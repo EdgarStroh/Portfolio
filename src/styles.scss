@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Bricolage Grotesque';
+    src: url('app/assets/fonts/BricolageGrotesque10pt-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Bricolage Grotesque';
+
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
