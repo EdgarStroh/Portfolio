@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  isEnglish: boolean = true;
 
+  toggleLanguage() {
+    this.isEnglish = !this.isEnglish;
+  }
 }

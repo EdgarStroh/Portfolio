@@ -1,10 +1,17 @@
 <header>
   <nav>
     <ul>
-        <li><a href="default.asp">About me</a></li>
-        <li><a href="news.asp">Skills</a></li>
-        <li><a href="contact.asp">Projects</a></li>
-        <li><a href="about.asp">Contacts</a></li>
-      </ul>
+      <li><a href="default.asp">About me</a></li>
+      <li><a href="news.asp">Skills</a></li>
+      <li><a href="contact.asp">Projects</a></li>
+      <li><a href="about.asp">Contact</a></li>
+      
+      <div class="switch-container" (click)="toggleLanguage()">
+        <span [class.active]="isEnglish" [class.inactive]="!isEnglish">EN</span>
+        <div class="switch" [class.left]="isEnglish" [class.right]="!isEnglish"></div>
+        <span [class.active]="!isEnglish" [class.inactive]="isEnglish">DE</span>
+      </div>
+      
+    </ul>
   </nav>
 </header>

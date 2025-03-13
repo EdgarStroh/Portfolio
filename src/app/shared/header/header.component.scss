@@ -1,4 +1,73 @@
 header {
     height: 80px;
+    align-content: center;
+}
+
+ul{
+    display: flex;
+    place-content: space-around;
 
 }
+a{
+    color: white;
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    // background-color: #1a1a1a;
+    // padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  span {
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .active {
+    color: #ff8057;
+  }
+  
+  .inactive {
+    color: white;
+  }
+  
+  .switch {
+    width: 35px;
+    height: 8px;
+    background-color: #ff8057;
+    border-radius: 15px;
+    position: relative;
+    transition: background 0.3s ease-in-out;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+  }
+  
+  .switch::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #2f6cff;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    position: absolute;
+    top: -6px;
+    left: -4px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .left::after {
+    transform: translateX(2px);
+  }
+  
+  .right::after {
+    transform: translateX(20px);
+  }
+  

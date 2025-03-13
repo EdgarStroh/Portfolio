@@ -13,9 +13,11 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
   imports: [
     // RouterOutlet, 
     HeaderComponent,
-    AboutMeComponent, HeroComponent, 
-    ProjectsComponent, ContactComponent, 
-    SkillsComponent, TestimonialsComponent],
+    // AboutMeComponent, 
+    HeroComponent, 
+    // ProjectsComponent, ContactComponent, 
+    // SkillsComponent, TestimonialsComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

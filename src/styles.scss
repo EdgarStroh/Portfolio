@@ -6,17 +6,20 @@
 
 @font-face {
     font-family: 'Bricolage Grotesque';
-    src: url('app/assets/fonts/BricolageGrotesque10pt-Regular.otf') format('opentype');
+    src: url('/assets/fonts/BricolageGrotesque10pt-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
     font-family: 'Bricolage Grotesque';
-
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    color: white;
 }
