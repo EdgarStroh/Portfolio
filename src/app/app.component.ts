@@ -12,8 +12,8 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
   selector: 'app-root',
   imports: [
     // RouterOutlet, 
-    HeaderComponent,
-    // AboutMeComponent, 
+    // HeaderComponent,
+    AboutMeComponent, 
     HeroComponent, 
     // ProjectsComponent, ContactComponent, 
     // SkillsComponent, TestimonialsComponent

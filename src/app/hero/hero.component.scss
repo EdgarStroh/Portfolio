@@ -1,10 +1,74 @@
 .hero-bg {
-    background-image: url("/assets/img/hero/hero-bg.png");
-    background-size: cover;  /* Sorgt dafür, dass das Bild die gesamte Fläche ausfüllt */
-    background-position: center; /* Zentriert das Bild */
-    background-repeat: no-repeat; /* Verhindert Wiederholungen */
-    // max-width: 1440px;
-    height: 100vh;
-    position: relative;
+  background-image: url("/assets/img/hero/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  position: relative;
+}
+
+.title-foto {
+  justify-content: center;
+  padding: 180px 50px 0 50px;
+  display: flex;
+  gap: 100px;
+}
+
+.button-title {
+  display: flex;
+  flex-direction: column;
+  padding-top: 66px;
+}
+
+.title-font-frontend {
+  padding-top: 25px;
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 100%;
+  color: white;
+}
+
+.title-font-dev {
+  padding-top: 20px;
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 100%;
+  color: white;
+  padding-left: 150px;
+}
+
+.pic-frame {
+  height: 250px;
+  width: 200px;
+  margin-left: -330px;
+  transform: rotate(5deg);
+}
+
+.button-gt {
+  margin-left: auto;
+  box-shadow: 2px 4px 0px 0px #F8F9FA;
+  margin-top: 25px;
+}
+
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  gap: 8px;
+  padding-left: 25px;
+  padding-top: 100px;
+  cursor: pointer;
+
+  >img {
+    padding: 2px;
+    height: 32px;
+    width: 32px;
+    border: 1px solid white;
+    border-radius: 100px;
+
+    &:hover {
+      background-color: #3355FF;
+    }
   }
-  
+
+}

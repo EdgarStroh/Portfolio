@@ -13,8 +13,8 @@
 
 body {
     font-family: 'Bricolage Grotesque';
-    max-width: 1440px;
-    margin: 0 auto;
+    // display: flex;
+    // justify-content: center; // Zentriert den Inhalt im Body
     width: 100%;
 }
 
@@ -22,4 +22,22 @@ ul {
     list-style-type: none;
     padding: 0;
     color: white;
+}
+
+button {
+    width: fit-content;
+    border: 1px solid white;
+    height: 40px;
+    color: white;
+    padding: 10px 24px 10px 24px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 100px;
+}
+
+.max-width-1440 {
+    max-width: 1440px;
+    margin: 0 auto; 
 }
