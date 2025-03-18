@@ -1,6 +1,8 @@
 header {
   height: 80px;
   align-content: center;
+  padding: 19px 72px;
+  gap: 32px;
 }
 
 ul {
@@ -74,4 +76,42 @@ span {
 
 .right::after {
   transform: translateX(20px);
+}
+nav ul li a {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 165%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.125s ease-in;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+nav ul li:nth-child(1) a::after {
+  background-image: url('/assets/img/header/aboutme-hover.png');
+}
+
+nav ul li:nth-child(2) a::after {
+  background-image: url('/assets/img/header/skills-hover.png');
+}
+
+nav ul li:nth-child(3) a::after {
+  background-image: url('/assets/img/header/projects-hover.png');
+}
+
+nav ul li:nth-child(4) a::after {
+  background-image: url('/assets/img/header/contact-hover.png');
 }

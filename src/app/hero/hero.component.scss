@@ -44,10 +44,19 @@
   transform: rotate(5deg);
 }
 
+
+
 .button-gt {
   margin-left: auto;
   box-shadow: 2px 4px 0px 0px #F8F9FA;
   margin-top: 25px;
+  transition: background-color 0.12s ease-in, box-shadow 0.12s ease-in;
+  &:hover {
+    background-color: #F87A55;
+    box-shadow: none;
+    transform: translate(2px, 4px);
+    
+  }
 }
 
 .contact-icons {
@@ -55,9 +64,10 @@
   flex-direction: column;
   width: 40px;
   gap: 8px;
-  padding-left: 25px;
-  padding-top: 100px;
   cursor: pointer;
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
 
   >img {
     padding: 2px;
@@ -71,4 +81,118 @@
     }
   }
 
+}
+
+@keyframes smartAnimate {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes smartAnimateReverse {
+  0% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes waveHand {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.7;
+
+  }
+
+  100% {
+    transform: translateX(45px) rotate(350deg);
+    opacity: 1;
+  }
+}
+
+@keyframes waveHandReverse {
+  0% {
+    transform: translateX(45px) rotate(350deg);
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0.7;
+
+  }
+
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+
+  }
+}
+
+.wave-hand {
+  // margin-left: auto;
+  margin-left: 110px;
+  display: flex;
+  width: 40px;
+  height: auto;
+  opacity: 0;
+  // transition: opacity 0.3s ease, transform 0.6s ease-in-out;
+}
+
+.helloworld-btn {
+  transition: background-color 0.125s ease-out, color 0.12s ease-out, transform 0.12s cubic-bezier(0.25, 1, 0.5, 1), min-width 0.3s ease;
+  will-change: transform, width;
+  position: relative;
+  overflow: hidden;
+  min-width: 140px;
+  text-align: center;
+  white-space: nowrap;
+
+  &::after {
+    content: "Hello world";
+    display: inline-block;
+    transition: opacity 0.3s ease, transform 0.12s;
+  }
+
+  &:hover {
+    background-color: #3355FF;
+    animation: smartAnimate 0.6s ease-in-out;
+    min-width: 180px;
+    /* 🚀 Der Button wird jetzt sanft breiter */
+  }
+
+  &:hover::after {
+    content: "I'm Edgar Stroh";
+    display: inline-block;
+    transition: opacity 0.3s ease, transform 0.12s;
+  }
+}
+
+
+.wave-hand-animation {
+  width: fit-content;
+}
+
+/* ✅ Animation für Hover */
+.wave-hand-animation.hovered .wave-hand {
+  opacity: 1;
+  animation: waveHand 0.25s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+/* ✅ Reverse-Animation, wenn hasHovered auf false gesetzt wird */
+.wave-hand-animation.reverse .wave-hand {
+  animation: waveHandReverse 0.25s ease-out forwards;
 }
