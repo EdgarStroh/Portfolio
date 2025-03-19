@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
 import { CommonModule } from '@angular/common';
 
@@ -14,12 +14,12 @@ export class HeroComponent {
 
   onMouseEnter() {
     this.hasHovered = true;
-    this.isReversing = false; // Verhindert, dass direkt die Reverse-Animation startet
+    this.isReversing = false;
   }
 
   onMouseLeave() {
     if (this.hasHovered) {
-      this.isReversing = true; // Setzt die Reverse-Animation aktiv
+      this.isReversing = true;
     }
   }
 }

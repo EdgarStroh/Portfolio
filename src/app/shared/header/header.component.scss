@@ -7,7 +7,6 @@ header {
 
 ul {
   display: flex;
-  // place-content: space-around;
   justify-content: space-between;
 
 }
@@ -22,8 +21,6 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
-  // background-color: #1a1a1a;
-  // padding: 10px 15px;
   border-radius: 20px;
   cursor: pointer;
 }

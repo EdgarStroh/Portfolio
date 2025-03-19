@@ -17,7 +17,9 @@
 .button-title {
   display: flex;
   flex-direction: column;
-  padding-top: 66px;
+  // align-items: flex-start; /* Verhindert, dass sich das div ausdehnt */
+  min-width: 835px;
+  /* Feste Breite für den Textbereich */
 }
 
 .title-font-frontend {
@@ -34,28 +36,60 @@
   font-size: 128px;
   line-height: 100%;
   color: white;
-  padding-left: 150px;
+  margin-left: auto;
+  width: fit-content;
+}
+
+.title {
+  display: flex;
+  gap: 5px;
+  /* Abstand zwischen den Buchstaben */
+  width: fit-content;
+}
+
+.letter {
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 100%;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.letter:first-child {
+  text-transform: uppercase;
+}
+
+.letter:not(:first-child) {
+  text-transform: lowercase;
+}
+
+.letter:hover {
+  text-transform: uppercase !important;
+  color: #F7C518;
+}
+
+.letter:hover:first-child {
+  text-transform: lowercase !important;
 }
 
 .pic-frame {
   height: 250px;
   width: 200px;
-  margin-left: -330px;
-  transform: rotate(5deg);
+  margin-left: -250px;
+  transform: rotate(8deg) translateY(-22px);
 }
-
-
 
 .button-gt {
   margin-left: auto;
   box-shadow: 2px 4px 0px 0px #F8F9FA;
   margin-top: 25px;
   transition: background-color 0.12s ease-in, box-shadow 0.12s ease-in;
+
   &:hover {
     background-color: #F87A55;
     box-shadow: none;
     transform: translate(2px, 4px);
-    
+
   }
 }
 
@@ -71,8 +105,8 @@
 
   >img {
     padding: 2px;
-    height: 32px;
-    width: 32px;
+    height: 40px;
+    width: 40px;
     border: 1px solid white;
     border-radius: 100px;
 
@@ -143,13 +177,11 @@
 }
 
 .wave-hand {
-  // margin-left: auto;
   margin-left: 110px;
   display: flex;
   width: 40px;
   height: auto;
   opacity: 0;
-  // transition: opacity 0.3s ease, transform 0.6s ease-in-out;
 }
 
 .helloworld-btn {
@@ -171,7 +203,6 @@
     background-color: #3355FF;
     animation: smartAnimate 0.6s ease-in-out;
     min-width: 180px;
-    /* 🚀 Der Button wird jetzt sanft breiter */
   }
 
   &:hover::after {
@@ -186,13 +217,11 @@
   width: fit-content;
 }
 
-/* ✅ Animation für Hover */
 .wave-hand-animation.hovered .wave-hand {
   opacity: 1;
   animation: waveHand 0.25s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
 }
 
-/* ✅ Reverse-Animation, wenn hasHovered auf false gesetzt wird */
 .wave-hand-animation.reverse .wave-hand {
   animation: waveHandReverse 0.25s ease-out forwards;
 }
