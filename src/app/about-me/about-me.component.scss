@@ -1,0 +1,116 @@
+section {
+    height: 720px;
+    width: 100%;
+    padding: 144px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 147px;
+}
+
+.paper-left {
+    display: flex;
+    flex-direction: column;
+
+    .paper-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -55px;
+
+        img.paper-img {
+            height: 152px;
+            width: 560px;
+        }
+
+        .paper-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            // align-items: center;
+            gap: 16px;
+            // transform: rotate(-4deg);
+        }
+
+        .paper-icons {
+            width: 40px;
+            height: 40px;
+            // background-color: aquamarine;
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-align: justify;
+            color: white;
+        }
+    }
+
+    .yellow {
+        z-index: 3;
+    }
+
+    .blue {
+        z-index: 2;
+    }
+
+    .orange {
+        z-index: 1;
+    }
+}
+
+.text-right {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lets-talk {
+    color: black;
+    border-color: black;
+    box-shadow: 2px 4px 0px 0px black;
+    transition: background-color 0.12s ease-in, box-shadow 0.12s ease-in;
+    margin-left: auto;
+
+    &:hover {
+        background-color: #F87A55;
+        box-shadow: none;
+        transform: translate(2px, 4px);
+    }
+}
+
+.paper-wrapper {
+    &:nth-child(1) .paper-content {
+
+        // Yellow
+        .paper-icons,
+        span {
+            transform: rotate(-4deg);
+            margin-bottom: 12px;
+        }
+    }
+
+    &:nth-child(2) .paper-content {
+
+        // Blue
+        .paper-icons,
+        span {
+            transform: rotate(0deg);
+        }
+    }
+
+    &:nth-child(3) .paper-content {
+
+        // Orange
+        .paper-icons,
+        span {
+            transform: rotate(4deg);
+            margin-bottom: 12px;
+        }
+    }
+}

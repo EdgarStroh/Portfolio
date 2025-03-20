@@ -1,0 +1,81 @@
+section {
+    position: relative;
+    background-image: url("/assets/img/skills/skills-bg.png");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 144px 120px;
+}
+
+.text-paper {
+    width: 656px;
+    height: 144px;
+    gap: 10px;
+    padding: 32px;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    text-transform: uppercase;
+    color: white;
+    padding-right: 17px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: white;
+}
+
+.title-text {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.title {
+    width: 261px;
+    height: 100px;
+}
+
+.abc {
+    background-image: url("/assets/img/skills/orange-circle.png");
+    width: 261px;
+    height: 80px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.text-paper {
+    width: 656px;
+    height: 184px;
+    padding: 32px;
+    gap: 10px;
+    // width: 100%;
+}
+
+.text span {
+    padding: 66px;
+    gap: 10px;
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}

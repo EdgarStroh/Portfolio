@@ -1,10 +1,9 @@
 .hero-bg {
   background-image: url("/assets/img/hero/hero-bg.png");
   background-size: cover;
-  background-position: center;
+  background-position: bottom; // Bild bleibt unten ausgerichtet
   background-repeat: no-repeat;
-  height: 120vh;
-  position: relative;
+  min-height: 100vh; // Mindestens die Höhe des Viewports
 }
 
 .title-foto {
@@ -43,8 +42,10 @@
 .title {
   display: flex;
   gap: 5px;
-  /* Abstand zwischen den Buchstaben */
   width: fit-content;
+  color: white;
+
+  display: inline-block;
 }
 
 .letter {
@@ -52,25 +53,36 @@
   font-size: 128px;
   line-height: 100%;
   color: white;
-  transition: all 0.3s ease;
+
+  &:first-child {
+    text-transform: uppercase;
+  }
+
+  &:not(:first-child) {
+    text-transform: lowercase;
+  }
+
+  &:hover {
+    text-transform: uppercase !important;
+    transition: transform 200ms ease-in, color 200ms ease-in;
+    color: #F7C518;
+  }
+
+  &:hover:first-child {
+    text-transform: lowercase !important;
+  }
 }
 
-.letter:first-child {
+
+.letter.dev {
   text-transform: uppercase;
+
+  &:hover {
+    text-transform: lowercase !important;
+    transition: transform 200ms ease-in, color 200ms ease-in;
+  }
 }
 
-.letter:not(:first-child) {
-  text-transform: lowercase;
-}
-
-.letter:hover {
-  text-transform: uppercase !important;
-  color: #F7C518;
-}
-
-.letter:hover:first-child {
-  text-transform: lowercase !important;
-}
 
 .pic-frame {
   height: 250px;

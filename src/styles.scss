@@ -39,5 +39,20 @@ button {
 
 .max-width-1440 {
     max-width: 1440px;
-    margin: 0 auto; 
+    margin: 0 auto;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
 }
