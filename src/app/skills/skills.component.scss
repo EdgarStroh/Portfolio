@@ -4,16 +4,16 @@ section {
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 144px 120px;
 }
 
-.text-paper {
-    width: 656px;
-    height: 144px;
-    gap: 10px;
-    padding: 32px;
-}
+// .text-paper {
+//     width: 656px;
+//     height: 144px;
+//     gap: 10px;
+//     padding: 32px;
+// }
 
 h3 {
     font-weight: 500;
@@ -37,7 +37,7 @@ h2 {
 .title-text {
     display: flex;
     align-items: center;
-    gap: 48px;
+    gap: 38px;
 }
 
 .title {
@@ -78,4 +78,45 @@ h2 {
     line-height: 100%;
     letter-spacing: 0%;
 
+}
+
+.skills-icon {
+    width: 72px;
+    height: 72px;
+    mix-blend-mode: Luminosity;
+    transition: all 0.3s ease-in-out;
+    /* Sanfte Animation */
+}
+
+.skills-icon-container {
+    width: 640px;
+    height: 266px;
+    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    padding-top: 25px;
+}
+
+.single-icon {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    min-width: 96px;
+    min-height: 98px;
+    gap: 4px;
+    align-items: center;
+
+    // &:hover {
+    //     transform: translate(16px, 16px);
+    // }
+}
+
+.single-icon:hover .skills-icon {
+    transform: scale(0.78);
+    mix-blend-mode: normal;
+    filter: none;
+}
+.skills-icon span{
+    // transform: translate(16px, 16px);
 }
