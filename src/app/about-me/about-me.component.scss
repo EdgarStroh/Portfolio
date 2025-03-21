@@ -30,15 +30,13 @@ section {
             left: 50%;
             transform: translate(-50%, -50%);
             display: flex;
-            // align-items: center;
             gap: 16px;
-            // transform: rotate(-4deg);
+            // align-items: center;
         }
-
+     
         .paper-icons {
             width: 40px;
             height: 40px;
-            // background-color: aquamarine;
         }
 
         span {
@@ -61,6 +59,7 @@ section {
 
     .orange {
         z-index: 1;
+
     }
 }
 
@@ -68,6 +67,13 @@ section {
     gap: 30px;
     display: flex;
     flex-direction: column;
+}
+.paper-content.abc {
+    transform: translate(-50%, -50%) rotate(5deg) !important;
+  }
+.abc {
+    place-content: center;
+    // transform: translate(22px, 4px);
 }
 
 .lets-talk {
@@ -110,7 +116,7 @@ section {
         .paper-icons,
         span {
             transform: rotate(4deg);
-            margin-bottom: 12px;
+            // margin-bottom: 12px;
         }
     }
 }

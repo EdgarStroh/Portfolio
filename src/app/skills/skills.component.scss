@@ -38,6 +38,7 @@ h2 {
     display: flex;
     align-items: center;
     gap: 38px;
+    // justify-content: center;
 }
 
 .title {
@@ -66,7 +67,6 @@ h2 {
     height: 184px;
     padding: 32px;
     gap: 10px;
-    // width: 100%;
 }
 
 .text span {
@@ -85,7 +85,6 @@ h2 {
     height: 72px;
     mix-blend-mode: Luminosity;
     transition: all 0.3s ease-in-out;
-    /* Sanfte Animation */
 }
 
 .skills-icon-container {
@@ -106,17 +105,63 @@ h2 {
     min-height: 98px;
     gap: 4px;
     align-items: center;
-
-    // &:hover {
-    //     transform: translate(16px, 16px);
-    // }
 }
 
 .single-icon:hover .skills-icon {
     transform: scale(0.78);
     mix-blend-mode: normal;
-    filter: none;
 }
-.skills-icon span{
-    // transform: translate(16px, 16px);
+
+.sticker {
+    width: 200px;
+    height: 200px;
+    transform: rotate(8deg) translateX(55px);
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    //  z-index: 1;
+}
+
+.sticker img {
+    display: block;
+    width: 100%;
+}
+
+.sic-sticker-container {
+    display: flex;
+    align-items: center;
+    /* Vertikal ausrichten */
+    justify-content: center;
+    /* Zentriert die Inhalte */
+    // gap: 40px; /* Abstand zwischen den beiden Elementen */
+}
+
+.sticker-text {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    // opacity: 0; // Standardmäßig unsichtbar
+    transition: opacity 0.2s ease-in-out;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 118px;
+    width: 167px;
+    transform: translate(44%, -149%) rotate(8deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    // z-index: 1;
+    >img {
+        width: 72px;
+        padding-top: 12px;
+        // z-index: 1;
+    }
+    span{
+        z-index: 2;
+    }
+}
+
+.sticker img[src*="sticker-open"]+.sticker-text {
+    opacity: 1; // Wird sichtbar, wenn `sticker-open.png` aktiv ist
 }
