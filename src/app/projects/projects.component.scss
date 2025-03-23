@@ -1,0 +1,58 @@
+section {
+    min-height: 90vh;
+    padding: 144px 120px;
+    // background-color: aqua;
+}
+
+.projects-title-text {
+    width: 560px;
+    height: 238px;
+    gap: 38px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.projects-title {
+    gap: 16px;
+}
+
+.projects-title-underline {
+    animation: revealAnimation 4s infinite ease-in-out;
+}
+
+@keyframes revealAnimation {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    40% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    70% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 100% 0 0);
+    }
+}
+
+.projects-content {
+    display: flex;
+    justify-content: space-between;
+    /* Abstand zwischen den Elementen */
+    align-items: center;
+    /* Vertikal zentrieren */
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.title-text-join {
+    // height: 660px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
