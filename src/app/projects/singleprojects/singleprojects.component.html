@@ -1,0 +1,12 @@
+<div class="project-container" *ngFor="let project of projectlist">
+    <div class="project-img-wrapper">
+        <div class="hover-container">
+            <img class="project-img" [src]="project.img" alt="{{ project.name }}"
+                [ngClass]="{'project-img-laptop': project.name === 'Join'}">
+        </div>
+    </div>
+    <div class="project-text-title">
+        <span>{{ project.name }}</span>
+        <p>{{ project.description }}</p>
+    </div>
+</div>

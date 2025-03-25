@@ -18,7 +18,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
     ProjectsComponent, 
     // ContactComponent, 
     SkillsComponent, 
-    // TestimonialsComponent
+    TestimonialsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

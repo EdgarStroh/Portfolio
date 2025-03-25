@@ -1,6 +1,10 @@
 section {
     min-height: 90vh;
-    padding: 144px 120px;
+    padding-top: 144px;
+    padding-right: 120px ;
+    padding-left: 120px;
+    padding-bottom: 80px;
+    // padding: 144px 120px;
     // background-color: aqua;
 }
 
@@ -10,7 +14,7 @@ section {
     gap: 38px;
     display: flex;
     flex-direction: column;
-    align-self: center;
+    // align-self: center;
 }
 
 .projects-title {
@@ -43,6 +47,7 @@ section {
     display: flex;
     justify-content: space-between;
     /* Abstand zwischen den Elementen */
+ 
     align-items: center;
     /* Vertikal zentrieren */
     max-width: 1440px;
@@ -51,8 +56,16 @@ section {
 
 .title-text-join {
     // height: 660px;
-    display: flex;
+    // display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
+app-singleprojects {
+    display: flex;
+    flex-wrap: wrap; /* Falls nicht genug Platz da ist, umbrechen */
+    // gap: 32px; /* Abstand zwischen den Projekten */
+    // justify-content: center; /* Zentriert die Projekte */
+    justify-content: space-between;
+  }
+  
