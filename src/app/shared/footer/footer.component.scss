@@ -1,0 +1,19 @@
+footer {
+    padding: 0px 120px 0px 120px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 132px;
+    align-items: center;
+    // background-color: red;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // width: 100%;
+    a {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}

@@ -5,13 +5,43 @@ section {
     background-position: bottom;
     background-repeat: no-repeat;
     min-height: 90vh;
-
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
 }
 
 .padding-container {
     padding: 144px 120px;
 }
+
+
+.skill-text {
+    position: absolute;
+    padding-left: 17px;
+    padding-top: 14px;
+    top: 0;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    50% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.circle-animation {
+    animation: fadeInOut 3s ease-in-out infinite;
+}
+
+
 
 // .text-paper {
 //     width: 656px;
@@ -51,12 +81,17 @@ h2 {
     height: 100px;
 }
 
-.abc {
-    background-image: url("/assets/img/skills/orange-circle.png");
+.circle-animation {
+    // background-image: url("/assets/img/skills/orange-circle.png");
     width: 261px;
     height: 80px;
     padding-left: 10px;
     padding-top: 10px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
 }
 
 .text {
