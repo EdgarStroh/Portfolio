@@ -17,11 +17,28 @@ section {
     justify-self: right;
 }
 
+@keyframes revealArrow {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    20% {
+        clip-path: inset(0 0 0 0);
+    }
+    80% {
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 100% 0 0);
+    }
+}
+
 .blue-arrow {
     width: 100px;
     height: 36px;
-    
+    animation: revealArrow 3s ease-out infinite;
+    animation-delay: 100ms;
 }
+
 
 .testimonials {
     width: 100vw;
