@@ -1,58 +1,62 @@
 <section>
     <div class="skill-content max-width-1440">
-        <div class="title-text">
-            <div class="title">
-                <h3>MY STACK</h3>
-                <div class="abc">
-                    <h2>Skill set</h2>
+        <div class="padding-container">
+            <div class="title-text">
+                <div class="title">
+                    <h3>MY STACK</h3>
+                    <div class="abc">
+                        <h2>Skill set</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="text">
-                <img class="text-paper" src="/assets/img/skills/paper.png">
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus perspiciatis nemo totam natus
-                    earum, vel, blanditiis iure ipsum minus porro aliquam autem?</span>
-            </div>
-        </div>
-
-        <div class="sic-sticker-container">
-            <div class="skills-icon-container">
-                <div class="single-icon"><img class="skills-icon"
-                        src="/assets/img/skills/icons/html.png"><span>HTML</span>
-                </div>
-                <div class="single-icon"><img class="skills-icon"
-                        src="/assets/img/skills/icons/css.png"><span>CSS</span>
-                </div>
-                <div class="single-icon"><img class="skills-icon"
-                        src="/assets/img/skills/icons/js.png"><span>JavaScript</span>
-                </div>
-                <div class="single-icon"><img class="skills-icon"
-                        src="/assets/img/skills/icons/ts.png"><span>TypeScript</span>
-                </div>
-                <div class="single-icon">
-                    <img class="skills-icon" src="/assets/img/skills/icons/angular.png">
-                    <span>Angular</span>
-                </div>
-                <div class="single-icon"><img class="skills-icon"
-                        src="/assets/img/skills/icons/firebase.png"><span>Firebase</span></div>
-                <div class="single-icon"><img class="skills-icon"
-                        src="/assets/img/skills/icons/git.png"><span>Git</span>
-                </div>
-                <div class="single-icon"><img class="skills-icon"
-                        src="/assets/img/skills/icons/rest-api.png"><span>Rest-Api</span></div>
-                <div class="single-icon"><img class="skills-icon"
-                        src="/assets/img/skills/icons/scrum.png"><span>Scrum</span>
+                <div class="text">
+                    <img class="text-paper" src="/assets/img/skills/paper.png">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus perspiciatis nemo totam
+                        natus
+                        earum, vel, blanditiis iure ipsum minus porro aliquam autem?</span>
                 </div>
             </div>
 
-            <div (click)="onStickerClick()" style="width: 200px; height: 200px;">
-                <img class="sticker" [src]="stickerImage" alt="Sticker">
-                <div class="sticker-text" *ngIf="stickerImage === '/assets/img/skills/sticker-open.png'">
-                    <span>Also, I'm interested in diving into:</span>
-                    <img src="/assets/img/skills/icons/python.png" > 
-                    <span>Python</span>
+            <div class="sic-sticker-container">
+                <div class="skills-icon-container">
+                    <div class="single-icon"><img class="skills-icon"
+                            src="/assets/img/skills/icons/html.png"><span>HTML</span>
+                    </div>
+                    <div class="single-icon"><img class="skills-icon"
+                            src="/assets/img/skills/icons/css.png"><span>CSS</span>
+                    </div>
+                    <div class="single-icon"><img class="skills-icon"
+                            src="/assets/img/skills/icons/js.png"><span>JavaScript</span>
+                    </div>
+                    <div class="single-icon"><img class="skills-icon"
+                            src="/assets/img/skills/icons/ts.png"><span>TypeScript</span>
+                    </div>
+                    <div class="single-icon">
+                        <img class="skills-icon" src="/assets/img/skills/icons/angular.png">
+                        <span>Angular</span>
+                    </div>
+                    <div class="single-icon"><img class="skills-icon"
+                            src="/assets/img/skills/icons/firebase.png"><span>Firebase</span></div>
+                    <div class="single-icon"><img class="skills-icon"
+                            src="/assets/img/skills/icons/git.png"><span>Git</span>
+                    </div>
+                    <div class="single-icon"><img class="skills-icon"
+                            src="/assets/img/skills/icons/rest-api.png"><span>Rest-Api</span></div>
+                    <div class="single-icon"><img class="skills-icon"
+                            src="/assets/img/skills/icons/scrum.png"><span>Scrum</span>
+                    </div>
                 </div>
-            </div>
 
+                <div (click)="onStickerClick()" class="sticker">
+                    <img [src]="stickerImage" alt="Sticker">
+                    <div class="sticker-text" *ngIf="stickerImage === '/assets/img/skills/sticker-open.png'">
+                        <span>Also, I'm interested in diving into:</span>
+                        <img src="/assets/img/skills/icons/python.png">
+                        <span>Python</span>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </div>
 </section>

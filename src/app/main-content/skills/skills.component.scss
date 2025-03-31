@@ -5,8 +5,12 @@ section {
     background-position: bottom;
     background-repeat: no-repeat;
     min-height: 90vh;
-    padding: 144px 120px;
+
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.padding-container {
+    padding: 144px 120px;
 }
 
 // .text-paper {
@@ -116,11 +120,11 @@ h2 {
 .sticker {
     width: 200px;
     height: 200px;
-    transform: rotate(8deg) translateX(55px);
-    position: relative;
-    display: inline-block;
+    transform: rotate(8deg);
+    position: absolute;
+    right: 0;
+    /* Sticker ganz nach rechts */
     cursor: pointer;
-    //  z-index: 1;
 }
 
 .sticker img {
@@ -131,10 +135,10 @@ h2 {
 .sic-sticker-container {
     display: flex;
     align-items: center;
-    /* Vertikal ausrichten */
     justify-content: center;
-    /* Zentriert die Inhalte */
-    // gap: 40px; /* Abstand zwischen den beiden Elementen */
+    /* Hält die Icons in der Mitte */
+    position: relative;
+    width: 100%;
 }
 
 .sticker-text {
@@ -146,19 +150,21 @@ h2 {
     padding-bottom: 2px;
     height: 118px;
     width: 167px;
-    transform: translate(44%, -149%) rotate(8deg);
+    transform: translate(10%, -149%);
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 4px;
     align-items: center;
+
     // z-index: 1;
     >img {
         width: 72px;
         padding-top: 12px;
         // z-index: 1;
     }
-    span{
+
+    span {
         z-index: 2;
     }
 }
