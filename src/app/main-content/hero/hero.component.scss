@@ -48,40 +48,98 @@
   display: inline-block;
 }
 
+@keyframes smoothTextTransform {
+  0% {
+    transform: scaleY(1);
+  }
+
+  25% {
+    transform: scaleY(1.05);
+  }
+
+  50% {
+    transform: scaleY(1.07);
+  }
+
+  75% {
+    transform: scaleY(1.09);
+  }
+
+  100% {
+    transform: scaleY(1.1);
+    color: #F7C518;
+  }
+}
+
+@keyframes smoothTextReset {
+  0% {
+    transform: scaleY(1.1);
+    // color: #F7C518;
+  }
+
+  25% {
+    transform: scaleY(1.09);
+  }
+
+  50% {
+    transform: scaleY(1.07);
+  }
+
+  75% {
+    transform: scaleY(1.05);
+  }
+
+  100% {
+    transform: scaleY(1);
+    color: white;
+  }
+}
+
 .letter {
   font-weight: 700;
   font-size: 128px;
   line-height: 100%;
   color: white;
-  transition: transform 300ms ease-in-out, color 300ms ease-in-out;
-  will-change: transform, color;
-
-  &:first-child {
-    text-transform: uppercase;
-  }
-
-  &:not(:first-child) {
-    text-transform: lowercase;
-  }
-
-  &:hover {
-    text-transform: uppercase !important;
-    color: #F7C518;
-    transform: scale(1.1);
-  }
-
-  &:hover:first-child {
-    text-transform: lowercase !important;
-  }
+  display: inline-block;
+  vertical-align: bottom;
+  transition: color 300ms ease-in-out;
+  // animation: none; /* Animation ist AUS bis Hover aktiv wird */
 }
+
+/* Standard-Styling */
+.letter:first-child {
+  text-transform: uppercase;
+}
+
+.letter:not(:first-child) {
+  text-transform: lowercase;
+}
+
+/* Hover Effekt */
+.letter:hover {
+  animation: smoothTextTransform 300ms ease-in-out forwards;
+}
+
+.letter:not(:hover) {
+  animation: smoothTextReset 300ms ease-in forwards;
+}
+
+.letter:first-child:hover {
+  text-transform: lowercase;
+}
+
+.letter:not(:first-child):hover {
+  text-transform: uppercase;
+}
+
 
 .letter.dev {
   text-transform: uppercase;
-  transition: transform 300ms ease-in-out, color 300ms ease-in-out;
+  // transition: transform 300ms ease-in, color 300ms ease-in;
 
   &:hover {
     text-transform: lowercase !important;
-    transform: scale(1.1);
+    // transform: scale(1.1);
   }
 }
 
@@ -115,7 +173,7 @@
   gap: 8px;
   cursor: pointer;
   position: absolute;
-  left: 317px;
+  left: 100px;
   bottom: 130px;
 
   >img {
