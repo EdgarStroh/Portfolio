@@ -3,17 +3,19 @@ footer {
     color: white;
     display: flex;
     justify-content: space-between;
-    height: 132px;
+    height: 90px;
     align-items: center;
-    // background-color: red;
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-    // width: 100%;
     a {
         color: white;
         font-size: 18px;
         font-weight: 500;
     }
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-left: 120px;
+   
 }

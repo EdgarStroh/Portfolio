@@ -1,14 +1,14 @@
 header {
   height: 80px;
   align-content: center;
-  padding: 19px 72px;
+  padding: 19px 22px;
   gap: 32px;
 }
 
 ul {
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
 }
 
 a {
@@ -74,6 +74,7 @@ span {
 .right::after {
   transform: translateX(20px);
 }
+
 nav ul li a {
   position: relative;
   display: inline-block;
@@ -97,18 +98,18 @@ nav ul li a {
   }
 }
 
-nav ul li:nth-child(1) a::after {
+nav ul li:nth-child(2) a::after {
   background-image: url('/assets/img/header/aboutme-hover.png');
 }
 
-nav ul li:nth-child(2) a::after {
+nav ul li:nth-child(3) a::after {
   background-image: url('/assets/img/header/skills-hover.png');
 }
 
-nav ul li:nth-child(3) a::after {
+nav ul li:nth-child(4) a::after {
   background-image: url('/assets/img/header/projects-hover.png');
 }
 
-nav ul li:nth-child(4) a::after {
+nav ul li:nth-child(5) a::after {
   background-image: url('/assets/img/header/contact-hover.png');
 }
