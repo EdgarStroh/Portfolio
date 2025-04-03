@@ -1,21 +1,114 @@
 footer {
-    padding: 0px 120px 0px 120px;
+    padding: 40px 47px 70px 47px;
     color: white;
     display: flex;
     justify-content: space-between;
-    height: 90px;
+    height: 65px;
     align-items: center;
-    a {
-        color: white;
-        font-size: 18px;
-        font-weight: 500;
-    }
+    width: 100%;
 }
 
-.name{
+footer a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 24px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    border-radius: 40px;
+}
+
+a:nth-child(n+2):hover {
+    background-color: #3355FF;
+    border-radius: 40px;
+}
+
+footer a:nth-child(1) {
+    position: relative;
+}
+
+footer a:nth-child(1)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/img/header/contact-hover.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.125s ease-out;
+}
+
+footer a:nth-child(1):hover::after {
+    clip-path: inset(0 0 0 0);
+}
+
+.name {
     display: flex;
     flex-direction: column;
     color: white;
     padding-left: 120px;
-   
+
+}
+
+.empty-place {
+    margin-top: 30px;
+}
+
+.footer-icons {
+    width: 30px;
+    opacity: 0;
+}
+
+.link-container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    flex-direction: column;
+}
+
+.link-container.hovered .footer-icons {
+    animation: animationIconHover 0.6s cubic-bezier(0.25, 1.5, 0.5, 1) forwards;
+}
+
+.link-container.reverse .footer-icons {
+    animation: animationIconHoverReverse 0.25s ease-out forwards;
+}
+
+.empty-ph {
+    height: 30px;
+}
+
+@keyframes animationIconHover {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.7;
+
+    }
+
+    100% {
+        transform: translateX(35px) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes animationIconHoverReverse {
+    0% {
+        transform: translateX(35px) rotate(360deg);
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+    }
 }

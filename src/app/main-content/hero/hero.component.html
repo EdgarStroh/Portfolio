@@ -3,11 +3,13 @@
         <app-header></app-header>
         <div class="title-foto">
             <div class="button-title">
+
                 <div class="wave-hand-animation" [ngClass]="{ 'hovered': hasHovered, 'reverse': isReversing }">
                     <img class="wave-hand" src="/assets/img/hero/waving-hand.png">
                     <button class="helloworld-btn" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
                     </button>
                 </div>
+                
                 <span class="title-font-frontend title">
                     <span class="letter">F</span>
                     <span class="letter">r</span>

@@ -78,25 +78,26 @@ span {
 nav ul li a {
   position: relative;
   display: inline-block;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 120%;
-    height: 165%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.125s ease-in;
-  }
-
-  &:hover::after {
-    opacity: 1;
-  }
 }
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 165%;
+  background-size: cover;
+  background-position: center;
+  clip-path: inset(0 100% 0 0); 
+  transition: clip-path 0.125s ease-out; 
+}
+
+nav ul li a:hover::after {
+  clip-path: inset(0 0 0 0); 
+}
+
 
 nav ul li:nth-child(2) a::after {
   background-image: url('/assets/img/header/aboutme-hover.png');
