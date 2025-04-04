@@ -1,8 +1,23 @@
-<div class="project-container" *ngFor="let project of projectlist">
+<div class="project-container" *ngFor="let project of projectlist; let i = index">
     <div class="project-img-wrapper">
+        
+        <img *ngIf="i === 0" 
+        class="logo" 
+        src="/assets/img/skills/featured-logo.png"
+        alt="Logo" 
+        [style.width]="'168px'" 
+        [style.position]="'absolute'" 
+        [style.bottom]="'0'" 
+        [style.marginBottom]="'50px'"
+        [style.left]="'0'"
+        [style.z-index]="'5'"
+        >
+
+
         <div class="hover-container">
             <img class="project-img" [src]="project.img" alt="{{ project.name }}"
                 [ngClass]="{'project-img-laptop': project.name === 'Join'}">
+       
         </div>
     </div>
     <div class="project-text-title">
@@ -10,3 +25,5 @@
         <p>{{ project.description }}</p>
     </div>
 </div>
+
+
