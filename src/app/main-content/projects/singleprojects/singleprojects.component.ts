@@ -11,7 +11,7 @@ import { SingledataService } from '../singleprojects.service';
 })
 export class SingleprojectsComponent {
 
-  projectlist: { img: string; name: string; description: string; }[] = [];
+  projectlist: { img: string; name: string; description: string; logo?: string; }[] = [];
 
   constructor(private singledataService: SingledataService) {
     this.projectlist = this.singledataService.projectlist;
