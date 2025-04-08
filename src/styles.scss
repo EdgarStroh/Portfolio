@@ -82,6 +82,7 @@ h3 {
   display: inline-block;
   border-radius: 20px;
   overflow: hidden;
+  cursor: pointer;
 
   .project-img {
     height: 337px;
@@ -116,7 +117,32 @@ h3 {
   &:hover::after {
     opacity: 1;
   }
+
+  &:hover>.project-details-btn {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .project-details-btn {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 50px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    box-shadow: 2px 4px 0px 0px #F8F9FA;
+
+    &:hover {
+      background-color: #F87A55;
+      box-shadow: none;
+      transform: translate(2px, 4px);
+    }
+  }
 }
+
 
 .project-img-laptop {
   animation: floatUpDown 2s ease-in-out infinite alternate;
@@ -194,3 +220,12 @@ h3 {
     opacity: 0;
   }
 }
+
+// .project-container:first-child .logo {
+//   width: 168px;
+//   position: absolute;
+//   bottom: 0;
+//   margin-bottom: 50px;
+//   left: 0;
+//   z-index: 5;
+// }
