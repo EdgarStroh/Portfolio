@@ -22,4 +22,4 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
   templateUrl: './main-content.component.html',
   styleUrls: ['./main-content.component.scss']
 })
-export class HeroContentComponent { }
+export class MainContentComponent { }

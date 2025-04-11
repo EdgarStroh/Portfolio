@@ -1,18 +1,21 @@
 <div class="project-container" *ngFor="let project of projectlist; let i = index">
   <div class="project-img-wrapper">
-    
-      <button class="project-details-btn">Project details</button>
 
-      <img *ngIf="project.logo"  class="project-logo" [src]="project.logo">
+    <button class="project-details-btn" (click)="goToProject(project.name)">
+      Project details
+    </button>
 
-      <div class="hover-container">
-          <img class="project-img" [src]="project.img" alt="{{ project.name }}"
-              [ngClass]="{'project-img-laptop': project.name === 'Join'}">
-      </div>
+
+    <img *ngIf="project.logo" class="project-logo" [src]="project.logo">
+
+    <div class="hover-container">
+      <img class="project-img" [src]="project.img" alt="{{ project.name }}"
+        [ngClass]="{'project-img-laptop': project.name === 'Join'}">
+    </div>
   </div>
 
   <div class="project-text-title">
-      <span>{{ project.name }}</span>
-      <p>{{ project.description }}</p>
+    <span>{{ project.name }}</span>
+    <p>{{ project.description }}</p>
   </div>
 </div>

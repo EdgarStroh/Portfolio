@@ -1,12 +1,11 @@
 import { Routes } from '@angular/router';
-// import { HeroComponent } from './hero/hero.component';
-// import { AboutMeComponent } from './about-me/about-me.component';
-// import { ProjectsComponent } from './projects/projects.component';
-// import { ContactComponent } from './contact/contact.component';
+import { SingleprojectsComponent } from './main-content/projects/singleprojects/singleprojects.component';
+import { ProjectDetailComponent } from './main-content/projects/project-detail/project-detail.component';
+import { MainContentComponent } from './main-content/main-content.component';
 
 export const routes: Routes = [
-  // { path: '', component: HeroComponent }, // Startseite (alles sichtbar)
-  // { path: 'about-me', component: AboutMeComponent },
-  // { path: 'projects', component: ProjectsComponent },
-  // { path: 'contact', component: ContactComponent }
+  { path: '', component:  MainContentComponent},
+  { path: 'projects/:slug', component: ProjectDetailComponent }
 ];
+
+
