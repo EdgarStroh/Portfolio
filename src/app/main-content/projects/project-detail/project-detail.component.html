@@ -1,20 +1,46 @@
-<app-header></app-header>
-<div class="project-detail-bg">
+<div class="project-detail-bg ">
+  <div class="lin-grad">
+    <div class=" max-width-1440">
+      <app-header></app-header>
 
-  <h1>{{ project.title }}</h1>
-  <p>{{ project.description }}</p>
-  <p>{{ project.details }}</p>
+      <div class="arrow-back-container">
+        <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back.png">
+        <span>Go Back</span>
+      </div>
 
-  <div class="tools">
-    <span *ngFor="let tool of project.tools">{{ tool }}</span>
+      <div class="project-detail-view">
+
+        <div class="headline-container">
+          <h2>{{ project.title }}</h2>
+          <img class="blue-line" src="/assets/img/about-me/blue-line.png">
+        </div>
+
+        <div class="proj-detail-text">
+          <span class="project-detail-headline">Description</span>
+          <span>{{ project.description }}</span>
+
+          <span class="project-detail-headline">Implementation Details</span>
+          <span>{{ project.description }}</span>
+
+          <div class="duration-container">
+            <span class="project-detail-duration">Duration:</span>
+            {{ project.duration }}
+          </div>
+        </div>
+
+       
+        <!-- <div class="tools">
+            <span *ngFor="let tool of project.tools">{{ tool }}</span>
+          </div>
+
+          <img [src]="project.image" [alt]="project.title">
+
+          <div class="links">
+            <a [href]="project.github" target="_blank">GitHub</a>
+            <a [href]="project.live" target="_blank">Live Test</a>
+          </div> -->
+      </div>
+      <!-- <button>Next Project →</button> -->
+    </div>
   </div>
-
-  <img [src]="project.image" [alt]="project.title">
-
-  <!-- <div class="links">
-      <a [href]="project.github" target="_blank">GitHub</a>
-      <a [href]="project.live" target="_blank">Live Test</a>
-    </div> -->
-
-  <button>Next Project →</button>
 </div>
