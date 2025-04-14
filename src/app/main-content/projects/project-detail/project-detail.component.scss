@@ -13,7 +13,7 @@
 
 .arrow-back-container {
     padding-top: 60px;
-    padding-left: 19px;
+    padding-left: 67px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -30,8 +30,9 @@
 }
 
 .project-detail-view {
-    padding: 55px 80px;
+    padding: 55px 120px;
     // gap: 48px;
+    display: flex;
 
     h2 {
         font-weight: 700;
@@ -49,7 +50,7 @@
 .headline-container {
     position: relative;
     display: inline-block;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     // padding-bottom: 40px;
 }
 
@@ -58,10 +59,11 @@
     flex-direction: column;
     // padding-top: 40px;
     // gap: 16px;
-    width: 43%;
-span{
-    padding-bottom: 20px;
-}
+    width: 78%;
+
+    span {
+        padding-bottom: 25px;
+    }
 }
 
 .blue-line {
@@ -94,11 +96,60 @@ span{
 }
 
 .duration-container {
-    // padding-top: 16px;
+    margin-bottom: 25px;
 }
 
 .project-detail-duration {
     // padding-top: 14px;
     font-weight: 700;
     font-size: 18px;
+}
+
+.lang-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lang-img {
+    height: 24px;
+}
+
+.project-detail-view-rs {
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img-image {
+    display: block;
+    height: 375px;
+    width: 560px;
+    border-radius: 20px;
+}
+
+.project-img-sticker {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    right: -9%;
+    top: 31%;
+}
+
+.button-container {
+    padding-top: 21px;
+    display: flex;
+    gap: 21px;
+    justify-content: right;
+}
+
+button{
+    box-shadow: 2px 4px 0px 0px white;
+    &:hover {
+        background-color: #F87A55;
+        box-shadow: none;
+        transform: translate(2px, 4px);
+        transition: background-color 0.12s ease-in, box-shadow 0.12s ease-in;
+      }
 }

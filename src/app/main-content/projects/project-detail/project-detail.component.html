@@ -10,35 +10,46 @@
 
       <div class="project-detail-view">
 
-        <div class="headline-container">
-          <h2>{{ project.title }}</h2>
-          <img class="blue-line" src="/assets/img/about-me/blue-line.png">
-        </div>
+        <div class="project-detail-view-ls">
+          <div class="headline-container">
+            <h2>{{ project.title }}</h2>
+            <img class="blue-line" src="/assets/img/about-me/blue-line.png">
+          </div>
 
-        <div class="proj-detail-text">
-          <span class="project-detail-headline">Description</span>
-          <span>{{ project.description }}</span>
+          <div class="proj-detail-text">
+            <span class="project-detail-headline">Description</span>
+            <span>{{ project.description }}</span>
 
-          <span class="project-detail-headline">Implementation Details</span>
-          <span>{{ project.description }}</span>
+            <span class="project-detail-headline">Implementation Details</span>
+            <span>{{ project.details }}</span>
 
-          <div class="duration-container">
-            <span class="project-detail-duration">Duration:</span>
-            {{ project.duration }}
+            <div class="duration-container">
+              <span class="project-detail-duration">Duration:</span>
+              {{ project.duration }}
+            </div>
+          </div>
+
+
+          <div class="lang-container">
+            <ng-container *ngFor="let lang of project.languages; let i = index">
+              <img class="lang-img" [src]="project.lang_img[i]" alt="{{ lang }}">
+              <span>{{ lang }}</span>
+            </ng-container>
           </div>
         </div>
 
-       
-        <!-- <div class="tools">
-            <span *ngFor="let tool of project.tools">{{ tool }}</span>
+        <div class="project-detail-view-rs">
+          <img class="project-img-image" src="{{project.image}}">
+          <img class="project-img-sticker" src="{{project.sticker}}">
+
+          <div class="button-container">
+            <button>GitHub</button>
+            <button>Live Test</button>
           </div>
 
-          <img [src]="project.image" [alt]="project.title">
+        </div>
 
-          <div class="links">
-            <a [href]="project.github" target="_blank">GitHub</a>
-            <a [href]="project.live" target="_blank">Live Test</a>
-          </div> -->
+
       </div>
       <!-- <button>Next Project →</button> -->
     </div>

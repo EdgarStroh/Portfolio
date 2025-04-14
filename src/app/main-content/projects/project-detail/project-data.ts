@@ -2,33 +2,54 @@ export const PROJECTS = [
   {
     title: 'Join',
     slug: 'join',
-    description: 'Task manager inspired by the Kanban System. Create and organnize tasks using drag and drop functions, assign users and catagories.',
-    implementationDetails: 'loremt Ipsum',
+    description: 'Task manager inspired by the Kanban system. Create and organize tasks using drag-and-drop functionality, assign users and categories.',
+    details: 'Developed with JavaScript, the app features a modular architecture, dynamic task management, and intuitive drag-and-drop interactions. Users can create, edit, and assign tasks to categories and team members, enhancing workflow efficiency.',
     duration: '5 weeks',
-    tools: ['HTML', 'CSS', 'JavaScript', 'TypeScript'], // <- wichtig!
-    // image: 'assets/images/join.png'
+    languages: ['HTML', 'CSS', 'JavaScript', ],
+    lang_img: [
+      '/assets/img/skills/icons/html.png',
+      '/assets/img/skills/icons/css.png',
+      '/assets/img/skills/icons/js.png',
+    ],
+    image: '/assets/img/projects/project-detail/join.png',
+    sticker: '/assets/img/skills/featured-logo.png',
+    // github: 'https://github.com/yourname/dabubble',
+    // live: 'https://dabubble.com'
+  },
+
+  {
+    title: 'Pokedex',
+    slug: 'pokedex',
+    description: 'Pokedex is a web application that lets you explore and search for Pokémon, displaying detailed information like stats, evolutions, and abilities in a clean and interactive interface.',
+    details: 'Powered by a public Pokémon API, the app fetches and renders data in real-time using JavaScript, offering users an engaging and responsive browsing experience.',
+    duration: '2 weeks',
+    languages: ['HTML', 'CSS', 'JavaScript', 'API'],
+    lang_img: [
+      '/assets/img/skills/icons/html.png',
+      '/assets/img/skills/icons/css.png',
+      '/assets/img/skills/icons/js.png',
+      '/assets/img/skills/icons/rest-api.png',
+    ],
+    image: '/assets/img/projects/project-detail/pokedex.png',
+    sticker: '/assets/img/skills/featured-logo.png',
+    // github: 'https://github.com/yourname/dabubble',
+    // live: 'https://dabubble.com'
   },
   {
-    // id: 'el-pollo-loco',
     title: 'El Pollo Loco',
-    slug: 'el-pollo-loco',  // hinzugefügt
-    description: 'Jump and run game...',
-    details: 'Short text about game logic, architecture...',
-    tools: ['javascript', 'html', 'css'],
-    // duration: '3 weeks',
-    // image: 'assets/img/pollo-loco.png',
+    slug: 'el-pollo-loco',
+    description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+    details: 'The game is built using object-oriented JavaScript, with a modular structure for characters, enemies, and game mechanics. It includes collision detection, animation handling, sound effects, and a well-organized game loop for real-time interactions.',
+    duration: '5 weeks',
+    languages: ['HTML', 'CSS', 'JavaScript'],
+    lang_img: [
+      '/assets/img/skills/icons/html.png',
+      '/assets/img/skills/icons/css.png',
+      '/assets/img/skills/icons/js.png',
+    ],
+    image: '/assets/img/projects/project-detail/el-pollo-loco.png',
+    sticker: '/assets/img/skills/featured-logo.png',
     // github: 'https://github.com/yourname/el-pollo-loco',
     // live: 'https://pollo-loco.com'
   },
-  {
-    id: 'dabubble',
-    title: 'DABubble',
-    description: 'Slack Clone App for communication...',
-    details: 'Short text about architecture, structure, chat functions...',
-    tools: ['typescript', 'html', 'css'],
-    duration: '4 weeks',
-    // image: 'assets/img/dabubble.png',
-    // github: 'https://github.com/yourname/dabubble',
-    // live: 'https://dabubble.com'
-  }
 ];
