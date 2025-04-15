@@ -44,12 +44,15 @@ footer a:nth-child(1):hover::after {
     clip-path: inset(0 0 0 0);
 }
 
-.name {
+.name-logo {
     display: flex;
     flex-direction: column;
     color: white;
     padding-left: 120px;
-
+    width: fit-content;
+    a{
+        width: fit-content;
+    }
 }
 
 .empty-place {

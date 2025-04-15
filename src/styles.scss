@@ -162,6 +162,12 @@ h3 {
   height: 70px;
   width: 80px;
   margin-left: -20px;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+  &:hover{
+    // fill: black; /* Standardfarbe */
+    filter: brightness(0) saturate(100%) invert(76%) sepia(91%) saturate(1193%) hue-rotate(12deg) brightness(101%) contrast(101%);
+}
 }
 
 @keyframes buttonHoverScale {

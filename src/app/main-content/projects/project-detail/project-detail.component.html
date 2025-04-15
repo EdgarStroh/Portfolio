@@ -3,10 +3,11 @@
     <div class=" max-width-1440">
       <app-header></app-header>
 
-      <div class="arrow-back-container">
+      <div class="arrow-back-container" [routerLink]="['/']">
         <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back.png">
         <span>Go Back</span>
       </div>
+      
 
       <div class="project-detail-view">
 
@@ -47,11 +48,15 @@
             <button>Live Test</button>
           </div>
 
+          <div class="arrow-back-yellow-container" (click)="goToNextProject()" [class.disabled]="!nextSlug">
+            <span>Next Project</span>
+            <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back-yellow.png">
+          </div>
+
         </div>
 
 
       </div>
-      <!-- <button>Next Project →</button> -->
     </div>
   </div>
 </div>

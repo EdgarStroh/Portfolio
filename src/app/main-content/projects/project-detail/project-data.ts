@@ -4,7 +4,7 @@ export const PROJECTS = [
     slug: 'join',
     description: 'Task manager inspired by the Kanban system. Create and organize tasks using drag-and-drop functionality, assign users and categories.',
     details: 'Developed with JavaScript, the app features a modular architecture, dynamic task management, and intuitive drag-and-drop interactions. Users can create, edit, and assign tasks to categories and team members, enhancing workflow efficiency.',
-    duration: '5 weeks',
+    duration: '6 weeks',
     languages: ['HTML', 'CSS', 'JavaScript', ],
     lang_img: [
       '/assets/img/skills/icons/html.png',

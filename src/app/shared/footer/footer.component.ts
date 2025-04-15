@@ -8,27 +8,17 @@ import { CommonModule } from '@angular/common';
 })
 export class FooterComponent {
   hasHovered: boolean[] = [false, false, false]; 
+  isReversing: boolean[] = [false, false, false]; 
 
   onMouseEnter(index: number) {
     this.hasHovered[index] = true;
+    this.isReversing[index] = false;  
   }
 
   onMouseLeave(index: number) {
-    this.hasHovered[index] = false;
+    if (this.hasHovered[index]) {
+      this.isReversing[index] = true;  
+      this.hasHovered[index] = false;  
+    }
   }
-
-
-  // hasHovered = false;
-  // isReversing = false;
-
-  // onMouseEnter() {
-  //   this.hasHovered = true;
-  //   this.isReversing = false;
-  // }
-
-  // onMouseLeave() {
-  //   if (this.hasHovered) {
-  //     this.isReversing = true;
-  //   }
-  // }
 }

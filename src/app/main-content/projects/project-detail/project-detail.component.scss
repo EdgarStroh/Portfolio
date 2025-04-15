@@ -17,10 +17,15 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    cursor: pointer;
 
     span {
         font-weight: 700;
         font-size: 18px;
+
+        &:hover {
+            color: #F87A55;
+        }
     }
 }
 
@@ -133,23 +138,44 @@
     height: 120px;
     width: 120px;
     position: absolute;
-    right: -9%;
-    top: 31%;
+    right: -71px;
+    top: 130px;
 }
 
 .button-container {
     padding-top: 21px;
     display: flex;
-    gap: 21px;
+    gap: 35px;
     justify-content: right;
 }
 
-button{
+button {
     box-shadow: 2px 4px 0px 0px white;
+
     &:hover {
         background-color: #F87A55;
         box-shadow: none;
         transform: translate(2px, 4px);
         transition: background-color 0.12s ease-in, box-shadow 0.12s ease-in;
-      }
+    }
+}
+
+.arrow-back-yellow-container {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: right;
+    margin-right: -50px;
+    cursor: pointer;
+
+    span {
+        font-weight: 700;
+        font-size: 18px;
+        color: white;
+
+        &:hover {
+            color: #F7C518;
+        }
+    }
 }

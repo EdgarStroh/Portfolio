@@ -70,36 +70,37 @@ span {
 }
 
 .sticker-container {
+
     position: relative;
     display: inline-block;
-  }
-  
-  .orange-sticker {
+}
+
+.orange-sticker {
     display: block;
     width: 168px;
     height: 168px;
-  }
-  
-  .text-curve {
+}
+
+.text-curve {
     position: absolute;
     top: -1.5px;
     left: 1.5px;
     width: 168px;
     height: 168px;
-  }
-  
-  .curved-text {
-    fill: #130e12;
-    font-weight: 700;
-  }
+}
 
-  .se-logo-sticker {
+.curved-text {
+    fill: #2F1200;
+    font-weight: 700;
+}
+
+.se-logo-sticker {
+    filter: brightness(0) saturate(40%) invert(50%) sepia(67%) saturate(6327%) hue-rotate(11deg) brightness(20%) contrast(100%);
     position: absolute;
-    top: 50%;
-    left: 18.9%;
-    width: 54px; /* oder was auch immer gut aussieht */
-    height: 56px;
-    transform: translate(-50%, -50%);
-    pointer-events: none; /* Damit es klick-durchlässig bleibt, falls nötig */
-  }
-  
+    top: 50.2%;
+    left: 15.4%;
+    width: 94px;
+    height: 96px;
+    transform: translate(-50%, -50%) rotate(1deg);
+    pointer-events: none;
+}
