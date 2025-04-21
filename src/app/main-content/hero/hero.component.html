@@ -6,10 +6,11 @@
 
                 <div class="wave-hand-animation" [ngClass]="{ 'hovered': hasHovered, 'reverse': isReversing }">
                     <img class="wave-hand" src="/assets/img/hero/waving-hand.png">
-                    <button class="helloworld-btn" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                    <button class="helloworld-btn" [ngClass]="{ 'auto-hover': isMobile }" (mouseenter)="onMouseEnter()"
+                        (mouseleave)="onMouseLeave()">
                     </button>
                 </div>
-                
+
                 <span class="title-font-frontend title">
                     <span class="letter">F</span>
                     <span class="letter">r</span>
@@ -31,9 +32,10 @@
                     <span class="letter dev">E</span>
                     <span class="letter dev">R</span>
                 </span>
-                <button class="button-gt">Get in Touch</button>
+                <button class="button-gt"><a href="#contact">Get in Touch</a></button>
+
             </div>
-            
+
             <img class="pic-frame" src="/assets/img/hero/img-frame.png">
         </div>
         <div class="contact-icons">

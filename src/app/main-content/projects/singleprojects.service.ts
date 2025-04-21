@@ -17,7 +17,7 @@ export class SingledataService {
     {
       img: "assets/img/projects/pokedex.png",
       name: "Pokedex",
-      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      description: 'An interactive Pokédex web app to browse and view Pokémon stats, evolutions, and abilities using real-time data from a public API.',
     },
     {
       img: "assets/img/projects/elpolloloco.png",

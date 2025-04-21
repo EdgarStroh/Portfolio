@@ -8,7 +8,7 @@
 
 .title-foto {
   justify-content: center;
-  padding: 180px 50px 0 50px;
+  padding: 170px 50px 0 50px;
   display: flex;
   gap: 100px;
 }
@@ -23,27 +23,27 @@
 
 .title-font-frontend {
   padding-top: 25px;
-  font-weight: 700;
-  font-size: 128px;
-  line-height: 100%;
-  color: white;
+  // font-weight: 700;
+  // font-size: 28px;
+  // line-height: 100%;
+  // color: white;
 }
 
 .title-font-dev {
   padding-top: 20px;
-  font-weight: 700;
-  font-size: 128px;
-  line-height: 100%;
-  color: white;
+  // font-weight: 700;
+  // font-size: 128px;
+  // line-height: 100%;
+  // color: white;
   margin-left: auto;
-  width: fit-content;
+  // width: fit-content;
 }
 
 .title {
   display: flex;
   gap: 5px;
-  width: fit-content;
-  color: white;
+  // width: fit-content;
+  // color: white;
   cursor: default;
   display: inline-block;
 }
@@ -166,16 +166,18 @@
   }
 }
 
+a {
+  color: white;
+}
+
 .contact-icons {
   display: flex;
   flex-direction: column;
-  width: 40px;
+  padding-left: 72px;
   gap: 8px;
   cursor: pointer;
-  position: absolute;
-  left: 100px;
-  bottom: 130px;
 
+  // position: absolute;
   >img {
     padding: 2px;
     height: 40px;
@@ -185,6 +187,7 @@
 
     &:hover {
       background-color: #3355FF;
+      transition: ease-in-out 125ms;
     }
   }
 
@@ -206,6 +209,7 @@
   min-width: 140px;
   text-align: center;
   white-space: nowrap;
+  cursor: default;
 
   &::after {
     content: "Hello world";
@@ -213,14 +217,15 @@
     transition: opacity 0.3s ease, transform 0.12s;
   }
 
-  &:hover {
+  &:hover,
+  &.auto-hover {
     background-color: #3355FF;
     animation: buttonHoverScale 0.6s ease-in-out;
     min-width: 180px;
-
   }
 
-  &:hover::after {
+  &:hover::after,
+  &.auto-hover::after {
     content: "I'm Edgar Stroh";
     display: inline-block;
     transition: opacity 0.3s ease, transform 0.12s;
@@ -228,7 +233,9 @@
 }
 
 
+
 .wave-hand-animation {
+
   width: fit-content;
 }
 
@@ -239,4 +246,92 @@
 
 .wave-hand-animation.reverse .wave-hand {
   animation: animationIconHoverReverse 0.25s ease-out forwards;
+}
+
+@media (max-width: 1015px) {
+
+  .contact-icons {
+    padding-left: 20px;
+  }
+
+  .title-foto {
+    padding: 0px 15px 0 15px;
+  }
+}
+
+@media (max-width: 970px) {
+  .pic-frame {
+    margin-left: -320px;
+  }
+
+}
+
+@media (max-width: 855px) {
+  .helloworld-btn {
+    margin-left: 3px;
+  }
+
+  .pic-frame {
+    position: absolute;
+    bottom: 75px;
+    margin-left: 0px;
+  }
+
+  .contact-icons {
+    position: absolute;
+    bottom: 85px;
+  }
+
+  .button-title {
+    min-width: 0px;
+    width: 100%;
+  }
+
+  .letter {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .letter {
+    font-size: 80px;
+  }
+
+  .button-gt {
+    margin-right: 4px;
+  }
+
+  .contact-icons {
+    display: none;
+  }
+  .se-logo {
+    height: 60px;
+    width: 70px;
+  }
+}
+
+@media (max-width: 500px) {
+  .letter {
+    font-size: 51px;
+  }
+}
+
+@media (max-height: 730px) {
+  .pic-frame {
+    height: 200px;
+    width: 160px;
+    bottom: 40px;
+  }
+
+  .button-gt {
+    margin-top: 10px;
+  }
+
+  .title-font-frontend {
+    padding-top: 10px;
+  }
+
+  .title-font-dev {
+    padding-top: 10px;
+  }
 }

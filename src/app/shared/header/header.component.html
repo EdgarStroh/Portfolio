@@ -2,17 +2,43 @@
   <nav>
     <ul>
       <img class="se-logo" src="/assets/img/header/se-logo.png">
-      <li><a href="#aboutme" class="dark-font">About me</a></li>
-      <li><a href="#skills" class="dark-font">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      
+      <li><a href="#aboutme" class="nav-link aboutme dark-font hide">About me</a></li>
+      <li><a href="#skills" class="nav-link skills dark-font hide">Skills</a></li>
+      <li><a href="#projects" class="nav-link projects hide">Projects</a></li>
+      <li><a href="#contact" class="nav-link contact hide">Contact</a></li>
+
       <div class="switch-container" (click)="toggleLanguage()">
         <span [class.active]="isEnglish" [class.inactive]="!isEnglish">EN</span>
         <div class="switch" [class.left]="isEnglish" [class.right]="!isEnglish"></div>
         <span [class.active]="!isEnglish" [class.inactive]="isEnglish">DE</span>
       </div>
+
+      <button class="burger-menu" (click)="toggleMenu()">
+        <img class="burger-menu-img" [src]="burgerIcon" >
+      </button>
+
+      <div class="mobile-nav" [class.show]="isMenuOpen">
+        <ul class="nav-links">
+          <li><a href="#aboutme" class="nav-link aboutme dark-font">About me</a></li>
+          <li><a href="#skills" class="nav-link skills dark-font">Skills</a></li>
+          <li><a href="#projects" class="nav-link projects">Projects</a></li>
+          <li><a href="#contact" class="nav-link contact">Contact</a></li>
+        </ul>
+
+        <div class="mobile-switch-container" (click)="toggleLanguage()">
+          <span [class.active]="isEnglish" [class.inactive]="!isEnglish">EN</span>
+          <div class="switch" [class.left]="isEnglish" [class.right]="!isEnglish"></div>
+          <span [class.active]="!isEnglish" [class.inactive]="isEnglish">DE</span>
+        </div>
       
+        <div class="contact-icons">
+          <img src="/assets/img/hero/icons/linkedin.png" alt="LinkedIn">
+          <img src="/assets/img/hero/icons/Github.png" alt="GitHub">
+          <img src="/assets/img/hero/icons/mail.png" alt="Email">
+        </div>
+
+     
+
+      </div>
     </ul>
   </nav>
-</header>

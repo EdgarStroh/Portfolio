@@ -31,7 +31,7 @@ export const PROJECTS = [
       '/assets/img/skills/icons/rest-api.png',
     ],
     image: '/assets/img/projects/project-detail/pokedex.png',
-    sticker: '/assets/img/skills/featured-logo.png',
+    sticker: '/assets/img/projects/project-detail/es-sticker.png',
     // github: 'https://github.com/yourname/dabubble',
     // live: 'https://dabubble.com'
   },
@@ -48,7 +48,7 @@ export const PROJECTS = [
       '/assets/img/skills/icons/js.png',
     ],
     image: '/assets/img/projects/project-detail/el-pollo-loco.png',
-    sticker: '/assets/img/skills/featured-logo.png',
+    sticker: '/assets/img/projects/project-detail/es-sticker.png',
     // github: 'https://github.com/yourname/el-pollo-loco',
     // live: 'https://pollo-loco.com'
   },
