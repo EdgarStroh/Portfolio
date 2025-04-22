@@ -158,16 +158,50 @@ h3 {
   }
 }
 
+@keyframes revealAnimation {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  50% {
+    clip-path: inset(0 0 0 0);
+  }
+
+  70% {
+    clip-path: inset(0 0 0 0);
+  }
+
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
 .se-logo {
   height: 70px;
   width: 80px;
   margin-left: -18px;
   transition: all 200ms ease-in;
   cursor: pointer;
-  &:hover{
+
+  &:hover {
     // fill: black; /* Standardfarbe */
     filter: brightness(0) saturate(100%) invert(76%) sepia(91%) saturate(1193%) hue-rotate(12deg) brightness(101%) contrast(101%);
+  }
 }
+
+.f-s18 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.f-s20 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
 }
 
 @keyframes buttonHoverScale {
@@ -236,3 +270,17 @@ h3 {
   z-index: 5;
 }
 
+@media (max-width: 600px) {
+  h2 {
+    font-weight: 700;
+    font-size: 48px;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .f-s20 {
+    font-size: 18px;
+  }
+}

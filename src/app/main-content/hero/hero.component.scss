@@ -175,22 +175,20 @@ a {
   flex-direction: column;
   padding-left: 72px;
   gap: 8px;
-  cursor: pointer;
 
-  // position: absolute;
+  width: fit-content;
   >img {
     padding: 2px;
     height: 40px;
     width: 40px;
     border: 1px solid white;
     border-radius: 100px;
-
+    cursor: pointer;
     &:hover {
       background-color: #3355FF;
       transition: ease-in-out 125ms;
     }
   }
-
 }
 
 .wave-hand {
