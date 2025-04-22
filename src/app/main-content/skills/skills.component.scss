@@ -6,6 +6,7 @@ section {
     background-repeat: no-repeat;
     min-height: 90vh;
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+    // align-content: center;
 }
 
 .padding-container {
@@ -38,16 +39,17 @@ section {
 }
 
 .circle-animation {
-    animation: fadeInOut 3s ease-in-out infinite;
+    animation: fadeInOut 4s ease-in-out infinite;
 }
 
 
 
 .text-paper {
-    width: 656px;
-    height: 144px;
+    width: 100%;
+    max-width: 656px;
+    min-height: 144px;
     gap: 10px;
-    padding: 32px;
+    // padding: 2px;
 }
 
 h3 {
@@ -97,20 +99,20 @@ h2 {
 .text {
     position: relative;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
-    width: fit-content;
+    // width: fit-content;
 }
 
-.text-paper {
-    width: 656px;
-    height: 184px;
-    padding: 32px;
-    gap: 10px;
-}
+// .text-paper {
+//     width: 656px;
+//     height: 184px;
+//     padding: 32px;
+//     gap: 10px;
+// }
 
 .text span {
-    padding: 66px;
+    padding: 20px 18px;
     gap: 10px;
     position: absolute;
     font-weight: 400;
@@ -160,6 +162,7 @@ h2 {
     right: 0;
     /* Sticker ganz nach rechts */
     cursor: pointer;
+    // display: none;
 }
 
 .sticker img {
@@ -206,4 +209,111 @@ h2 {
 
 .sticker img[src*="sticker-open"]+.sticker-text {
     opacity: 1; // Wird sichtbar, wenn `sticker-open.png` aktiv ist
+}
+
+
+
+@media (max-width: 1439px) {
+    .padding-container {
+        padding-top: 140px;
+        padding-right: 44px;
+        padding-bottom: 100px;
+        padding-left: 44px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sticker {
+        right: unset;
+        bottom: -235px;
+    }
+
+    section {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .title-text {
+        flex-direction: column;
+    }
+
+    section {
+        height: 1000px;
+    }
+
+    .padding-container {
+        padding-top: 88px;
+        padding-bottom: 88px;
+    }
+
+    .title {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 730px) {
+    section {
+        height: 1100px;
+    }
+    .skills-icon-container {
+        justify-content: center;
+    }
+    .sticker {
+        right: unset;
+        bottom: -350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .skill-text {
+        padding-left: 44px;
+        padding-top: 22px;
+    }
+
+    .skills-icon {
+        height: 56px;
+        width: 56px;
+    }
+
+    section {
+        height: 1100px;
+    }
+
+    .sticker {
+        bottom: -300px;
+    }
+
+    .skills-icon-container {
+        gap: 16px;
+    }
+
+    .padding-container {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .text-paper {
+        min-height: 196px;
+    }
+
+    .title-text {
+        gap: 16px;
+    }
+
+    section {
+        height: 1100px;
+    }
+}
+
+@media (max-width: 351px) {
+    .sticker {
+        bottom: -530px;
+    }
+
+    section {
+        height: 1350px;
+    }
 }
