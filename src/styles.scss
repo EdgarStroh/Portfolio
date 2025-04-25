@@ -123,6 +123,7 @@ h3 {
     pointer-events: auto;
   }
 
+
   .project-details-btn {
     position: absolute;
     bottom: 40px;
@@ -143,6 +144,30 @@ h3 {
   }
 }
 
+.mobile-btn {
+  display: none;
+  margin-bottom: 12px;
+  margin-top: 8px;
+  width: fit-content;
+  border: 2px solid black !important;
+  height: 40px;
+  color: black;
+  padding: 10px 24px 10px 24px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 100px;
+  box-shadow: 2px 4px 0px 0px black;
+  margin-left: auto;
+
+  &:hover {
+    background-color: #F87A55;
+    color: white;
+    box-shadow: none;
+    transform: translate(2px, 4px);
+  }
+}
 
 .project-img-laptop {
   animation: floatUpDown 2s ease-in-out infinite alternate;
@@ -262,25 +287,79 @@ h3 {
 }
 
 .project-logo {
-  width: 168px;
+  max-width: 168px;
+  width: 100%;
   position: absolute;
   bottom: 0;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
   left: 0;
   z-index: 5;
 }
 
 @media (max-width: 600px) {
+  .hover-btn {
+    display: none !important; // verstecke Button 1 auf kleineren Geräten
+  }
+
+  .mobile-btn {
+    display: inline-block !important; // zeige Button 2 nur auf kleinen Geräten
+  }
+
   h2 {
     font-weight: 700;
-    font-size: 48px!important;
+    font-size: 48px !important;
   }
 
   h3 {
-    font-weight: 500!important;
-    font-size: 18px!important;
+    font-weight: 500 !important;
+    font-size: 18px !important;
   }
+
   .f-s20 {
     font-size: 18px;
+  }
+
+  .project-img-wrapper {
+    max-height: 337px;
+    max-width: 560px;
+    height: 100%;
+    width: 100%;
+
+    .project-img {
+      // height: 337px;
+      // width: 560px;
+      max-height: 337px;
+      max-width: 560px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .project-container {
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+    width: 100%;
+    max-height: 515px;
+    height: 100%;
+    margin-bottom: 28px;
+
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .project-logo {
+    width: 120px;
+  }
+
+  .project-text-title {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 450px) {
+  .project-logo {
+    width: 100px;
   }
 }

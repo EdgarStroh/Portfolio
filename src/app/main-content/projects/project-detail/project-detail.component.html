@@ -7,7 +7,7 @@
         <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back.png">
         <span>Go Back</span>
       </div>
-      
+
 
       <div class="project-detail-view">
 
@@ -42,17 +42,28 @@
         <div class="project-detail-view-rs">
           <div class="project-image-wrapper">
             <img class="project-img-image" src="{{project.image}}">
+            <img class="project-img-sticker" src="{{project.sticker}}">
           </div>
-          <img class="project-img-sticker" src="{{project.sticker}}">
+
 
           <div class="button-container">
             <button>GitHub</button>
             <button>Live Test</button>
           </div>
 
+
+
           <div class="arrow-back-yellow-container" (click)="goToNextProject()" [class.disabled]="!nextSlug">
-            <span>Next Project</span>
-            <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back-yellow.png">
+
+            <div class="arrow-back-container-mobile" [routerLink]="['/']">
+              <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back.png">
+              <span>Go Back</span>
+            </div>
+
+            <div class="next-proj-container">
+              <span>Next Project</span>
+              <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back-yellow.png">
+            </div>
           </div>
 
         </div>

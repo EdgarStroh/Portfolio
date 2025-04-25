@@ -5,6 +5,7 @@
     background-position: center;
     background-color: #1D1D1D;
     height: 100vh;
+
 }
 
 .lin-grad {
@@ -17,11 +18,13 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    cursor: pointer;
+    pointer-events: none;
 
     span {
         font-weight: 700;
         font-size: 18px;
+        pointer-events: auto;
+        cursor: pointer;
 
         &:hover {
             color: #F87A55;
@@ -32,6 +35,8 @@
 .arrow-back {
     height: 24px;
     width: 24px;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .project-detail-view {
@@ -46,10 +51,15 @@
 
 }
 
+.project-detail-view-ls {
+    max-width: 600px;
+    width: 100%;
+}
+
 .project-detail-headline {
-    padding-bottom: 16px;
+    // padding-bottom: 16px;
     font-weight: 800;
-    font-size: 26px;
+    font-size: 24px;
 }
 
 .headline-container {
@@ -68,6 +78,7 @@
 
     span {
         padding-bottom: 25px;
+        width: 100%;
     }
 }
 
@@ -132,13 +143,17 @@
     height: 375px;
     width: 560px;
     border-radius: 20px;
+    //   padding: 8px;
+    // border-radius: 12px;
+    border: 1px solid rgba(200, 200, 255, 0.4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
 }
 
 .project-img-sticker {
     height: 120px;
     width: 120px;
     position: absolute;
-    right: -71px;
+    right: -45px;
     top: 130px;
 }
 
@@ -160,19 +175,33 @@ button {
     }
 }
 
+.arrow-back-container-mobile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.next-proj-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .arrow-back-yellow-container {
     margin-top: 40px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    // gap: 8px;
     justify-content: right;
-    margin-right: -50px;
-    cursor: pointer;
+    margin-right: -43px;
+    pointer-events: none;
 
     span {
         font-weight: 700;
         font-size: 18px;
         color: white;
+        pointer-events: auto;
+        cursor: pointer;
 
         &:hover {
             color: #F7C518;
@@ -181,9 +210,114 @@ button {
 }
 
 .project-image-wrapper {
-    padding: 8px;
-    border-radius: 12px;
-    border: 1px solid rgba(200, 200, 255, 0.4);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+    position: relative;
 }
 
+@media (max-width: 1370px) {
+    .project-detail-view {
+        padding: 55px 64px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .project-detail-view {
+        flex-direction: column;
+    }
+
+    .project-detail-bg {
+        background-image: url("/assets/img/projects/project-detail/project-detail-bg.png");
+        background-position: top;
+        height: fit-content;
+        // background-size: 270%; /* Bild wird noch größer */
+    }
+
+    .project-detail-view-ls {
+        max-width: unset;
+    }
+
+    .project-detail-view-rs {
+        margin-top: 40px;
+        align-items: center;
+    }
+
+    .proj-detail-text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        span {
+            // padding-bottom: 25px;
+            width: 100%;
+        }
+    }
+
+    .arrow-back-yellow-container {
+        margin-right: unset;
+        margin-left: auto;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .arrow-back-container {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .project-img-sticker {
+        right: 0;
+        top: 0;
+    }
+
+    .project-img-image {
+        max-width: 560px;
+        width: 100%;
+        max-height: 375px;
+        height: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-detail-view {
+        padding: 14px 14px;
+    }
+    .project-detail-headline {
+        font-size: 20px;
+        padding-bottom: 12px!important;
+    }
+}
+
+@media (max-width: 500px) {
+    .project-img-sticker {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+
+@media (max-width: 770px) {
+    .project-detail-bg {
+        background-size: 120%; 
+    }
+}
+@media (max-width: 670px) {
+    .project-detail-bg {
+        background-size: 140%; 
+    }
+}
+@media (max-width: 510px) {
+    .project-detail-bg {
+        background-size: 170%; 
+    }
+}
+@media (max-width: 440px) {
+    .project-detail-bg {
+        background-size: 240%; 
+    }
+}
+@media (max-width: 340px) {
+    .project-detail-bg {
+        background-size: 270%; 
+    }
+}

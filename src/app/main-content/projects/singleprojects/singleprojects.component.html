@@ -1,7 +1,7 @@
 <div class="project-container" *ngFor="let project of projectlist; let i = index">
   <div class="project-img-wrapper">
 
-    <button class="project-details-btn" (click)="goToProject(project.name)">
+    <button class="project-details-btn hover-btn" (click)="goToProject(project.name)">
       Project details
     </button>
 
@@ -18,4 +18,8 @@
     <span>{{ project.name }}</span>
     <p>{{ project.description }}</p>
   </div>
+  
+  <button class="project-details-btn mobile-btn" (click)="goToProject(project.name)">
+    Project details
+  </button>
 </div>
