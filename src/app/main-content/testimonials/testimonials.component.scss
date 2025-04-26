@@ -4,6 +4,10 @@ section {
     gap: 48px;
 }
 
+h2 {
+    text-align: right;
+}
+
 .arrow-container {
     display: flex;
     gap: 12px;
@@ -21,12 +25,15 @@ section {
     0% {
         clip-path: inset(0 100% 0 0);
     }
+
     20% {
         clip-path: inset(0 0 0 0);
     }
+
     80% {
         clip-path: inset(0 0 0 0);
     }
+
     100% {
         clip-path: inset(0 100% 0 0);
     }
@@ -130,6 +137,69 @@ section {
         &:nth-child(3) {
             transform: rotate(4deg);
             z-index: 1;
+        }
+    }
+}
+
+@media (max-width: 1370px) {
+    section {
+        padding: 77px 44px;
+        height: fit-content;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .testimonials {
+        flex-direction: column;
+        zoom: 92%;
+
+        .testi-paper {
+            &:nth-child(2) {
+                margin-top: unset;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 0px 44px;
+        padding-bottom: 44px;
+    }
+}
+
+@media (max-width: 640px) {
+    section {
+        padding: 77px 16px;
+    }
+
+    .testimonials {
+        zoom: 90%;
+    }
+
+    .testi-paper img {
+        transform: rotate(90deg);
+        height: 300px;
+        width: 340px;
+    }
+
+    .testi-text {
+        width: 250px !important;
+        top: -20px !important;
+    }
+
+    .testi-job-name {
+        width: 250px !important;
+    }
+
+    .testimonials {
+        .testi-paper::after {
+            transform: rotate(90deg);
+            transform-origin: center center;
+            height: 300px;
+            width: 340px;
         }
     }
 }

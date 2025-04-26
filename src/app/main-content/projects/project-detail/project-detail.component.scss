@@ -88,7 +88,7 @@
     top: 100%;
     width: 100%;
     height: auto;
-    min-height: 20px;
+    min-height: 15px;
     animation: revealArrow 3s ease-out infinite;
     // margin-bottom: 20px;
 }
@@ -179,6 +179,7 @@ button {
     display: flex;
     align-items: center;
     gap: 8px;
+    display: none;
 }
 
 .next-proj-container {
@@ -229,7 +230,6 @@ button {
         background-image: url("/assets/img/projects/project-detail/project-detail-bg.png");
         background-position: top;
         height: fit-content;
-        // background-size: 270%; /* Bild wird noch größer */
     }
 
     .project-detail-view-ls {
@@ -247,7 +247,6 @@ button {
         width: 100%;
 
         span {
-            // padding-bottom: 25px;
             width: 100%;
         }
     }
@@ -261,6 +260,9 @@ button {
 
     .arrow-back-container {
         display: none;
+    }
+    .arrow-back-container-mobile {
+        display: flex;
     }
 }
 
@@ -294,6 +296,7 @@ button {
         width: 80px;
     }
 }
+
 
 
 @media (max-width: 770px) {

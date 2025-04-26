@@ -296,6 +296,13 @@ h3 {
   z-index: 5;
 }
 
+@media (max-width: 1200px) {
+  .project-container {
+    gap: 20px;
+    height: 500px;
+  }
+}
+
 @media (max-width: 600px) {
   .hover-btn {
     display: none !important; // verstecke Button 1 auf kleineren Geräten
