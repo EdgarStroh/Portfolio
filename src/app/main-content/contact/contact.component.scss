@@ -12,6 +12,8 @@ section {
 .padding-container {
     // padding: 144px 120px;
     padding: 184px 120px 144px 120px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .contact-text-container {
@@ -103,4 +105,9 @@ span {
     height: 96px;
     transform: translate(-50%, -50%) rotate(1deg);
     pointer-events: none;
+}
+
+.contact-form-container {
+    max-width: 480px;
+    width: 100%;
 }

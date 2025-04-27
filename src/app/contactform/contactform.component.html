@@ -1,0 +1,32 @@
+<div class="container">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+
+        <div class="form-style">
+            <label for="name" class="f-s24">What's your name?</label>
+            <input #name="ngModel" class="f-s18" [(ngModel)]="contactData.name" type="text" id="name" name="name"
+                [placeholder]="name.invalid && name.touched ? 'Oops! it seems your name is missing' : 'Your name goes here'"
+                required>
+        </div>
+
+        <div class="form-style">
+            <label for="email" class="f-s24">What's your e-mail?</label>
+            <input class="f-s18" #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email"
+                [placeholder]="email.invalid && email.touched ? 'Hoppla! your email is required' : 'youremail@email.com'"
+                required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+        </div>
+
+        <div class="form-style">
+            <label for="subject" class="f-s24">How can I help you?</label>
+            <textarea class="f-s18" rows="1" #message="ngModel" minlength="4" [(ngModel)]="contactData.message"
+                id="subject" name="subject"
+                [placeholder]="message.invalid && message.touched ? 'What do you need to develop?' : 'Hello Edgar, I am interested in...'"
+                required></textarea>
+            <!-- @if (!message.valid && message.touched){
+            <span>Please enter a message</span>
+        } -->
+        </div>
+
+        <!-- <input type="submit" value="Submit"> -->
+
+    </form>
+</div>
