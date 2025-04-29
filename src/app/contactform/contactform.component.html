@@ -26,7 +26,30 @@
         } -->
         </div>
 
-        <!-- <input type="submit" value="Submit"> -->
+        <div class="submit-container">
+            <div class="checkbox-error-container">
+                <div class="checkbox-text-container">
+                    <div class="checkbox-container">
+                        <input type="checkbox" class="checkbox" id="privacyCheckbox" name="privacy"
+                            [(ngModel)]="contactData.privacyAccepted" #privacy="ngModel" required>
+                    </div>
+                    <span>
+                        I've read the
+                        <a href="">privacy policy</a>
+                        and agree to the processing of my data as outlined.
+                    </span>
+                </div>
+
+                <!-- Fehleranzeige, wenn nicht akzeptiert -->
+                <div class="error-container">
+                    <div class="error" *ngIf="!contactData.privacyAccepted && formSubmitted">
+                        Please accept the privacy policy.
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </div>
 
     </form>
 </div>

@@ -11,14 +11,15 @@ import { CommonModule } from '@angular/common';
 })
 export class ContactformComponent {
   mailTest = true;
-
+  formSubmitted = false;
   http = inject(HttpClient);
 
-    contactData = {
-      name: "",
-      email: "",
-      message: "",
-    }
+  contactData = {
+    name: "",
+    email: "",
+    message: "",
+    privacyAccepted: false
+  }
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -43,23 +44,47 @@ export class ContactformComponent {
   //   }
   // }
 
-  onSubmit(ngForm: any) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+  onSubmit(ngForm: any): void {
+    this.formSubmitted = true;
+
+    // Wenn das Formular übermittelt wurde und die Eingaben valide sind
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.contactData.privacyAccepted) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
-            ngForm.resetForm();
+            ngForm.resetForm(); // Formular zurücksetzen
+            console.log('Formular erfolgreich gesendet:', response);
           },
           error: (error) => {
-            console.error(error);
+            console.error('Fehler beim Senden des Formulars:', error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => console.info('Senden des Formulars abgeschlossen'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+    }
+    // Wenn das Formular übermittelt wurde, aber die Mail-Prüfung fehlschlägt
+    else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+      console.log('Mail-Test ist aktiv, Formular zurückgesetzt');
+    }
+    // Wenn die Datenschutzrichtlinie nicht akzeptiert wurde
+    else if (!this.contactData.privacyAccepted) {
+      console.warn('Bitte akzeptiere die Datenschutzrichtlinie.');
     }
   }
+
+  // validateCheckbox(): void {
+  //   const checkbox = document.getElementById('privacyCheckbox') as HTMLInputElement | null;
+  //   const errorMessage = document.getElementById('error-message') as HTMLElement | null;
+
+  //   if (!checkbox || !errorMessage) return;
+
+  //   if (!checkbox.checked) {
+  //     errorMessage.classList.remove('hidden');
+  //   } else {
+  //     errorMessage.classList.add('hidden');
+  //     // Hier kannst du den Submit-Vorgang starten
+  //     console.log('Form can be submitted.');
+  //   }
+  // }
 
 }

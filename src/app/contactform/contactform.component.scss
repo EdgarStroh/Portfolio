@@ -23,7 +23,7 @@ input[type=submit]:hover {
 }
 
 .container {
-    padding-top: 128px;
+    padding-top: 148px;
     display: flex;
     gap: 40px;
     border-radius: 5px;
@@ -110,4 +110,97 @@ label {
 input.ng-invalid.ng-touched::placeholder,
 textarea.ng-invalid.ng-touched::placeholder {
     color: #FF3A00;
+}
+
+.submit-container {
+    display: flex;
+    // gap: 8px;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.checkbox-container {
+    width: 24px;
+    height: 24px;
+
+    &:hover {
+        background-color: #3355FF4D;
+        border-radius: 13px;
+    }
+
+    .checkbox {
+        margin-top: 3px;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 3px solid #3355FF;
+        /* Blaue Farbe */
+        border-radius: 3px;
+        /* Für abgerundete Ecken */
+        background-color: transparent;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .checkbox:checked::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-image: url('/assets/img/contact/icons/check.png');
+        background-size: cover;
+        background-position: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+a {
+    color: #3355FF;
+
+    &:hover {
+        color: #F7C518;
+    }
+}
+
+.privacy-error {
+    color: #F87A55;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.error-container {
+    height: 0px;
+    margin-left: 25px;
+}
+
+.error {
+    color: #F87A55;
+    font-size: 14px;
+}
+
+.checkbox-error-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkbox-text-container {
+    display: flex;
+    gap: 8px;
+}
+
+button {
+    box-shadow: 2px 4px 0px 0px white;
+    transition:
+        background-color 0.12s ease-in,
+        box-shadow 0.12s ease-in,
+        transform 0.12s ease-in;
+        margin-left: auto;
+    &:hover {
+        background-color: #F87A55;
+        transform: translate(2px, 4px);
+        box-shadow: none;
+    }
 }

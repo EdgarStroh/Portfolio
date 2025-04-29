@@ -11,7 +11,7 @@ section {
 
 .padding-container {
     // padding: 144px 120px;
-    padding: 184px 120px 144px 120px;
+    padding: 184px 120px 80px 120px;
     display: flex;
     justify-content: space-between;
 }
@@ -96,18 +96,31 @@ span {
     font-weight: 700;
 }
 
+// .se-logo-sticker {
+//     filter: brightness(0) saturate(40%) invert(50%) sepia(67%) saturate(6327%) hue-rotate(11deg) brightness(20%) contrast(100%);
+//     position: absolute;
+//     top: 50.2%;
+//     left: 15.4%;
+//     width: 94px;
+//     height: 96px;
+//     transform: translate(-50%, -50%) rotate(1deg);
+//     pointer-events: none;
+// }
+
 .se-logo-sticker {
-    filter: brightness(0) saturate(40%) invert(50%) sepia(67%) saturate(6327%) hue-rotate(11deg) brightness(20%) contrast(100%);
     position: absolute;
-    top: 50.2%;
-    left: 15.4%;
-    width: 94px;
-    height: 96px;
-    transform: translate(-50%, -50%) rotate(1deg);
-    pointer-events: none;
+    width: 168px;
+    height: 168px;
+    top: 0;
+    right: 0;
+    margin-right: -4px;
+    z-index: 5;
+    rotate: 5deg;
 }
 
 .contact-form-container {
     max-width: 480px;
     width: 100%;
+    position: relative;
+  
 }
