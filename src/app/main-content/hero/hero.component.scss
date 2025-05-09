@@ -8,7 +8,7 @@
 
 .title-foto {
   justify-content: center;
-  padding: 170px 50px 0 50px;
+  // padding: 170px 50px 0 50px;
   display: flex;
   gap: 100px;
 }
@@ -156,9 +156,9 @@
   margin-left: auto;
   margin-top: 25px;
   box-shadow: 2px 4px 0px 0px #F8F9FA;
-  transition: 
-    background-color 0.12s ease-in, 
-    box-shadow 0.12s ease-in, 
+  transition:
+    background-color 0.12s ease-in,
+    box-shadow 0.12s ease-in,
     transform 0.12s ease-in;
 
   &:hover {
@@ -176,10 +176,10 @@ a {
 .contact-icons {
   display: flex;
   flex-direction: column;
-  padding-left: 72px;
+  // padding-left: 72px;
   gap: 8px;
-
   width: fit-content;
+
   >img {
     padding: 2px;
     height: 40px;
@@ -187,6 +187,7 @@ a {
     border: 1px solid white;
     border-radius: 100px;
     cursor: pointer;
+
     &:hover {
       background-color: #3355FF;
       transition: ease-in-out 125ms;
@@ -249,14 +250,20 @@ a {
   animation: animationIconHoverReverse 0.25s ease-out forwards;
 }
 
+@media (max-width: 1439px) {
+  section {
+    padding-top: 82px!important;
+  }
+}
+
 @media (max-width: 1015px) {
 
   .contact-icons {
-    padding-left: 20px;
+    // padding-left: 20px;
   }
 
   .title-foto {
-    padding: 0px 15px 0 15px;
+    // padding: 0px 15px 0 15px;
   }
 }
 
@@ -276,6 +283,9 @@ a {
     position: absolute;
     bottom: 75px;
     margin-left: 0px;
+  }
+  section{
+    padding-top: 35px!important;
   }
 
   .contact-icons {
@@ -305,6 +315,7 @@ a {
   .contact-icons {
     display: none;
   }
+
   .se-logo {
     height: 60px;
     width: 70px;

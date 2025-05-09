@@ -3,9 +3,11 @@
 
         <div class="form-style">
             <label for="name" class="f-s24">What's your name?</label>
-            <input #name="ngModel" class="f-s18" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                [placeholder]="name.invalid && name.touched ? 'Oops! it seems your name is missing' : 'Your name goes here'"
-                required>
+            <div class="abc" > 
+                <input #name="ngModel" class="f-s18" [(ngModel)]="contactData.name" type="text" id="name" name="name"
+                    [placeholder]="name.invalid && name.touched ? 'Oops! it seems your name is missing' : 'Your name goes here'"
+                    required>
+            </div>
         </div>
 
         <div class="form-style">
@@ -48,7 +50,11 @@
                 </div>
             </div>
 
-            <button type="submit">Submit</button>
+            <div class="arrow-submit-btn">
+                <img class="yellow-arrow" src="/assets/img/contact/yellow-arrow.png">
+                <button type="submit">Submit</button>
+            </div>
+
         </div>
 
     </form>

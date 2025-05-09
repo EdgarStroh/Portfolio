@@ -1,47 +1,50 @@
 <div class="hero-bg">
     <div class="max-width-1440">
         <app-header></app-header>
-        <div class="title-foto">
-            <div class="button-title">
+        <section>
 
-                <div class="wave-hand-animation" [ngClass]="{ 'hovered': hasHovered, 'reverse': isReversing }">
-                    <img class="wave-hand" src="/assets/img/hero/waving-hand.png">
-                    <button class="helloworld-btn" [ngClass]="{ 'auto-hover': isMobile }" (mouseenter)="onMouseEnter()"
-                        (mouseleave)="onMouseLeave()">
-                    </button>
+            <div class="title-foto">
+                <div class="button-title">
+
+                    <div class="wave-hand-animation" [ngClass]="{ 'hovered': hasHovered, 'reverse': isReversing }">
+                        <img class="wave-hand" src="/assets/img/hero/waving-hand.png">
+                        <button class="helloworld-btn" [ngClass]="{ 'auto-hover': isMobile }"
+                            (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                        </button>
+                    </div>
+
+                    <span class="title-font-frontend title">
+                        <span class="letter">F</span>
+                        <span class="letter">r</span>
+                        <span class="letter">o</span>
+                        <span class="letter">n</span>
+                        <span class="letter">t</span>
+                        <span class="letter">e</span>
+                        <span class="letter">n</span>
+                        <span class="letter">d</span>
+                    </span>
+                    <span class="title-font-dev title">
+                        <span class="letter dev">D</span>
+                        <span class="letter dev">E</span>
+                        <span class="letter dev">V</span>
+                        <span class="letter dev">E</span>
+                        <span class="letter dev">L</span>
+                        <span class="letter dev">O</span>
+                        <span class="letter dev">P</span>
+                        <span class="letter dev">E</span>
+                        <span class="letter dev">R</span>
+                    </span>
+                    <button class="button-gt"><a href="#contact">Get in Touch</a></button>
+
                 </div>
 
-                <span class="title-font-frontend title">
-                    <span class="letter">F</span>
-                    <span class="letter">r</span>
-                    <span class="letter">o</span>
-                    <span class="letter">n</span>
-                    <span class="letter">t</span>
-                    <span class="letter">e</span>
-                    <span class="letter">n</span>
-                    <span class="letter">d</span>
-                </span>
-                <span class="title-font-dev title">
-                    <span class="letter dev">D</span>
-                    <span class="letter dev">E</span>
-                    <span class="letter dev">V</span>
-                    <span class="letter dev">E</span>
-                    <span class="letter dev">L</span>
-                    <span class="letter dev">O</span>
-                    <span class="letter dev">P</span>
-                    <span class="letter dev">E</span>
-                    <span class="letter dev">R</span>
-                </span>
-                <button class="button-gt"><a href="#contact">Get in Touch</a></button>
-
+                <img class="pic-frame" src="/assets/img/hero/img-frame.png">
             </div>
-
-            <img class="pic-frame" src="/assets/img/hero/img-frame.png">
-        </div>
-        <div class="contact-icons">
-            <img src="/assets/img/hero/icons/linkedin.png">
-            <img src="/assets/img/hero/icons/Github.png">
-            <img src="/assets/img/hero/icons/mail.png">
-        </div>
+            <div class="contact-icons">
+                <img src="/assets/img/hero/icons/linkedin.png">
+                <img src="/assets/img/hero/icons/Github.png">
+                <img src="/assets/img/hero/icons/mail.png">
+            </div>
+        </section>
     </div>
 </div>

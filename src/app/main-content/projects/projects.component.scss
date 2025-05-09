@@ -1,9 +1,9 @@
 section {
-    min-height: 90vh;
-    padding-top: 144px;
-    padding-right: 120px;
-    padding-left: 120px;
-    // padding-bottom: 80px;
+    // min-height: 90vh;
+    // padding-top: 144px;
+    // padding-right: 120px;
+    // padding-left: 120px;
+    padding-bottom: 0px;
     // padding: 144px 120px;
     // background-color: aqua;
 }
@@ -50,8 +50,8 @@ app-singleprojects {
 
 @media (max-width: 1370px) {
     section {
-        padding-right: 44px;
-        padding-left: 44px;
+        // padding-right: 44px;
+        // padding-left: 44px;
     }
 }
 
@@ -64,15 +64,16 @@ app-singleprojects {
 }
 @media (max-width: 800px){
     section{
-        padding-top: 88px;
-        padding-bottom: 88px;
+        // padding-top: 88px;
+        padding-bottom: 44px;
     }
 }
 
 @media (max-width: 640px) {
     section {
-        padding-right: 16px;
-        padding-left: 16px;
+        padding-top: unset !important;
+        // padding-right: 16px;
+        // padding-left: 16px;
     }
 }
 

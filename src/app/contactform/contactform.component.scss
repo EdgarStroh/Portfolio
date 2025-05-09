@@ -23,13 +23,14 @@ input[type=submit]:hover {
 }
 
 .container {
-    padding-top: 148px;
+    padding-top: 100px;
     display: flex;
     gap: 40px;
     border-radius: 5px;
     background-color: none;
     color: white;
     max-width: 480px;
+    // justify-content: right;
 }
 
 input::placeholder,
@@ -123,11 +124,6 @@ textarea.ng-invalid.ng-touched::placeholder {
     width: 24px;
     height: 24px;
 
-    &:hover {
-        background-color: #3355FF4D;
-        border-radius: 13px;
-    }
-
     .checkbox {
         margin-top: 3px;
         appearance: none;
@@ -140,6 +136,11 @@ textarea.ng-invalid.ng-touched::placeholder {
         background-color: transparent;
         cursor: pointer;
         position: relative;
+
+        &:hover {
+            background-color: #3355FF4D;
+            // border-radius: 10px;
+        }
     }
 
     .checkbox:checked::before {
@@ -191,16 +192,80 @@ a {
     gap: 8px;
 }
 
+.yellow-arrow {
+    max-width: 180px;
+    width: 100%;
+    max-height: 34px;
+    height: 100%;
+    margin-left: auto;
+    animation: revealArrow 3s ease-out infinite;
+    animation-delay: 100ms;
+    display: none;
+    margin-top: 9px;
+}
+
+@keyframes revealArrow {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    20% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    80% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 100% 0 0);
+    }
+}
+
 button {
     box-shadow: 2px 4px 0px 0px white;
     transition:
         background-color 0.12s ease-in,
         box-shadow 0.12s ease-in,
         transform 0.12s ease-in;
-        margin-left: auto;
+    margin-left: auto;
+
     &:hover {
         background-color: #F87A55;
         transform: translate(2px, 4px);
         box-shadow: none;
     }
 }
+
+.arrow-submit-btn {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    padding-top: 20px;
+
+}
+
+@media (max-width: 1200px) {
+    .yellow-arrow {
+        display: unset;
+    }
+}
+@media (max-width: 1130px) {
+
+    .container{
+        padding-top: unset;
+    }
+}
+
+.abc {
+    overflow-x: auto;            /* horizontales Scrollen erlauben */
+    overflow-y: hidden;          /* vertikal verhindern */
+    white-space: nowrap;         /* Text nicht umbrechen */
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE */
+  }
+  
+  input::-webkit-scrollbar {
+    display: none;               /* Chrome/Safari */
+  }
+  

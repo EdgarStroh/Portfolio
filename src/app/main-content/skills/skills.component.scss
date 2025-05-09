@@ -1,22 +1,22 @@
-section {
+.img-bg {
     position: relative;
     background-image: url("/assets/img/skills/skills-bg.webp");
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    min-height: 90vh;
+    min-height: 80vh;
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
     // align-content: center;
 }
 
-.padding-container {
-    padding: 144px 120px;
-}
+// .padding-container {
+//     padding: 144px 120px;
+// }
 
 
 .skill-text {
     position: absolute;
-    padding-left: 17px;
+    // padding-left: 17px;
     padding-top: 14px;
     top: 0;
 }
@@ -40,6 +40,7 @@ section {
 
 .circle-animation {
     animation: fadeInOut 4s ease-in-out infinite;
+
 }
 
 
@@ -87,8 +88,8 @@ h2 {
     // background-image: url("/assets/img/skills/orange-circle.png");
     width: 261px;
     height: 80px;
-    padding-left: 10px;
-    padding-top: 10px;
+    // padding-left: 10px;
+    padding-top: 5px;
 }
 
 .image-container {
@@ -112,7 +113,7 @@ h2 {
 // }
 
 .text span {
-    padding: 20px 18px;
+    padding: 20px 10px;
     gap: 10px;
     position: absolute;
     font-weight: 400;
@@ -159,7 +160,7 @@ h2 {
     height: 200px;
     transform: rotate(8deg);
     position: absolute;
-    right: 0;
+    right: 7px;
     /* Sticker ganz nach rechts */
     cursor: pointer;
     // display: none;
@@ -211,16 +212,22 @@ h2 {
     opacity: 1; // Wird sichtbar, wenn `sticker-open.png` aktiv ist
 }
 
-
-
-@media (max-width: 1370px) {
-    .padding-container {
-        padding-top: 140px;
-        padding-right: 44px;
-        padding-bottom: 100px;
-        padding-left: 44px;
+@media (max-width: 1439px) {
+    .img-bg {
+        align-content: center;
+        // padding-top: unset;
+        // padding-bottom: unset;
     }
 }
+
+// @media (max-width: 1370px) {
+//     .padding-container {
+//         padding-top: 140px;
+//         padding-right: 44px;
+//         padding-bottom: 100px;
+//         padding-left: 44px;
+//     }
+// }
 
 @media (max-width: 1200px) {
     .sticker {
@@ -243,8 +250,8 @@ h2 {
     }
 
     .padding-container {
-        padding-top: 88px;
-        padding-bottom: 88px;
+        // padding-top: 88px;
+        // padding-bottom: 88px;
     }
 
     .title {
@@ -256,9 +263,11 @@ h2 {
     section {
         height: 1100px;
     }
+
     .skills-icon-container {
         justify-content: center;
     }
+
     .sticker {
         right: unset;
         bottom: -350px;
@@ -289,8 +298,8 @@ h2 {
     }
 
     .padding-container {
-        padding-right: 16px;
-        padding-left: 16px;
+        // padding-right: 16px;
+        // padding-left: 16px;
     }
 }
 
