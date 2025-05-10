@@ -1,12 +1,11 @@
 <div class="container">
     <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-
         <div class="form-style">
             <label for="name" class="f-s24">What's your name?</label>
-            <div class="abc" > 
+            <div class="abc">
                 <input #name="ngModel" class="f-s18" [(ngModel)]="contactData.name" type="text" id="name" name="name"
                     [placeholder]="name.invalid && name.touched ? 'Oops! it seems your name is missing' : 'Your name goes here'"
-                    required>
+                    required (ngModelChange)="formValidFN()">
             </div>
         </div>
 
@@ -14,7 +13,7 @@
             <label for="email" class="f-s24">What's your e-mail?</label>
             <input class="f-s18" #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email"
                 [placeholder]="email.invalid && email.touched ? 'Hoppla! your email is required' : 'youremail@email.com'"
-                required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" (ngModelChange)="formValidFN()">
         </div>
 
         <div class="form-style">
@@ -22,11 +21,9 @@
             <textarea class="f-s18" rows="1" #message="ngModel" minlength="4" [(ngModel)]="contactData.message"
                 id="subject" name="subject"
                 [placeholder]="message.invalid && message.touched ? 'What do you need to develop?' : 'Hello Edgar, I am interested in...'"
-                required></textarea>
-            <!-- @if (!message.valid && message.touched){
-            <span>Please enter a message</span>
-        } -->
+                required (ngModelChange)="formValidFN()"></textarea>
         </div>
+
 
         <div class="submit-container">
             <div class="checkbox-error-container">
@@ -37,7 +34,7 @@
                     </div>
                     <span>
                         I've read the
-                        <a href="">privacy policy</a>
+                        <a routerLink="/privacy-policy">Privacy Policy</a>
                         and agree to the processing of my data as outlined.
                     </span>
                 </div>
@@ -52,7 +49,9 @@
 
             <div class="arrow-submit-btn">
                 <img class="yellow-arrow" src="/assets/img/contact/yellow-arrow.png">
-                <button type="submit">Submit</button>
+                <button type="submit" [disabled]="isSubmitDisabled(contactForm)">
+                    Submit
+                </button>
             </div>
 
         </div>

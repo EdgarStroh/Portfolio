@@ -1,11 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { setInterval } from 'timers/promises';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
@@ -13,6 +16,7 @@ export class ContactformComponent {
   mailTest = true;
   formSubmitted = false;
   http = inject(HttpClient);
+  formValid = false;
 
   contactData = {
     name: "",
@@ -66,9 +70,21 @@ export class ContactformComponent {
       ngForm.resetForm();
       console.log('Mail-Test ist aktiv, Formular zurückgesetzt');
     }
-    // Wenn die Datenschutzrichtlinie nicht akzeptiert wurde
     else if (!this.contactData.privacyAccepted) {
       console.warn('Bitte akzeptiere die Datenschutzrichtlinie.');
+    }
+  }
+
+  isSubmitDisabled(contactForm: NgForm): boolean {
+    const result = !this.formValid || !this.contactData.privacyAccepted;
+    return result;
+  }
+
+  formValidFN() {
+    if (this.contactData.name && this.contactData.email && this.contactData.message) {
+      this.formValid = true;
+    } else {
+      this.formValid = false;
     }
   }
 

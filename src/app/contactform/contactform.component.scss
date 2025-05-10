@@ -22,8 +22,27 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
+button[disabled] {
+    box-shadow: 2px 4px 0px 0px grey;
+    border-color: grey;
+    color: grey;
+    cursor: not-allowed;
+    opacity: 0.7;
+    animation: unset;
+
+    &:hover {
+        background-color: unset;
+        color: grey;
+        box-shadow: 2px 4px 0px 0px grey;
+        cursor: not-allowed;
+        animation: unset;
+        transform: none;
+    }
+}
+
+
 .container {
-    padding-top: 100px;
+    padding-top: 90px;
     display: flex;
     gap: 40px;
     border-radius: 5px;
@@ -201,7 +220,7 @@ a {
     animation: revealArrow 3s ease-out infinite;
     animation-delay: 100ms;
     display: none;
-    margin-top: 9px;
+    margin-top: 5px;
 }
 
 @keyframes revealArrow {
@@ -250,22 +269,34 @@ button {
         display: unset;
     }
 }
+
 @media (max-width: 1130px) {
 
-    .container{
+    .container {
         padding-top: unset;
     }
 }
 
+@media (max-width: 400px) {
+    .yellow-arrow {
+       width: 150px;
+    }
+}
+
 .abc {
-    overflow-x: auto;            /* horizontales Scrollen erlauben */
-    overflow-y: hidden;          /* vertikal verhindern */
-    white-space: nowrap;         /* Text nicht umbrechen */
-    scrollbar-width: none;       /* Firefox */
-    -ms-overflow-style: none;    /* IE */
-  }
-  
-  input::-webkit-scrollbar {
-    display: none;               /* Chrome/Safari */
-  }
-  
+    overflow-x: auto;
+    /* horizontales Scrollen erlauben */
+    overflow-y: hidden;
+    /* vertikal verhindern */
+    white-space: nowrap;
+    /* Text nicht umbrechen */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE */
+}
+
+input::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}

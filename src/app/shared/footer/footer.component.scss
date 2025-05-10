@@ -1,11 +1,13 @@
 footer {
-    padding: 40px 95px 70px 95px;
+    padding: 50px 95px;
     color: white;
     display: flex;
     justify-content: space-between;
     height: 65px;
     align-items: center;
     width: 100%;
+    // max-width: 1440px;
+    // align-items: center;
 }
 
 footer a {
@@ -26,7 +28,8 @@ footer a:nth-child(1) {
     position: relative;
 }
 
-footer a:nth-child(1)::after {
+footer a:nth-child(1)::after,
+.empty-place-mobile a::after {
     content: '';
     position: absolute;
     top: 0;
@@ -40,9 +43,13 @@ footer a:nth-child(1)::after {
     transition: clip-path 0.125s ease-out;
 }
 
-footer a:nth-child(1):hover::after {
+
+footer a:nth-child(1):hover::after,
+.empty-place-mobile a:hover::after {
     clip-path: inset(0 0 0 0);
 }
+
+/* Animation wie bei footer a:nth-child(1) */
 
 .name-logo {
     display: flex;
@@ -50,9 +57,36 @@ footer a:nth-child(1):hover::after {
     color: white;
     padding-left: 120px;
     width: fit-content;
-    a{
+
+    a {
         width: fit-content;
     }
+}
+
+.empty-place-mobile {
+    display: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    // padding-top: 12px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    border-radius: 40px;
+
+    a {
+        color: white;
+    }
+}
+
+.empty-place-mobile a {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 12px;
+    padding-top: 12px;
+
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    border-radius: 40px;
 }
 
 .empty-place {
@@ -113,5 +147,60 @@ footer a:nth-child(1):hover::after {
     100% {
         transform: translateX(0) rotate(0deg);
         opacity: 0;
+    }
+}
+
+@media (max-width: 1439px) {
+    .name-logo {
+        padding-left: 44px
+    }
+
+    footer {
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 685px) {
+    footer {
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 80px;
+        padding-left: 20px;
+
+    }
+
+    .name-logo {
+        padding-left: 16px;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        height: 35px;
+
+        span {
+            padding-bottom: 17px;
+        }
+    }
+
+    .empty-place {
+        display: none;
+    }
+
+    .empty-place-mobile {
+        display: flex;
+
+    }
+
+    .mobile-column {
+        // display: flex;
+        padding-right: 16px;
+        justify-items: right;
+    }
+}
+
+@media (max-width: 360px) {
+    footer {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }

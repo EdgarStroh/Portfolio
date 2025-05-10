@@ -261,6 +261,7 @@ button {
     .arrow-back-container {
         display: none;
     }
+
     .arrow-back-container-mobile {
         display: flex;
     }
@@ -284,9 +285,10 @@ button {
     .project-detail-view {
         padding: 14px 14px;
     }
+
     .project-detail-headline {
         font-size: 20px;
-        padding-bottom: 12px!important;
+        padding-bottom: 12px !important;
     }
 }
 
@@ -301,26 +303,37 @@ button {
 
 @media (max-width: 770px) {
     .project-detail-bg {
-        background-size: 120%; 
+        background-size: 120%;
     }
 }
+
 @media (max-width: 670px) {
     .project-detail-bg {
-        background-size: 140%; 
+        background-size: 140%;
     }
 }
+
 @media (max-width: 510px) {
     .project-detail-bg {
-        background-size: 170%; 
+        background-size: 170%;
     }
 }
+
 @media (max-width: 440px) {
     .project-detail-bg {
-        background-size: 240%; 
+        background-size: 240%;
     }
 }
+
+@media (max-width: 350px) {
+    .lang-container {
+        width: 87%;
+        flex-flow: wrap;
+    }
+}
+
 @media (max-width: 340px) {
     .project-detail-bg {
-        background-size: 270%; 
+        background-size: 270%;
     }
 }
