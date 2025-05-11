@@ -1,7 +1,7 @@
 <header>
   <nav>
     <ul>
-      <img class="se-logo" src="/assets/img/header/se-logo.png">
+      <a href="#hero"><img class="se-logo" src="/assets/img/header/se-logo.png"></a>
       <li><a href="#aboutme" class="nav-link aboutme dark-font hide">About me</a></li>
       <li><a href="#skills" class="nav-link skills dark-font hide">Skills</a></li>
       <li><a href="#projects" class="nav-link projects hide">Projects</a></li>
@@ -14,7 +14,7 @@
       </div>
 
       <button class="burger-menu" (click)="toggleMenu()">
-        <img class="burger-menu-img" [src]="burgerIcon" >
+        <img class="burger-menu-img" [src]="burgerIcon">
       </button>
 
       <div class="mobile-nav" [class.show]="isMenuOpen">
@@ -30,14 +30,14 @@
           <div class="switch" [class.left]="isEnglish" [class.right]="!isEnglish"></div>
           <span [class.active]="!isEnglish" [class.inactive]="isEnglish">DE</span>
         </div>
-      
+
         <div class="contact-icons">
           <img src="/assets/img/hero/icons/linkedin.png" alt="LinkedIn">
           <img src="/assets/img/hero/icons/Github.png" alt="GitHub">
           <img src="/assets/img/hero/icons/mail.png" alt="Email">
         </div>
 
-     
+
 
       </div>
     </ul>
