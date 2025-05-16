@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; 
-
+import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../language.service';
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -9,6 +9,11 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule]
 })
 export class SkillsComponent {
+  constructor(public langService: LanguageService) { }
+
+  toggleLanguage() {
+    this.langService.toggleLanguage();
+  }
   stickerImage: string = '/assets/img/skills/sticker.png';
   private isOpen: boolean = false;
 

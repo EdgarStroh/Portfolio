@@ -3,63 +3,48 @@
         <div class="padding-container">
             <div class="title-text">
                 <div class="title">
-                    <h3>MY STACK</h3>
+                    <h3>{{ langService.translationsMap.skills.title }}</h3>
                     <div class="image-container">
-                        <img class="circle-animation" src="/assets/img/skills/orange-circle.png" alt="Skill Circle">
-                        <h2 class="skill-text">Skill set</h2>
+                        <img class="circle-animation" src="/assets/img/skills/orange-circle.png" alt="Skill-Kreis">
+                        <h2 class="skill-text">{{ langService.translationsMap.skills.skillSet }}</h2>
                     </div>
                 </div>
                 <div class="text">
-                    <img class="text-paper" src="/assets/img/skills/paper.png">
-                    <span>
-                        I have hands-on experience with HTML, CSS, JavaScript, and Angular to create dynamic and
-                        responsive web interfaces.
-                        I use Git for version control, Visual Studio Code as my main development environment, and Figma
-                        for UI planning.
-                    </span>
+                    <img class="text-paper" src="/assets/img/skills/paper.png" />
+                    <span>{{ langService.translationsMap.skills.Text }}</span>
                 </div>
             </div>
 
             <div class="sic-sticker-container">
                 <div class="skills-icon-container">
                     <div class="single-icon"><img class="skills-icon"
-                            src="/assets/img/skills/icons/html.png"><span>HTML</span>
-                    </div>
+                            src="/assets/img/skills/icons/html.png" /><span>HTML</span></div>
                     <div class="single-icon"><img class="skills-icon"
-                            src="/assets/img/skills/icons/css.png"><span>CSS</span>
-                    </div>
+                            src="/assets/img/skills/icons/css.png" /><span>CSS</span></div>
                     <div class="single-icon"><img class="skills-icon"
-                            src="/assets/img/skills/icons/js.png"><span>JavaScript</span>
-                    </div>
+                            src="/assets/img/skills/icons/js.png" /><span>JavaScript</span></div>
                     <div class="single-icon"><img class="skills-icon"
-                            src="/assets/img/skills/icons/ts.png"><span>TypeScript</span>
-                    </div>
-                    <div class="single-icon">
-                        <img class="skills-icon" src="/assets/img/skills/icons/angular.png">
-                        <span>Angular</span>
-                    </div>
+                            src="/assets/img/skills/icons/ts.png" /><span>TypeScript</span></div>
                     <div class="single-icon"><img class="skills-icon"
-                            src="/assets/img/skills/icons/firebase.png"><span>Firebase</span></div>
+                            src="/assets/img/skills/icons/angular.png" /><span>Angular</span></div>
                     <div class="single-icon"><img class="skills-icon"
-                            src="/assets/img/skills/icons/git.png"><span>Git</span>
-                    </div>
+                            src="/assets/img/skills/icons/firebase.png" /><span>Firebase</span></div>
                     <div class="single-icon"><img class="skills-icon"
-                            src="/assets/img/skills/icons/rest-api.png"><span>Rest-Api</span></div>
+                            src="/assets/img/skills/icons/git.png" /><span>Git</span></div>
                     <div class="single-icon"><img class="skills-icon"
-                            src="/assets/img/skills/icons/scrum.png"><span>Scrum</span>
-                    </div>
+                            src="/assets/img/skills/icons/rest-api.png" /><span>Rest-API</span></div>
+                    <div class="single-icon"><img class="skills-icon"
+                            src="/assets/img/skills/icons/scrum.png" /><span>Scrum</span></div>
                 </div>
 
                 <div (click)="onStickerClick()" class="sticker">
-                    <img [src]="stickerImage" alt="Sticker">
+                    <img [src]="stickerImage" alt="Sticker" />
                     <div class="sticker-text" *ngIf="stickerImage === '/assets/img/skills/sticker-open.png'">
-                        <span>Also, I'm interested in diving into:</span>
-                        <img src="/assets/img/skills/icons/python.png">
+                        <span>{{ langService.translationsMap.skills.stickerText }}</span>
+                        <img src="/assets/img/skills/icons/python.png" />
                         <span>Python</span>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>

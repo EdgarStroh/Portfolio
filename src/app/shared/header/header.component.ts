@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { ChangeDetectorRef } from '@angular/core';
+import { LanguageService } from '../../language.service';
 @Component({
   selector: 'app-header',
   imports: [],
@@ -7,18 +8,22 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  constructor(public langService: LanguageService, private cdr: ChangeDetectorRef) { }
+
   isEnglish: boolean = true;
   isMenuOpen: boolean = false;
 
   toggleLanguage() {
-    this.isEnglish = !this.isEnglish;
+    this.langService.toggleLanguage();
+    this.isEnglish = this.langService.isEnglish;
+    this.cdr.detectChanges(); // erzwingt das Neurendern
   }
 
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
     const icon = document.getElementById('burgerIcon') as HTMLImageElement;
-  
+
     if (this.isMenuOpen) {
       icon.src = '/assets/img/header/responsive/icons/close.png';
       icon.alt = 'Close menu';

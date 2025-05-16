@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SingleprojectsComponent } from "./singleprojects/singleprojects.component";
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-projects',
@@ -9,5 +10,6 @@ import { SingleprojectsComponent } from "./singleprojects/singleprojects.compone
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+  constructor(public langService: LanguageService) {}
 
 }
