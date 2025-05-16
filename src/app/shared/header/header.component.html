@@ -6,7 +6,7 @@
       <li><a href="#skills" class="nav-link skills dark-font hide">Skills</a></li>
       <li><a href="#projects" class="nav-link projects hide">Projects</a></li>
       <li><a href="#contact" class="nav-link contact hide">Contact</a></li>
-
+ 
       <div class="switch-container" (click)="toggleLanguage()">
         <span [class.active]="isEnglish" [class.inactive]="!isEnglish">EN</span>
         <div class="switch" [class.left]="isEnglish" [class.right]="!isEnglish"></div>
@@ -14,10 +14,20 @@
       </div>
 
       <button class="burger-menu" (click)="toggleMenu()">
-        <img class="burger-menu-img" [src]="burgerIcon">
+        <img class="burger-menu-img" src="/assets/img/header/responsive/icons/menu.png">
       </button>
 
       <div class="mobile-nav" [class.show]="isMenuOpen">
+        <!-- Mobile Header inside mobile-nav -->
+        <div class="mobile-header">
+          <a href="#hero">
+            <img class="se-logo" src="/assets/img/header/se-logo.png" alt="Logo">
+          </a>
+          <button class="close-btn" (click)="toggleMenu()">
+            <img src="/assets/img/header/responsive/icons/close.png" alt="Close Menu">
+          </button>
+        </div>
+
         <ul class="nav-links">
           <li><a href="#aboutme" class="nav-link aboutme dark-font">About me</a></li>
           <li><a href="#skills" class="nav-link skills dark-font">Skills</a></li>
@@ -36,9 +46,7 @@
           <img src="/assets/img/hero/icons/Github.png" alt="GitHub">
           <img src="/assets/img/hero/icons/mail.png" alt="Email">
         </div>
-
-
-
       </div>
+
     </ul>
   </nav>
