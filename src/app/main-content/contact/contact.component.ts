@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { ContactformComponent } from "../../contactform/contactform.component";
-
+import { LanguageService } from '../../language.service'; 
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -10,5 +10,5 @@ import { ContactformComponent } from "../../contactform/contactform.component";
   imports: [FooterComponent, ContactformComponent]
 })
 export class ContactComponent {
-
+ constructor(public langService: LanguageService) {}
 }

@@ -5,6 +5,7 @@ import { NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { setInterval } from 'timers/promises';
 import { RouterModule } from '@angular/router';
+import { LanguageService } from '../language.service';
 @Component({
   selector: 'app-contactform',
   standalone: true,
@@ -12,7 +13,9 @@ import { RouterModule } from '@angular/router';
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
+
 export class ContactformComponent {
+  constructor(public langService: LanguageService) { }
   mailTest = true;
   formSubmitted = false;
   http = inject(HttpClient);

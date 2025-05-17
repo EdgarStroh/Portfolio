@@ -10,8 +10,10 @@
                         <img class="wave-hand" src="/assets/img/hero/waving-hand.png">
                         <button class="helloworld-btn" [ngClass]="{ 'auto-hover': isMobile }"
                             (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                            <span>{{ buttonText }}</span>
                         </button>
                     </div>
+
 
                     <span class="title-font-frontend title">
                         <span class="letter">F</span>
@@ -34,7 +36,9 @@
                         <span class="letter dev">E</span>
                         <span class="letter dev">R</span>
                     </span>
-                    <button class="button-gt"><a href="#contact">Get in Touch</a></button>
+                    <button class="button-gt"><a href="#contact">
+                            {{ langService.translationsMap.hero.buttonText }}
+                        </a></button>
 
                 </div>
 

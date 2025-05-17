@@ -2,11 +2,15 @@
   <nav>
     <ul>
       <a href="#hero"><img class="se-logo" src="/assets/img/header/se-logo.png"></a>
-      <li><a href="#aboutme" class="nav-link aboutme dark-font hide">About me</a></li>
-      <li><a href="#skills" class="nav-link skills dark-font hide">Skills</a></li>
-      <li><a href="#projects" class="nav-link projects hide">Projects</a></li>
-      <li><a href="#contact" class="nav-link contact hide">Contact</a></li>
- 
+      <ul class="nav-links">
+        <li><a href="#aboutme" class="nav-link aboutme dark-font">{{ langService.translationsMap.header.aboutMe }}</a>
+        </li>
+        <li><a href="#skills" class="nav-link skills dark-font">{{ langService.translationsMap.header.skills }}</a></li>
+        <li><a href="#projects" class="nav-link projects">{{ langService.translationsMap.header.projects }}</a></li>
+        <li><a href="#contact" class="nav-link contact">{{ langService.translationsMap.header.contact }}</a></li>
+      </ul>
+
+
       <div class="switch-container" (click)="toggleLanguage()">
         <span [class.active]="isEnglish" [class.inactive]="!isEnglish">EN</span>
         <div class="switch" [class.left]="isEnglish" [class.right]="!isEnglish"></div>
@@ -29,10 +33,10 @@
         </div>
 
         <ul class="nav-links">
-          <li><a href="#aboutme" class="nav-link aboutme dark-font">About me</a></li>
-          <li><a href="#skills" class="nav-link skills dark-font">Skills</a></li>
-          <li><a href="#projects" class="nav-link projects">Projects</a></li>
-          <li><a href="#contact" class="nav-link contact">Contact</a></li>
+          <li><a href="#aboutme" class="nav-link aboutme dark-font">{{ langService.translationsMap.header.aboutMe }}</a></li>
+          <li><a href="#skills" class="nav-link skills dark-font">{{ langService.translationsMap.header.skills }}</a></li>
+          <li><a href="#projects" class="nav-link projects">{{ langService.translationsMap.header.projects }}</a></li>
+          <li><a href="#contact" class="nav-link contact">{{ langService.translationsMap.header.contact }}</a></li>
         </ul>
 
         <div class="mobile-switch-container" (click)="toggleLanguage()">

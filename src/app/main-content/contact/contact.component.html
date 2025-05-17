@@ -6,34 +6,13 @@
     <div class="contact-text-container">
 
       <div class="contact-title">
-        <h3>Contact me</h3>
-        <h2>Ready to work <br>together?</h2>
+        <h3 [innerHTML]="langService.translationsMap.contact.titleH3"></h3>
+        <h2 [innerHTML]="langService.translationsMap.contact.titleH2"></h2>
       </div>
-      <span class="f-s18 ">
-        I'm always up for a new challenge where I can bring in both my hands-on experience from the industrial world
-        and my growing frontend expertise. I love building user-friendly, clean interfaces and enjoy solving problems
-        with a mix of logic and creativity.
-        <br><br>
-        If you're looking for someone who knows what it means to work hard, stay
-        curious, and keep improving - let's connect and make it happen.
-      </span>
+
+      <span class="f-s18" [innerHTML]="langService.translationsMap.contact.text"></span>
       <img class="yellow-arrow" src="/assets/img/contact/yellow-arrow.png">
       <div class="sticker-container">
-        <!-- <img class="orange-sticker" src="/assets/img/contact/yellow-sticker.png" alt="Sticker"> -->
-
-        <!-- Das SE-Logo in die Mitte -->
-
-
-        <!-- <svg class="text-curve" viewBox="0 0 168 168">
-            <defs>
-              <path id="circlePath" d="M84,84 m-65,0 a65,65 0 1,1 130,0 a60,60 0 1,1 -130,0" />
-            </defs>
-            <text class="curved-text" font-size="11.7">
-              <textPath href="#circlePath" startOffset="0%">
-                Edgar Stroh — Frontend Developer — Edgar Stroh — Frontend Developer —
-              </textPath>
-            </text>
-          </svg> -->
       </div>
 
     </div>

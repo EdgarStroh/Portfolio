@@ -1,60 +1,102 @@
 <div class="container">
-    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-        <div class="form-style">
-            <label for="name" class="f-s24">What's your name?</label>
-            <div class="abc">
-                <input #name="ngModel" class="f-s18" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                    [placeholder]="name.invalid && name.touched ? 'Oops! it seems your name is missing' : 'Your name goes here'"
-                    required (ngModelChange)="formValidFN()">
-            </div>
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <div class="form-style">
+      <label for="name" class="f-s24">{{ langService.translationsMap.contactformular.nameLabel }}</label>
+      <div class="abc">
+        <input
+          #name="ngModel"
+          class="f-s18"
+          [(ngModel)]="contactData.name"
+          type="text"
+          id="name"
+          name="name"
+          [placeholder]="
+            name.invalid && name.touched
+              ? langService.translationsMap.contactformular.namePlaceholderError
+              : langService.translationsMap.contactformular.namePlaceholder
+          "
+          required
+          (ngModelChange)="formValidFN()"
+        />
+      </div>
+    </div>
+
+    <div class="form-style">
+      <label for="email" class="f-s24">{{ langService.translationsMap.contactformular.emailLabel }}</label>
+      <input
+        class="f-s18"
+        #email="ngModel"
+        [(ngModel)]="contactData.email"
+        type="text"
+        id="email"
+        name="email"
+        [placeholder]="
+          email.invalid && email.touched
+            ? langService.translationsMap.contactformular.emailPlaceholderError
+            : langService.translationsMap.contactformular.emailPlaceholder
+        "
+        required
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        (ngModelChange)="formValidFN()"
+      />
+    </div>
+
+    <div class="form-style">
+      <label for="subject" class="f-s24">{{ langService.translationsMap.contactformular.subjectLabel }}</label>
+      <textarea
+        class="f-s18"
+        rows="1"
+        #message="ngModel"
+        minlength="4"
+        [(ngModel)]="contactData.message"
+        id="subject"
+        name="subject"
+        [placeholder]="
+          message.invalid && message.touched
+            ? langService.translationsMap.contactformular.subjectPlaceholderError
+            : langService.translationsMap.contactformular.subjectPlaceholder
+        "
+        required
+        (ngModelChange)="formValidFN()"
+      ></textarea>
+    </div>
+
+    <div class="submit-container">
+      <div class="checkbox-error-container">
+        <div class="checkbox-text-container">
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              class="checkbox"
+              id="privacyCheckbox"
+              name="privacy"
+              [(ngModel)]="contactData.privacyAccepted"
+              #privacy="ngModel"
+              required
+            />
+          </div>
+          <span>
+            {{ langService.translationsMap.contactformular.privacyTextBefore }}
+            <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
+              {{ langService.translationsMap.contactformular.privacyPolicy }}
+            </a>
+            {{ langService.translationsMap.contactformular.privacyTextAfter }}
+          </span>
         </div>
 
-        <div class="form-style">
-            <label for="email" class="f-s24">What's your e-mail?</label>
-            <input class="f-s18" #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email"
-                [placeholder]="email.invalid && email.touched ? 'Hoppla! your email is required' : 'youremail@email.com'"
-                required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" (ngModelChange)="formValidFN()">
+        <div class="error-container">
+          <div class="error" *ngIf="!contactData.privacyAccepted && formSubmitted">
+            {{ langService.translationsMap.contactformular.privacyError }}
+          </div>
         </div>
+      </div>
 
-        <div class="form-style">
-            <label for="subject" class="f-s24">How can I help you?</label>
-            <textarea class="f-s18" rows="1" #message="ngModel" minlength="4" [(ngModel)]="contactData.message"
-                id="subject" name="subject"
-                [placeholder]="message.invalid && message.touched ? 'What do you need to develop?' : 'Hello Edgar, I am interested in...'"
-                required (ngModelChange)="formValidFN()"></textarea>
-        </div>
-
-
-        <div class="submit-container">
-            <div class="checkbox-error-container">
-                <div class="checkbox-text-container">
-                    <div class="checkbox-container">
-                        <input type="checkbox" class="checkbox" id="privacyCheckbox" name="privacy"
-                            [(ngModel)]="contactData.privacyAccepted" #privacy="ngModel" required>
-                    </div>
-                    <span>
-                        I've read the
-                        <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                        and agree to the processing of my data as outlined.
-                    </span>
-                </div>
-
-                <!-- Fehleranzeige, wenn nicht akzeptiert -->
-                <div class="error-container">
-                    <div class="error" *ngIf="!contactData.privacyAccepted && formSubmitted">
-                        Please accept the privacy policy.
-                    </div>
-                </div>
-            </div>
-
-            <div class="arrow-submit-btn">
-                <img class="yellow-arrow" src="/assets/img/contact/yellow-arrow.png">
-                <button type="submit" [disabled]="isSubmitDisabled(contactForm)">
-                    Submit
-                </button>
-            </div>
-
-        </div>
-
-    </form>
+      <div class="arrow-submit-btn">
+        <img class="yellow-arrow" src="/assets/img/contact/yellow-arrow.png" />
+        <button type="submit" [disabled]="isSubmitDisabled(contactForm)">
+          {{ langService.translationsMap.contactformular.submitButton }}
+        </button>
+      </div>
+    </div>
+  </form>
 </div>

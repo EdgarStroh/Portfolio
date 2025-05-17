@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "../../shared/header/header.component";
+import { LanguageService } from '../../language.service';
+
 @Component({
   selector: 'app-legal-notice',
   imports: [HeaderComponent],
@@ -7,5 +9,5 @@ import { HeaderComponent } from "../../shared/header/header.component";
   styleUrl: './legal-notice.component.scss'
 })
 export class LegalNoticeComponent {
-
+  constructor(public langService: LanguageService) { }
 }

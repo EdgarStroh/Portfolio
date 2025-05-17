@@ -1,17 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-hero',
+  standalone: true,
   imports: [HeaderComponent, CommonModule],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+  styleUrls: ['./hero.component.scss']
 })
-export class HeroComponent {
+export class HeroComponent implements AfterViewInit {
   hasHovered = false;
   isReversing = false;
   isMobile = false;
+
+  // Statt eigener Variable, einfach Zugriff auf Service:
+  constructor(public langService: LanguageService) { }
+
+  get defaultText(): string {
+    return this.langService.translationsMap.hero.defaultText;
+  }
+
+  get hoverText(): string {
+    return this.langService.translationsMap.hero.hoverText;
+  }
+
+  get buttonText(): string {
+    // Button-Text je nach Status wählen:
+    if (this.hasHovered && !this.isReversing) {
+      return this.hoverText;
+    } else {
+      return this.defaultText;
+    }
+  }
 
   onMouseEnter() {
     this.hasHovered = true;

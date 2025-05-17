@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { LanguageService } from '../../language.service';
 @Component({
   selector: 'app-testimonials',
   standalone: true,
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './testimonials.component.scss'
 })
 export class TestimonialsComponent {
-
+  constructor(public langService: LanguageService) { }
 }

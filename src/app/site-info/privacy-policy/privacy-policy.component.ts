@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "../../shared/header/header.component";
-
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -9,5 +9,5 @@ import { HeaderComponent } from "../../shared/header/header.component";
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
-
+ constructor(public langService: LanguageService) { }
 }

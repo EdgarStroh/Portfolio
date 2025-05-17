@@ -212,9 +212,10 @@ a {
   text-align: center;
   white-space: nowrap;
   cursor: default;
+  border: 1px solid #F8F9FA !important;
 
   &::after {
-    content: "Hello world";
+    // content: "Hello world";
     display: inline-block;
     transition: opacity 0.3s ease, transform 0.12s;
   }
@@ -228,13 +229,24 @@ a {
 
   &:hover::after,
   &.auto-hover::after {
-    content: "I'm Edgar Stroh";
+    // content: "I'm Edgar Stroh";
     display: inline-block;
     transition: opacity 0.3s ease, transform 0.12s;
   }
 }
 
+.helloworld-btn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
 
+  .hover-text {
+    display: inline-block;
+    transition: opacity 0.3s ease, transform 0.12s;
+    font-size: 16px; // oder was du willst
+  }
+}
 
 .wave-hand-animation {
 
@@ -252,18 +264,7 @@ a {
 
 @media (max-width: 1439px) {
   section {
-    padding-top: 82px!important;
-  }
-}
-
-@media (max-width: 1015px) {
-
-  .contact-icons {
-    // padding-left: 20px;
-  }
-
-  .title-foto {
-    // padding: 0px 15px 0 15px;
+    padding-top: 82px !important;
   }
 }
 
@@ -284,8 +285,9 @@ a {
     bottom: 75px;
     margin-left: 0px;
   }
-  section{
-    padding-top: 35px!important;
+
+  section {
+    padding-top: 35px !important;
   }
 
   .contact-icons {

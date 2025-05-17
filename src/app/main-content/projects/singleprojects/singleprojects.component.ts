@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SingledataService } from '../singleprojects.service';
 import { Router } from '@angular/router';
+import { LanguageService } from '../../../language.service';
 @Component({
   selector: 'app-singleprojects',
   imports: [CommonModule],  // Hier wird *ngFor verfügbar gemacht
@@ -11,9 +12,9 @@ import { Router } from '@angular/router';
 })
 export class SingleprojectsComponent {
 
-  projectlist: { img: string; name: string; description: string; logo?: string; }[] = [];
+  projectlist: { img: string; name: string; logo?: string; }[] = [];
 
-  constructor(private singledataService: SingledataService, private router: Router) {
+  constructor(private singledataService: SingledataService, private router: Router, public langService: LanguageService) {
     this.projectlist = this.singledataService.projectlist;
   }
 
@@ -26,7 +27,7 @@ export class SingleprojectsComponent {
     const slug = this.generateSlug(title);
     this.router.navigate(['/projects', slug]);
   }
-  
+
   generateSlug(title: string): string {
     return title.toLowerCase().replace(/\s+/g, '-');
   }

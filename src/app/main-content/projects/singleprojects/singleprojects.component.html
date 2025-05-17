@@ -16,10 +16,15 @@
 
   <div class="project-text-title">
     <span>{{ project.name }}</span>
-    <p>{{ project.description }}</p>
+    <p>{{
+      i === 0 ? langService.translationsMap.projects.joinDescription :
+      i === 1 ? langService.translationsMap.projects.pokedexDescription :
+      i === 2 ? langService.translationsMap.projects.elpollolocoDescription :
+      ''
+      }}</p>
   </div>
-  
+
   <button class="project-details-btn mobile-btn" (click)="goToProject(project.name)">
-    Project details
+    {{ langService.translationsMap.projects.projectDetailsButton }}
   </button>
 </div>
