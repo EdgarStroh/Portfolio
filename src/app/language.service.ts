@@ -53,6 +53,28 @@ export class LanguageService {
         pokedexDescription: 'An interactive Pokédex web app to browse and view Pokémon stats, evolutions, and abilities using real-time data from a public API.',
         elpollolocoDescription: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       },
+      singleproject: {
+        back: 'Go Back',
+        details: 'Implementation Details',
+        duration: 'Duration:',
+        next: 'Next Project',
+        join: {
+          description: 'Task manager inspired by the Kanban system. Create and organize tasks using drag-and-drop functionality, assign users and categories.',
+          details: 'Developed with JavaScript, the app features a modular architecture, dynamic task management, and intuitive drag-and-drop interactions. Users can create, edit, and assign tasks to categories and team members, enhancing workflow efficiency.',
+          duration: '6 weeks',
+        },
+        pokedex: {
+          description: 'Pokedex is a web application that lets you explore and search for Pokémon, displaying detailed information like stats, evolutions, and abilities in a clean and interactive interface.',
+          details: 'Powered by a public Pokémon API, the app fetches and renders data in real-time using JavaScript, offering users an engaging and responsive browsing experience.',
+          duration: '2 weeks',
+        },
+        elpolloloco: {
+          description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+          details: 'The game is built using object-oriented JavaScript, with a modular structure for characters, enemies, and game mechanics. It includes collision detection, animation handling, sound effects, and a well-organized game loop for real-time interactions.',
+          duration: '5 weeks',
+        }
+      },
+
       testimonials: {
         headerSmall: "in Their Words:",
         headerLarge: "Colleagues' Thoughts",
@@ -218,6 +240,27 @@ export class LanguageService {
         joinDescription: 'Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.',
         pokedexDescription: 'Eine interaktive Pokédex-Web-App, um Pokémon-Statistiken, Entwicklungen und Fähigkeiten in Echtzeit über eine öffentliche API zu durchsuchen und anzusehen.',
         elpollolocoDescription: 'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.',
+      },
+      singleproject: {
+        back: 'Zurück',
+        details: 'Durchführungsdetails',
+        duration: 'Dauer:',
+        next: 'Nächstes Projekt',
+        join: {
+          description: 'Ein Aufgabenmanager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Nutzer und Kategorien zu.',
+          details: 'Entwickelt mit JavaScript, bietet die App eine modulare Architektur, dynamisches Aufgabenmanagement und eine intuitive Drag-and-Drop-Bedienung. Nutzer können Aufgaben erstellen, bearbeiten und Kategorien oder Teammitgliedern zuweisen – für eine effizientere Zusammenarbeit.',
+          duration: '6 Wochen',
+        },
+        pokedex: {
+          description: 'Eine Webanwendung zum Durchstöbern und Suchen von Pokémon – mit übersichtlicher Darstellung von Werten, Entwicklungen und Fähigkeiten.',
+          details: 'Basierend auf einer öffentlichen Pokémon-API lädt die App Daten in Echtzeit per JavaScript und stellt sie in einer responsiven, interaktiven Benutzeroberfläche dar. Das sorgt für ein spannendes und reaktionsschnelles Nutzungserlebnis.',
+          duration: '2 Wochen',
+        },
+        elpolloloco: {
+          description: 'Jump-&-Run-Spiel mit Wurfmechanik, basierend auf objektorientierter Programmierung. Hilf Pepe dabei, Münzen und Tabasco zu sammeln, um gegen das verrückte Huhn zu kämpfen.',
+          details: 'Das Spiel wurde mit objektorientiertem JavaScript entwickelt. Es besitzt eine modulare Struktur für Figuren, Gegner und Spielmechaniken. Es beinhaltet Kollisionserkennung, Animationen, Soundeffekte und eine klar strukturierte Game Loop für flüssige Echtzeit-Interaktionen.',
+          duration: '5 Wochen',
+        }
       },
       testimonials: {
         headerSmall: "in Ihren Worten:",

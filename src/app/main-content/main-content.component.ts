@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { HeaderComponent } from "../shared/header/header.component";
 import { AboutMeComponent } from './about-me/about-me.component';
 import { HeroComponent } from './hero/hero.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -11,7 +10,6 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
   selector: 'app-main-content',
   standalone: true,
   imports: [
-    // HeaderComponent,
     AboutMeComponent,
     HeroComponent,
     ProjectsComponent,

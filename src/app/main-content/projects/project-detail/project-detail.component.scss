@@ -41,7 +41,6 @@
 
 .project-detail-view {
     padding: 55px 120px;
-    // gap: 48px;
     display: flex;
 
     h2 {
@@ -57,7 +56,6 @@
 }
 
 .project-detail-headline {
-    // padding-bottom: 16px;
     font-weight: 800;
     font-size: 24px;
 }
@@ -66,14 +64,11 @@
     position: relative;
     display: inline-block;
     margin-bottom: 60px;
-    // padding-bottom: 40px;
 }
 
 .proj-detail-text {
     display: flex;
     flex-direction: column;
-    // padding-top: 40px;
-    // gap: 16px;
     width: 78%;
 
     span {
@@ -90,7 +85,6 @@
     height: auto;
     min-height: 15px;
     animation: revealArrow 3s ease-out infinite;
-    // margin-bottom: 20px;
 }
 
 @keyframes revealArrow {
@@ -116,7 +110,6 @@
 }
 
 .project-detail-duration {
-    // padding-top: 14px;
     font-weight: 700;
     font-size: 18px;
 }
@@ -143,8 +136,6 @@
     height: 375px;
     width: 560px;
     border-radius: 20px;
-    //   padding: 8px;
-    // border-radius: 12px;
     border: 1px solid rgba(200, 200, 255, 0.4);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
 }
@@ -166,7 +157,6 @@
 
 button {
     box-shadow: 2px 4px 0px 0px white;
-
     &:hover {
         background-color: #F87A55;
         box-shadow: none;
@@ -192,7 +182,6 @@ button {
     margin-top: 40px;
     display: flex;
     align-items: center;
-    // gap: 8px;
     justify-content: right;
     margin-right: -43px;
     pointer-events: none;
@@ -298,8 +287,6 @@ button {
         width: 80px;
     }
 }
-
-
 
 @media (max-width: 770px) {
     .project-detail-bg {

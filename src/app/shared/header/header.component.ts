@@ -16,7 +16,7 @@ export class HeaderComponent {
   toggleLanguage() {
     this.langService.toggleLanguage();
     this.isEnglish = this.langService.isEnglish;
-    this.cdr.detectChanges(); // erzwingt das Neurendern
+    this.cdr.detectChanges();
   }
 
 
@@ -37,8 +37,5 @@ export class HeaderComponent {
     return this.isMenuOpen ? '/assets/img/header/responsive/icons/close.png' : '/assets/img/header/responsive/icons/menu.png';
   }
 
-  // get burgerAlt(): string {
-  //   return this.isMenuOpen ? 'Close menu' : 'Open menu';
-  // }
 
 }

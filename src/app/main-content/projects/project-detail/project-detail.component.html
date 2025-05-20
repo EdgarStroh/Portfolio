@@ -5,9 +5,8 @@
 
       <div class="arrow-back-container" [routerLink]="['/']">
         <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back.png">
-        <span>Go Back</span>
+        <span>{{ langService.translationsMap.singleproject.back }}</span>
       </div>
-
 
       <div class="project-detail-view">
 
@@ -18,18 +17,19 @@
           </div>
 
           <div class="proj-detail-text">
-            <span class="project-detail-headline">Description</span>
-            <span>{{ project.description }}</span>
+            <span class="project-detail-headline">
 
-            <span class="project-detail-headline">Implementation Details</span>
-            <span>{{ project.details }}</span>
+            </span>
+            <span>{{ langService.translationsMap.singleproject[projectKey!].description }}</span>
+
+            <span class="project-detail-headline">{{ langService.translationsMap.singleproject.details }}</span>
+            <span>{{ langService.translationsMap.singleproject[projectKey!].details }}</span>
 
             <div class="duration-container">
-              <span class="project-detail-duration">Duration:</span>
-              {{ project.duration }}
+              <span class="project-detail-duration">{{ langService.translationsMap.singleproject.duration }}</span>
+              {{ langService.translationsMap.singleproject[projectKey!].duration }}
             </div>
           </div>
-
 
           <div class="lang-container">
             <ng-container *ngFor="let lang of project.languages; let i = index">
@@ -45,31 +45,25 @@
             <img class="project-img-sticker" src="{{project.sticker}}">
           </div>
 
-
           <div class="button-container">
             <button>GitHub</button>
             <button>Live Test</button>
           </div>
 
-
-
           <div class="arrow-back-yellow-container" (click)="goToNextProject()" [class.disabled]="!nextSlug">
 
             <div class="arrow-back-container-mobile" [routerLink]="['/']">
               <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back.png">
-              <span>Go Back</span>
+              <span>{{ langService.translationsMap.singleproject.back }}</span>
             </div>
 
             <div class="next-proj-container">
-              <span>Next Project</span>
+              <span>{{ langService.translationsMap.singleproject.next }}</span>
               <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back-yellow.png">
             </div>
           </div>
-
         </div>
-
-
       </div>
     </div>
-    </div>
+  </div>
 </div>

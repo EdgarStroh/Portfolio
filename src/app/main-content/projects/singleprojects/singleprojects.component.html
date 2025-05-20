@@ -2,7 +2,7 @@
   <div class="project-img-wrapper">
 
     <button class="project-details-btn hover-btn" (click)="goToProject(project.name)">
-      Project details
+   {{ langService.translationsMap.projects.projectDetailsButton }}
     </button>
 
 
@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <div class="project-text-title">
+  <div class="project-text-title" >
     <span>{{ project.name }}</span>
     <p>{{
       i === 0 ? langService.translationsMap.projects.joinDescription :

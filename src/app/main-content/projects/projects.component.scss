@@ -1,11 +1,5 @@
 section {
-    // min-height: 90vh;
-    // padding-top: 144px;
-    // padding-right: 120px;
-    // padding-left: 120px;
     padding-bottom: 0px;
-    // padding: 144px 120px;
-    // background-color: aqua;
 }
 
 .projects-title-text {
@@ -15,7 +9,6 @@ section {
     gap: 38px;
     display: flex;
     flex-direction: column;
-    // align-self: center;
 }
 
 .projects-title {
@@ -25,8 +18,6 @@ section {
 .projects-title-underline {
     animation: revealAnimation 4s infinite ease-in-out;
 }
-
-
 
 .projects-content {
     display: flex;
@@ -47,14 +38,6 @@ app-singleprojects {
     justify-content: space-between;
 }
 
-
-@media (max-width: 1370px) {
-    section {
-        // padding-right: 44px;
-        // padding-left: 44px;
-    }
-}
-
 @media (max-width: 1210px) {
     app-singleprojects {
         display: flex;
@@ -64,7 +47,6 @@ app-singleprojects {
 }
 @media (max-width: 800px){
     section{
-        // padding-top: 88px;
         padding-bottom: 44px;
     }
 }
@@ -72,8 +54,6 @@ app-singleprojects {
 @media (max-width: 640px) {
     section {
         padding-top: unset !important;
-        // padding-right: 16px;
-        // padding-left: 16px;
     }
 }
 

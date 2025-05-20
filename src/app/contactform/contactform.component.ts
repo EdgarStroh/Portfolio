@@ -39,17 +39,6 @@ export class ContactformComponent {
     },
   };
 
-  // onSubmit(ngForm: any) {
-  //   if (ngForm.valid && ngForm.submitted) {
-  //     console.log(this.contactData);
-
-  //     this.contactData = {
-  //       name: "",
-  //       email: "",
-  //       message: "",
-  //     }
-  //   }
-  // }
 
   onSubmit(ngForm: any): void {
     this.formSubmitted = true;
@@ -90,20 +79,5 @@ export class ContactformComponent {
       this.formValid = false;
     }
   }
-
-  // validateCheckbox(): void {
-  //   const checkbox = document.getElementById('privacyCheckbox') as HTMLInputElement | null;
-  //   const errorMessage = document.getElementById('error-message') as HTMLElement | null;
-
-  //   if (!checkbox || !errorMessage) return;
-
-  //   if (!checkbox.checked) {
-  //     errorMessage.classList.remove('hidden');
-  //   } else {
-  //     errorMessage.classList.add('hidden');
-  //     // Hier kannst du den Submit-Vorgang starten
-  //     console.log('Form can be submitted.');
-  //   }
-  // }
 
 }

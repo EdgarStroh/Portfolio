@@ -15,7 +15,6 @@ export class HeroComponent implements AfterViewInit {
   isReversing = false;
   isMobile = false;
 
-  // Statt eigener Variable, einfach Zugriff auf Service:
   constructor(public langService: LanguageService) { }
 
   get defaultText(): string {
@@ -27,7 +26,6 @@ export class HeroComponent implements AfterViewInit {
   }
 
   get buttonText(): string {
-    // Button-Text je nach Status wählen:
     if (this.hasHovered && !this.isReversing) {
       return this.hoverText;
     } else {

@@ -1,7 +1,6 @@
 section {
     height: 640px;
     padding-top: 20px;
-    // padding-bottom:120px!important;
     margin-bottom: 40px;
     gap: 48px;
 }
@@ -145,7 +144,6 @@ h2 {
 
 @media (max-width: 1370px) {
     section {
-        // padding: 77px 44px;
         height: fit-content;
     }
 }
@@ -174,7 +172,6 @@ h2 {
 
 @media (max-width: 640px) {
     section {
-        // padding: 0px 16px;
         padding-bottom: 20px;
     }
 

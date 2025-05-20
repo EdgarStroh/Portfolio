@@ -3,11 +3,13 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { PROJECTS } from './project-data';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from "../../../shared/header/header.component";
+import { LanguageService } from '../../../language.service';
+type ProjectKey = 'join' | 'pokedex' | 'elpolloloco';
 
 @Component({
   standalone: true,
   selector: 'app-project-detail',
-  imports: [CommonModule, HeaderComponent,RouterModule],
+  imports: [CommonModule, HeaderComponent, RouterModule],
   templateUrl: './project-detail.component.html',
   styleUrls: ['./project-detail.component.scss']
 })
@@ -15,12 +17,22 @@ export class ProjectDetailComponent {
   project: any;
   projectFound = false;
   nextSlug: string | null = null;
+  projectKey: ProjectKey | null = null; // so verwendest du den Typ in der Klasse
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+
+  constructor(private route: ActivatedRoute, private router: Router, public langService: LanguageService) {
     this.route.params.subscribe(params => {
       const slug = params['slug'];
       this.project = PROJECTS.find(p => p.slug === slug);
       this.projectFound = !!this.project;
+
+      // ProjectKey anhand des slugs zuweisen (wenn möglich)
+      if (slug === 'join' || slug === 'pokedex' || slug === 'elpolloloco') {
+        this.projectKey = slug;
+      } else {
+        this.projectKey = 'join'; // fallback
+      }
+
       this.setNextSlug(slug);
     });
   }
