@@ -4,7 +4,7 @@
       <img class="paper-img" src="/assets/img/about-me/ripped-paper-yellow.png">
       <div class="paper-content">
         <img class="paper-icons" src="/assets/img/about-me/location.png">
-     <span>{{ langService.translationsMap.about.location }}</span>
+        <span>{{ langService.translationsMap.about.location }}</span>
       </div>
     </div>
     <div class="paper-wrapper blue">
@@ -37,6 +37,10 @@
       <br><br>
       <p class="f-s20">{{ langService.translationsMap.about.aboutBottom }}</p>
     </div>
-    <button class="lets-talk">{{ langService.translationsMap.about.talkButton }}</button>
+
+    <button class="lets-talk" onclick="location.href='#contact'">
+      {{ langService.translationsMap.about.talkButton }}
+    </button>
+
   </div>
 </section>

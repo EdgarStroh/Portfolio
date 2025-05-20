@@ -4,9 +4,29 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LanguageService {
+  isEnglish: boolean = true;
 
-  isEnglish = true;
+  setLanguage(lang: string): void {
+    this.isEnglish = lang === 'en';
+  }
+  
+  get currentLang() {
+    return this.isEnglish ? 'en' : 'de';
+  }
 
+  get translationsMap() {
+    return this.translations[this.currentLang];
+  }
+  toggleLanguage(): void {
+    this.isEnglish = !this.isEnglish;
+    const newLang = this.isEnglish ? 'en' : 'de';
+    this.setLanguage(newLang);
+    localStorage.setItem('language', newLang);
+  }
+
+  getLanguage(): string {
+    return this.isEnglish ? 'en' : 'de';
+  }
   private translations = {
     en: {
       header: {
@@ -383,15 +403,4 @@ export class LanguageService {
     },
   };
 
-  toggleLanguage() {
-    this.isEnglish = !this.isEnglish;
-  }
-
-  get currentLang() {
-    return this.isEnglish ? 'en' : 'de';
-  }
-
-  get translationsMap() {
-    return this.translations[this.currentLang];
-  }
 }
