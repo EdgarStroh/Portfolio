@@ -226,7 +226,7 @@ export class LanguageService {
       },
       hero: {
         defaultText: "Hallo Welt",
-        hoverText: "Ich bin Edgar Stroh",
+        hoverText: "Ich heiße Edgar Stroh",
         buttonText: "Lass uns connecten",
       },
       about: {

@@ -96,6 +96,18 @@ span {
     rotate: 5deg;
 }
 
+.contact-container {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .se-logo-sticker-mobile {
     position: absolute;
     width: 168px;

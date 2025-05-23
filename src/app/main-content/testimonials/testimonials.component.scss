@@ -16,6 +16,18 @@ h2 {
     justify-content: right;
 }
 
+.testimonials-container {
+    opacity: 0;
+    transform: translateX(100px); // Start rechts außerhalb
+  transition: opacity 0.8s ease, transform 0.8s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0); // Normalposition reinrutschen
+  }
+}
+
+
 .titel-container {
     display: flex;
     flex-direction: column;

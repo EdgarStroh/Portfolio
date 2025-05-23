@@ -14,6 +14,17 @@ section {
 .projects-title {
     gap: 16px;
 }
+.projects-container {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 .projects-title-underline {
     animation: revealAnimation 4s infinite ease-in-out;

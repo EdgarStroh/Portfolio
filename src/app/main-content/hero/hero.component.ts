@@ -14,6 +14,7 @@ export class HeroComponent implements AfterViewInit {
   hasHovered = false;
   isReversing = false;
   isMobile = false;
+  isVisible = false;  
 
   constructor(public langService: LanguageService) { }
 
@@ -36,6 +37,7 @@ export class HeroComponent implements AfterViewInit {
   onMouseEnter() {
     this.hasHovered = true;
     this.isReversing = false;
+    
   }
 
   onMouseLeave() {
@@ -44,7 +46,7 @@ export class HeroComponent implements AfterViewInit {
     }
   }
 
-  ngAfterViewInit() {
+ ngAfterViewInit() {
     if (window.innerWidth <= 600) {
       setTimeout(() => {
         this.isMobile = true;
@@ -52,5 +54,9 @@ export class HeroComponent implements AfterViewInit {
         this.isReversing = false;
       }, 1000);
     }
+    // Animation trigger (kann auch per Scroll event oder anderem Trigger gemacht werden)
+    setTimeout(() => {
+      this.isVisible = true;
+    }, 100);
   }
 }

@@ -19,6 +19,7 @@ section {
 body {
   font-family: 'Bricolage Grotesque';
   width: 100%;
+  cursor: none;
 }
 
 ul {
@@ -246,9 +247,41 @@ h3 {
   letter-spacing: 0%;
 
 }
+
 .lin-grad {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0)7.5%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0)7.5%);
 }
+
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-outline {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #dadada;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.15s ease-out;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #dadada;
+  border-radius: 50%;
+}
+
+/* Startzustand: unsichtbar + leicht nach unten verschoben */
+
+
 
 @keyframes buttonHoverScale {
   0% {
@@ -407,9 +440,9 @@ h3 {
 @media (max-width: 685px) {
   section {
     padding-top: 44px;
-    padding-right: 16px!important;
-    padding-bottom: 44px!important;
-    padding-left: 16px!important;
+    padding-right: 16px !important;
+    padding-bottom: 44px !important;
+    padding-left: 16px !important;
 
   }
 }

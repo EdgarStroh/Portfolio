@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ElementRef, AfterViewInit } from '@angular/core';
 import { LanguageService } from '../../language.service';
 
 @Component({
@@ -7,10 +7,29 @@ import { LanguageService } from '../../language.service';
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss']
 })
-export class AboutMeComponent {
-  constructor(public langService: LanguageService) {}
+export class AboutMeComponent implements AfterViewInit {
+  isVisible = false;
+
+  constructor(public langService: LanguageService, private el: ElementRef) {}
 
   toggleLanguage() {
     this.langService.toggleLanguage();
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.checkVisibility();
+  }
+
+  ngAfterViewInit() {
+    this.checkVisibility();
+  }
+
+  private checkVisibility() {
+    const rect = this.el.nativeElement.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    if (rect.top < windowHeight * 0.85) {
+      this.isVisible = true;
+    }
   }
 }
