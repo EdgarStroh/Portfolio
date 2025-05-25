@@ -1,55 +1,65 @@
-<header>
-  <nav>
-    <ul>
-      <a href="#hero"><img class="se-logo" src="/assets/img/header/se-logo.png"></a>
-      <ul class="nav-links">
-        <li><a href="#aboutme" class="nav-link aboutme dark-font">{{ langService.translationsMap.header.aboutMe }}</a>
-        </li>
-        <li><a href="#skills" class="nav-link skills dark-font">{{ langService.translationsMap.header.skills }}</a></li>
+<header [class.hidden]="!isVisible">
+  <div class="grading-background "></div>
+  <div class="header-content  ">
+    <nav class="nav-container max-width-1440">
+    
+      <div class="nav-left">
+        <a href="#hero">
+          <img class="se-logo" src="/assets/img/header/se-logo.png" alt="Logo">
+        </a>
+      </div>
+
+     
+      <ul class="nav-mid">
+        <li><a href="#aboutme"  class="nav-link aboutme" >{{ langService.translationsMap.header.aboutMe }}</a></li>
+        <li><a href="#skills" class="nav-link skills">{{ langService.translationsMap.header.skills }}</a></li>
         <li><a href="#projects" class="nav-link projects">{{ langService.translationsMap.header.projects }}</a></li>
         <li><a href="#contact" class="nav-link contact">{{ langService.translationsMap.header.contact }}</a></li>
       </ul>
 
-
-      <div class="switch-container" (click)="toggleLanguage()">
-        <span [class.active]="isEnglish" [class.inactive]="!isEnglish">EN</span>
-        <div class="switch" [class.left]="isEnglish" [class.right]="!isEnglish"></div>
-        <span [class.active]="!isEnglish" [class.inactive]="isEnglish">DE</span>
-      </div>
-
-      <button class="burger-menu" (click)="toggleMenu()">
-        <img class="burger-menu-img" src="/assets/img/header/responsive/icons/menu.png">
-      </button>
-
-      <div class="mobile-nav" [class.show]="isMenuOpen">
-        <div class="mobile-header">
-          <a href="#hero">
-            <img class="se-logo" src="/assets/img/header/se-logo.png" alt="Logo">
-          </a>
-          <button class="close-btn" (click)="toggleMenu()">
-            <img src="/assets/img/header/responsive/icons/close.png" alt="Close Menu">
-          </button>
-        </div>
-
-        <ul class="nav-links">
-          <li><a href="#aboutme" class="nav-link aboutme dark-font">{{ langService.translationsMap.header.aboutMe }}</a></li>
-          <li><a href="#skills" class="nav-link skills dark-font">{{ langService.translationsMap.header.skills }}</a></li>
-          <li><a href="#projects" class="nav-link projects">{{ langService.translationsMap.header.projects }}</a></li>
-          <li><a href="#contact" class="nav-link contact">{{ langService.translationsMap.header.contact }}</a></li>
-        </ul>
-
-        <div class="mobile-switch-container" (click)="toggleLanguage()">
+     
+      <div class="nav-right">
+        <div class="switch-container" (click)="toggleLanguage()">
           <span [class.active]="isEnglish" [class.inactive]="!isEnglish">EN</span>
           <div class="switch" [class.left]="isEnglish" [class.right]="!isEnglish"></div>
           <span [class.active]="!isEnglish" [class.inactive]="isEnglish">DE</span>
         </div>
 
-        <div class="contact-icons">
-          <img src="/assets/img/hero/icons/linkedin.png" alt="LinkedIn">
-          <img src="/assets/img/hero/icons/Github.png" alt="GitHub">
-          <img src="/assets/img/hero/icons/mail.png" alt="Email">
-        </div>
+        <button class="burger-menu" (click)="toggleMenu()">
+          <img class="burger-menu-img" src="/assets/img/header/responsive/icons/menu.png" alt="Menu">
+        </button>
       </div>
+    </nav>
+  </div>
 
+  
+  <div class="mobile-nav" [class.show]="isMenuOpen">
+    <div class="mobile-header">
+      <a href="#hero">
+        <img class="se-logo" src="/assets/img/header/se-logo.png" alt="Logo">
+      </a>
+      <button class="close-btn" (click)="toggleMenu()">
+        <img src="/assets/img/header/responsive/icons/close.png" alt="Close">
+      </button>
+    </div>
+
+    <ul class="mobile-links">
+      <li><a href="#aboutme" class="nav-link aboutme" (click)="toggleMenu()">{{ langService.translationsMap.header.aboutMe }}</a></li>
+      <li><a href="#skills" class="nav-link skills" (click)="toggleMenu()">{{ langService.translationsMap.header.skills }}</a></li>
+      <li><a href="#projects" class="nav-link projects" (click)="toggleMenu()">{{ langService.translationsMap.header.projects }}</a></li>
+      <li><a href="#contact" class="nav-link contact" (click)="toggleMenu()">{{ langService.translationsMap.header.contact }}</a></li>
     </ul>
-  </nav>
+
+    <div class="mobile-switch-container" (click)="toggleLanguage()">
+      <span [class.active]="isEnglish" [class.inactive]="!isEnglish">EN</span>
+      <div class="switch" [class.left]="isEnglish" [class.right]="!isEnglish"></div>
+      <span [class.active]="!isEnglish" [class.inactive]="isEnglish">DE</span>
+    </div>
+
+    <div class="contact-icons">
+      <img src="/assets/img/hero/icons/linkedin.png" alt="LinkedIn">
+      <img src="/assets/img/hero/icons/Github.png" alt="GitHub">
+      <img src="/assets/img/hero/icons/mail.png" alt="Email">
+    </div>
+  </div>
+</header>

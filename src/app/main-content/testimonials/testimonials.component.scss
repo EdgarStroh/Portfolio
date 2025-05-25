@@ -1,8 +1,9 @@
 section {
     height: 640px;
-    padding-top: 20px;
-    margin-bottom: 40px;
+    padding-top: 50px;
+    margin-bottom: 144px;
     gap: 48px;
+    padding-bottom: 0px;
 }
 
 h2 {
@@ -19,12 +20,12 @@ h2 {
 .testimonials-container {
     opacity: 0;
     transform: translateX(100px); // Start rechts außerhalb
-  transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;
 
-  &.visible {
-    opacity: 1;
-    transform: translateX(0); // Normalposition reinrutschen
-  }
+    &.visible {
+        opacity: 1;
+        transform: translateX(0); // Normalposition reinrutschen
+    }
 }
 
 
@@ -61,7 +62,7 @@ h2 {
 
 
 .testimonials {
-    width: 100vw;
+    // width: 100vw;
     max-width: 100%;
     margin-top: 100px !important;
     display: flex;
@@ -154,6 +155,9 @@ h2 {
     }
 }
 
+
+
+
 @media (max-width: 1370px) {
     section {
         height: fit-content;
@@ -178,13 +182,16 @@ h2 {
 @media (max-width: 800px) {
     section {
         padding: 0px 44px;
-        padding-bottom: 44px;
+        padding-top: 44px;
+        padding-bottom: 80px;
+        margin-bottom: 0px;
     }
 }
 
 @media (max-width: 640px) {
     section {
-        padding-bottom: 20px;
+        margin-bottom: 50px;
+        padding-top: 0px;
     }
 
     .testimonials {

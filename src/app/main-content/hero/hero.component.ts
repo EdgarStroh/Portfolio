@@ -1,12 +1,14 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { HeaderComponent } from '../../shared/header/header.component';
+// import { HeaderComponent } from '../../shared/header/header.component';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [HeaderComponent, CommonModule],
+  imports: [
+    // HeaderComponent
+     CommonModule],
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })

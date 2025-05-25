@@ -9,7 +9,7 @@ export class LanguageService {
   setLanguage(lang: string): void {
     this.isEnglish = lang === 'en';
   }
-  
+
   get currentLang() {
     return this.isEnglish ? 'en' : 'de';
   }
@@ -17,6 +17,7 @@ export class LanguageService {
   get translationsMap() {
     return this.translations[this.currentLang];
   }
+  
   toggleLanguage(): void {
     this.isEnglish = !this.isEnglish;
     const newLang = this.isEnglish ? 'en' : 'de';
@@ -94,7 +95,6 @@ export class LanguageService {
           duration: '5 weeks',
         }
       },
-
       testimonials: {
         headerSmall: "in Their Words:",
         headerLarge: "Colleagues' Thoughts",
@@ -217,6 +217,7 @@ export class LanguageService {
         legalNotice: 'Legal Notice',
       },
     },
+
     de: {
       header: {
         aboutMe: 'Über mich',

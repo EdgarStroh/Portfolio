@@ -6,6 +6,10 @@
   min-height: 100vh;
 }
 
+section{
+  padding-top: 220px;
+}
+
 .title-foto {
   justify-content: center;
   display: flex;
@@ -160,7 +164,7 @@ a {
   flex-direction: column;
   gap: 8px;
   width: fit-content;
-
+margin-bottom: 20px;
   >img {
     padding: 2px;
     height: 40px;
@@ -253,7 +257,7 @@ a {
 
 @media (max-width: 1439px) {
   section {
-    padding-top: 82px !important;
+    padding-top: 180px !important;
   }
 }
 
@@ -264,7 +268,7 @@ a {
 
 }
 
-@media (max-width: 855px) {
+@media (max-width: 930px) {
   .helloworld-btn {
     margin-left: 3px;
   }
@@ -276,12 +280,12 @@ a {
   }
 
   section {
-    padding-top: 35px !important;
+    padding-top: 65px !important;
   }
 
   .contact-icons {
     position: absolute;
-    bottom: 85px;
+    bottom: 90px;
   }
 
   .button-title {
