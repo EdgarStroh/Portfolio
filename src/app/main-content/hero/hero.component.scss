@@ -6,7 +6,7 @@
   min-height: 100vh;
 }
 
-section{
+section {
   padding-top: 220px;
 }
 
@@ -164,7 +164,8 @@ a {
   flex-direction: column;
   gap: 8px;
   width: fit-content;
-margin-bottom: 20px;
+  // margin-bottom: 20px;
+
   >img {
     padding: 2px;
     height: 40px;
@@ -262,8 +263,25 @@ margin-bottom: 20px;
 }
 
 @media (max-width: 970px) {
+  .title-foto {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+  }
+
+  section {
+    padding-top: 75px !important;
+  }
+
   .pic-frame {
-    margin-left: -320px;
+    position: static;
+    margin-left: 0;
+  }
+
+  .contact-icons {
+    position: static;
+    padding-bottom: 25px;
   }
 
 }
@@ -273,11 +291,11 @@ margin-bottom: 20px;
     margin-left: 3px;
   }
 
-  .pic-frame {
-    position: absolute;
-    bottom: 75px;
-    margin-left: 0px;
-  }
+  // .pic-frame {
+  //   position: absolute;
+  //   bottom: 75px;
+  //   margin-left: 0px;
+  // }
 
   section {
     padding-top: 65px !important;
@@ -285,7 +303,7 @@ margin-bottom: 20px;
 
   .contact-icons {
     position: absolute;
-    bottom: 90px;
+    bottom: 20px;
   }
 
   .button-title {
@@ -311,6 +329,10 @@ margin-bottom: 20px;
     display: none;
   }
 
+  .pic-frame {
+    margin-top: 50px;
+  }
+
   .se-logo {
     height: 60px;
     width: 70px;
@@ -324,12 +346,6 @@ margin-bottom: 20px;
 }
 
 @media (max-height: 730px) {
-  .pic-frame {
-    height: 200px;
-    width: 160px;
-    bottom: 40px;
-  }
-
   .button-gt {
     margin-top: 10px;
   }
