@@ -98,14 +98,14 @@ span {
 }
 
 .contact-container {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -177,6 +177,10 @@ span {
 @media (max-width: 685px) {
     .se-logo-sticker-mobile {
         margin: 90px 16px 0 0;
+    }
+
+    section {
+        padding-top: 140px !important;
     }
 }
 

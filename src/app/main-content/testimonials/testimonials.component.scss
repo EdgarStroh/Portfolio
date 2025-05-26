@@ -1,9 +1,5 @@
 section {
-    height: 640px;
-    padding-top: 50px;
-    margin-bottom: 144px;
     gap: 48px;
-    padding-bottom: 0px;
 }
 
 h2 {
@@ -62,14 +58,15 @@ h2 {
 
 
 .testimonials {
-    // width: 100vw;
     max-width: 100%;
-    margin-top: 100px !important;
+
     display: flex;
     gap: 40px;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 100px !important;
     padding: 0 66px;
+    padding-bottom: 32px;
 
     .testi-paper {
         position: relative;
@@ -156,8 +153,6 @@ h2 {
 }
 
 
-
-
 @media (max-width: 1370px) {
     section {
         height: fit-content;
@@ -169,7 +164,9 @@ h2 {
     .testimonials {
         flex-direction: column;
         zoom: 92%;
-
+        // padding-bottom: unset;
+        // margin-top: 20px;
+            // height: 1200px !important;
         .testi-paper {
             &:nth-child(2) {
                 margin-top: unset;
@@ -180,19 +177,19 @@ h2 {
 }
 
 @media (max-width: 800px) {
-    section {
-        padding: 0px 44px;
-        padding-top: 44px;
-        padding-bottom: 80px;
-        margin-bottom: 0px;
-    }
+    // section {
+    //     padding: 0px 44px;
+    //     padding-top: 44px;
+    //     padding-bottom: 80px;
+    //     margin-bottom: 0px;
+    // }
 }
 
 @media (max-width: 640px) {
-    section {
-        margin-bottom: 50px;
-        padding-top: 0px;
-    }
+    // section {
+    //     margin-bottom: 50px;
+    //     padding-top: 0px;
+    // }
 
     .testimonials {
         zoom: 90%;
