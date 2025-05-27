@@ -20,9 +20,11 @@ export class ContactComponent implements AfterViewInit {
     this.checkVisibility();
   }
 
-  ngAfterViewInit() {
+ ngAfterViewInit() {
+  setTimeout(() => {
     this.checkVisibility();
-  }
+  });
+}
 
   private checkVisibility() {
     const section = this.el.nativeElement.querySelector('section.max-width-1440');

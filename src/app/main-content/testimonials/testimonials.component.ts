@@ -17,9 +17,11 @@ export class TestimonialsComponent implements AfterViewInit {
     this.checkVisibility();
   }
 
-  ngAfterViewInit() {
+ ngAfterViewInit() {
+  setTimeout(() => {
     this.checkVisibility();
-  }
+  });
+}
 
   private checkVisibility() {
     const rect = this.el.nativeElement.getBoundingClientRect();

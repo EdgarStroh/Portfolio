@@ -20,8 +20,10 @@ export class ProjectsComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+  setTimeout(() => {
     this.checkVisibility();
-  }
+  });
+}
 
   private checkVisibility() {
     const rect = this.el.nativeElement.getBoundingClientRect();

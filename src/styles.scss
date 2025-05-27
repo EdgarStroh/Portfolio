@@ -5,31 +5,7 @@
   scroll-behavior: smooth;
 }
 
-/* Nur Hochformat */
-/* Nur für schmale Bildschirme (typisch Handy) */
-@media only screen and (max-width: 768px) and (orientation: landscape) {
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    background: #000;
-    color: white;
-    font-size: 1.5rem;
-    margin: 0;
-  }
 
-  body>* {
-    display: none;
-  }
-
-  body::before {
-    content: "Bitte halte das Gerät im Hochformat";
-    text-align: center;
-    padding: 1rem;
-  }
-}
 
 
 html,
@@ -42,7 +18,15 @@ body {
   src: url('/assets/fonts/BricolageGrotesque10pt-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
-  color: red;
+  // color: red;
+}
+
+@font-face {
+  font-family: 'Kalam';
+  src: url('/assets/fonts/Kalam-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
 }
 
 section {
@@ -480,5 +464,31 @@ h3 {
     padding-bottom: 44px !important;
     padding-left: 16px !important;
 
+  }
+}
+
+/* Nur Hochformat */
+/* Nur für schmale Bildschirme (typisch Handy) */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  body>* {
+    display: none;
+  }
+
+  body::before {
+    content: "Bitte halte das Gerät im Hochformat";
+    text-align: center;
+    padding: 1rem;
   }
 }

@@ -130,12 +130,37 @@ section {
 }
 
 
-
-.pic-frame {
-  height: 250px;
+.pic-font-container {
+  position: relative;
   width: 200px;
+  /* gleiche Breite wie das Bild */
+  height: 250px;
+  /* gleiche Höhe wie das Bild */
   margin-left: -250px;
   transform: rotate(8deg) translateY(-22px);
+}
+
+.pic-frame {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.pic-font {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 300%);
+  font-family: Kalam, sans-serif;
+  font-size: 24px;
+  color: black;
+  text-align: center;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0%;
+  &::after {
+    content: 'Edgar :)';
+  }
 }
 
 .button-gt {
@@ -274,9 +299,11 @@ a {
     padding-top: 75px !important;
   }
 
-  .pic-frame {
-    position: static;
+.pic-font-container {
     margin-left: 0;
+    // transform: none;
+    // width: 150px;
+    // height: 188px;
   }
 
   .contact-icons {
@@ -329,7 +356,7 @@ a {
     display: none;
   }
 
-  .pic-frame {
+  .pic-font-container {
     margin-top: 50px;
   }
 
