@@ -7,7 +7,8 @@
     height: 100vh;
 
 }
-.project-detail-container{
+
+.project-detail-container {
     padding-top: 60px;
 }
 
@@ -275,6 +276,10 @@ button {
         padding: 26px 14px;
     }
 
+    .project-detail-bg {
+        min-height: 100vh;
+    }
+
     .project-detail-headline {
         font-size: 20px;
         padding-bottom: 12px !important;
@@ -286,6 +291,9 @@ button {
         height: 80px;
         width: 80px;
     }
+
+
+
 }
 
 @media (max-width: 770px) {
@@ -321,6 +329,6 @@ button {
 
 @media (max-width: 340px) {
     .project-detail-bg {
-        background-size: 270%;
+        // background-size: 270%;
     }
 }
