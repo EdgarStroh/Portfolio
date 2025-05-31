@@ -17,7 +17,7 @@ export class ProjectDetailComponent {
   project: any;
   projectFound = false;
   nextSlug: string | null = null;
-  projectKey: ProjectKey | null = null; // so verwendest du den Typ in der Klasse
+  projectKey: ProjectKey | null = null; 
 
 
   constructor(private route: ActivatedRoute, private router: Router, public langService: LanguageService) {
@@ -26,11 +26,10 @@ export class ProjectDetailComponent {
       this.project = PROJECTS.find(p => p.slug === slug);
       this.projectFound = !!this.project;
 
-      // ProjectKey anhand des slugs zuweisen (wenn möglich)
       if (slug === 'join' || slug === 'pokedex' || slug === 'elpolloloco') {
         this.projectKey = slug;
       } else {
-        this.projectKey = 'join'; // fallback
+        this.projectKey = 'join'; 
       }
 
       this.setNextSlug(slug);
@@ -40,7 +39,6 @@ export class ProjectDetailComponent {
   setNextSlug(currentSlug: string) {
     const currentIndex = PROJECTS.findIndex(p => p.slug === currentSlug);
 
-    // Wenn aktuelles Projekt das letzte ist → nächstes ist das erste
     if (currentIndex === PROJECTS.length - 1) {
       this.nextSlug = PROJECTS[0].slug;
     } else {

@@ -29,7 +29,7 @@ export class ContactformComponent {
   }
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://edgar.stroh.de/app/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -43,12 +43,11 @@ export class ContactformComponent {
   onSubmit(ngForm: any): void {
     this.formSubmitted = true;
 
-    // Wenn das Formular übermittelt wurde und die Eingaben valide sind
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.contactData.privacyAccepted) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            ngForm.resetForm(); // Formular zurücksetzen
+            ngForm.resetForm(); 
             console.log('Formular erfolgreich gesendet:', response);
           },
           error: (error) => {
@@ -57,7 +56,6 @@ export class ContactformComponent {
           complete: () => console.info('Senden des Formulars abgeschlossen'),
         });
     }
-    // Wenn das Formular übermittelt wurde, aber die Mail-Prüfung fehlschlägt
     else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
       console.log('Mail-Test ist aktiv, Formular zurückgesetzt');

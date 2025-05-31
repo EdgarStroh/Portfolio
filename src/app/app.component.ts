@@ -1,5 +1,6 @@
-import { Component, AfterViewInit, ApplicationRef } from '@angular/core';
+import { Component, AfterViewInit, Inject, PLATFORM_ID, ApplicationRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 import { NgZone } from '@angular/core';
 @Component({
   selector: 'app-root',
@@ -9,7 +10,10 @@ import { NgZone } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-constructor(private ngZone: NgZone) {}
+  constructor(
+    private ngZone: NgZone,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) { }
 
   title = 'Edgar Stroh';
 
@@ -21,24 +25,29 @@ constructor(private ngZone: NgZone) {}
   private outlineX = 0;
   private outlineY = 0;
 
-  
 
- ngAfterViewInit(): void {
-  this.cursorDot = document.querySelector('.cursor-dot')!;
-  this.cursorOutline = document.querySelector('.cursor-outline')!;
 
-  document.addEventListener('mousemove', (e) => {
-    this.mouseX = e.clientX;
-    this.mouseY = e.clientY;
 
-    this.cursorDot.style.transform = `translate(${this.mouseX}px, ${this.mouseY}px)`;
-  });
+  ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
 
-  // Animation außerhalb von Angular starten
-  this.ngZone.runOutsideAngular(() => {
-    this.animateCursor();
-  });
-}
+    this.cursorDot = document.querySelector('.cursor-dot')!;
+    this.cursorOutline = document.querySelector('.cursor-outline')!;
+
+    document.addEventListener('mousemove', (e) => {
+      this.mouseX = e.clientX;
+      this.mouseY = e.clientY;
+
+      this.cursorDot.style.transform = `translate(${this.mouseX}px, ${this.mouseY}px)`;
+    });
+
+    this.ngZone.runOutsideAngular(() => {
+      this.animateCursor();
+    });
+  }
+
 
   private animateCursor(): void {
     this.outlineX += (this.mouseX - this.outlineX) * 0.3;

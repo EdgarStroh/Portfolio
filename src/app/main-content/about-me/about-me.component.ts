@@ -1,4 +1,5 @@
-import { Component, HostListener, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, HostListener, ElementRef, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';  
 import { LanguageService } from '../../language.service';
 
 @Component({
@@ -10,7 +11,11 @@ import { LanguageService } from '../../language.service';
 export class AboutMeComponent implements AfterViewInit {
   isVisible = false;
 
-  constructor(public langService: LanguageService, private el: ElementRef) {}
+  constructor(
+    public langService: LanguageService, 
+    private el: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object 
+  ) {}
 
   toggleLanguage() {
     this.langService.toggleLanguage();
@@ -18,18 +23,25 @@ export class AboutMeComponent implements AfterViewInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.checkVisibility();
+    if (isPlatformBrowser(this.platformId)) {  
+      this.checkVisibility();
+    }
   }
 
- ngAfterViewInit() {
-  setTimeout(() => {
-    this.checkVisibility();
-  });
-}
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) { 
+      setTimeout(() => {
+        this.checkVisibility();
+      });
+    }
+  }
 
   private checkVisibility() {
+    if (!isPlatformBrowser(this.platformId)) return;  
+
     const rect = this.el.nativeElement.getBoundingClientRect();
     const windowHeight = window.innerHeight;
+
     if (rect.top < windowHeight * 0.85) {
       this.isVisible = true;
     }

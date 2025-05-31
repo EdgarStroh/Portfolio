@@ -1,14 +1,12 @@
-import { Component, AfterViewInit } from '@angular/core';
-// import { HeaderComponent } from '../../shared/header/header.component';
+import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [
-    // HeaderComponent
-     CommonModule],
+  imports: [CommonModule],
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
@@ -16,9 +14,12 @@ export class HeroComponent implements AfterViewInit {
   hasHovered = false;
   isReversing = false;
   isMobile = false;
-  isVisible = false;  
+  isVisible = false;
 
-  constructor(public langService: LanguageService) { }
+  constructor(
+    public langService: LanguageService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   get defaultText(): string {
     return this.langService.translationsMap.hero.defaultText;
@@ -39,7 +40,6 @@ export class HeroComponent implements AfterViewInit {
   onMouseEnter() {
     this.hasHovered = true;
     this.isReversing = false;
-    
   }
 
   onMouseLeave() {
@@ -48,17 +48,18 @@ export class HeroComponent implements AfterViewInit {
     }
   }
 
- ngAfterViewInit() {
-    if (window.innerWidth <= 600) {
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      if (window.innerWidth <= 600) {
+        setTimeout(() => {
+          this.isMobile = true;
+          this.hasHovered = true;
+          this.isReversing = false;
+        }, 1000);
+      }
       setTimeout(() => {
-        this.isMobile = true;
-        this.hasHovered = true;
-        this.isReversing = false;
-      }, 1000);
+        this.isVisible = true;
+      }, 100);
     }
-    // Animation trigger (kann auch per Scroll event oder anderem Trigger gemacht werden)
-    setTimeout(() => {
-      this.isVisible = true;
-    }, 100);
   }
 }

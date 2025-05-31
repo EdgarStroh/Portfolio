@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { LanguageService } from '../../../language.service';
 @Component({
   selector: 'app-singleprojects',
-  imports: [CommonModule],  // Hier wird *ngFor verfügbar gemacht
+  imports: [CommonModule], 
   templateUrl: './singleprojects.component.html',
   styleUrls: ['./singleprojects.component.css']
 })

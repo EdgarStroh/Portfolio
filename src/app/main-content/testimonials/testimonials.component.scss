@@ -15,12 +15,12 @@ h2 {
 
 .testimonials-container {
     opacity: 0;
-    transform: translateX(100px); // Start rechts außerhalb
+    transform: translateX(100px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 
     &.visible {
         opacity: 1;
-        transform: translateX(0); // Normalposition reinrutschen
+        transform: translateX(0); 
     }
 }
 
@@ -164,9 +164,6 @@ h2 {
     .testimonials {
         flex-direction: column;
         zoom: 92%;
-        // padding-bottom: unset;
-        // margin-top: 20px;
-            // height: 1200px !important;
         .testi-paper {
             &:nth-child(2) {
                 margin-top: unset;
@@ -176,21 +173,9 @@ h2 {
 
 }
 
-@media (max-width: 800px) {
-    // section {
-    //     padding: 0px 44px;
-    //     padding-top: 44px;
-    //     padding-bottom: 80px;
-    //     margin-bottom: 0px;
-    // }
-}
+
 
 @media (max-width: 640px) {
-    // section {
-    //     margin-bottom: 50px;
-    //     padding-top: 0px;
-    // }
-
     .testimonials {
         zoom: 90%;
     }

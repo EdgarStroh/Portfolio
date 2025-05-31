@@ -1,5 +1,5 @@
-import { Component, ElementRef, HostListener, Renderer2, AfterViewInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ElementRef, HostListener, Renderer2, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { LanguageService } from '../../language.service';
 
 @Component({
@@ -12,13 +12,14 @@ import { LanguageService } from '../../language.service';
 export class SkillsComponent implements AfterViewInit {
   stickerImage: string = '/assets/img/skills/sticker.png';
   private isOpen: boolean = false;
-  private animated = false;
+  private animated = false; 
   isVisible = false;
 
   constructor(
     public langService: LanguageService,
     private el: ElementRef,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   toggleLanguage() {
@@ -40,15 +41,22 @@ export class SkillsComponent implements AfterViewInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.checkVisibility();
+    if (isPlatformBrowser(this.platformId)) {
+      this.checkVisibility();
+    }
   }
 
-ngAfterViewInit() {
-  setTimeout(() => {
-    this.checkVisibility();
-  });
-}
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => {
+        this.checkVisibility();
+      }, 0);
+    }
+  }
+
   private checkVisibility() {
+    if (!isPlatformBrowser(this.platformId)) return;
+
     const rect = this.el.nativeElement.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
@@ -59,11 +67,13 @@ ngAfterViewInit() {
   }
 
   private animateIn() {
+    if (this.animated) return;  
     const container = this.el.nativeElement.querySelector('.img-bg');
     if (container) {
       this.renderer.setStyle(container, 'opacity', '1');
       this.renderer.setStyle(container, 'transform', 'translateY(0)');
       this.renderer.setStyle(container, 'transition', 'opacity 1s ease-out, transform 1s ease-out');
+      this.animated = true;
     }
   }
 }

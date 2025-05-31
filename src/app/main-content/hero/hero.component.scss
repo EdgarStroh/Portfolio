@@ -64,7 +64,6 @@ section {
 @keyframes smoothTextReset {
   0% {
     transform: scaleY(1.1);
-    // color: #F7C518;
   }
 
   25% {
@@ -189,7 +188,6 @@ a {
   flex-direction: column;
   gap: 8px;
   width: fit-content;
-  // margin-bottom: 20px;
 
   >img {
     padding: 2px;
@@ -301,9 +299,6 @@ a {
 
 .pic-font-container {
     margin-left: 0;
-    // transform: none;
-    // width: 150px;
-    // height: 188px;
   }
 
   .contact-icons {
@@ -317,12 +312,6 @@ a {
   .helloworld-btn {
     margin-left: 3px;
   }
-
-  // .pic-frame {
-  //   position: absolute;
-  //   bottom: 75px;
-  //   margin-left: 0px;
-  // }
 
   section {
     padding-top: 65px !important;
