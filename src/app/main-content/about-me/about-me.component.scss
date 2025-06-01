@@ -171,7 +171,12 @@ h3 {
 @media (max-width: 1300px) {
     section {
         flex-direction: column-reverse;
-        margin-top: 140px;
+        margin-top: 200px;
+    }
+}
+@media (max-width: 685px) {
+    section {
+        margin-top: 148px;
     }
 }
 
