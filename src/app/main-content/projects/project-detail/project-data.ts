@@ -10,8 +10,8 @@ export const PROJECTS = [
     ],
     image: '/assets/img/projects/project-detail/join.png',
     sticker: '/assets/img/skills/featured-logo.png',
-    // github: 'https://github.com/yourname/dabubble',
-    // live: 'https://dabubble.com'
+    github: 'https://github.com/EdgarStroh/join',
+    live: 'https://edgar-stroh.de/join/html/login.html'
   },
 
   {
@@ -26,8 +26,8 @@ export const PROJECTS = [
     ],
     image: '/assets/img/projects/project-detail/pokedex.png',
     sticker: '/assets/img/projects/project-detail/es-sticker.png',
-    // github: 'https://github.com/yourname/dabubble',
-    // live: 'https://dabubble.com'
+    github: 'https://github.com/EdgarStroh/pokedex',
+    live: 'https://edgar-stroh.de/pokemon/index.html'
   },
   {
     title: 'El Pollo Loco',
@@ -40,7 +40,7 @@ export const PROJECTS = [
     ],
     image: '/assets/img/projects/project-detail/el-pollo-loco.png',
     sticker: '/assets/img/projects/project-detail/es-sticker.png',
-    // github: 'https://github.com/yourname/el-pollo-loco',
-    // live: 'https://pollo-loco.com'
+    github: 'https://github.com/EdgarStroh/el_pollo_loco',
+    live: 'https://edgar-stroh.de/elpolloloco/html/index.html'
   },
 ];

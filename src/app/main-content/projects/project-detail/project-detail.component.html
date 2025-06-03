@@ -46,8 +46,8 @@
           </div>
 
           <div class="button-container">
-            <button>GitHub</button>
-            <button>Live Test</button>
+            <button (click)="openLink(project.github)">GitHub</button>
+            <button (click)="openLink(project.live)">Live Test</button>
           </div>
 
           <div class="arrow-back-yellow-container" (click)="goToNextProject()" [class.disabled]="!nextSlug">

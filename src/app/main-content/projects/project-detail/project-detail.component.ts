@@ -17,7 +17,7 @@ export class ProjectDetailComponent {
   project: any;
   projectFound = false;
   nextSlug: string | null = null;
-  projectKey: ProjectKey | null = null; 
+  projectKey: ProjectKey | null = null;
 
 
   constructor(private route: ActivatedRoute, private router: Router, public langService: LanguageService) {
@@ -29,7 +29,7 @@ export class ProjectDetailComponent {
       if (slug === 'join' || slug === 'pokedex' || slug === 'elpolloloco') {
         this.projectKey = slug;
       } else {
-        this.projectKey = 'join'; 
+        this.projectKey = 'join';
       }
 
       this.setNextSlug(slug);
@@ -51,4 +51,10 @@ export class ProjectDetailComponent {
       this.router.navigate(['/projects', this.nextSlug]);
     }
   }
+
+  openLink(url: string) {
+    window.open(url, '_blank', 'noopener');
+
+  }
+
 }
