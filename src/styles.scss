@@ -5,7 +5,27 @@
   scroll-behavior: smooth;
 }
 
+/* Nur für Firefox */
+::-webkit-scrollbar {
+  width: 12px;
+}
 
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1E5DF6, #4ac5f9);
+  border-radius: 10px;
+  border: 2px solid #1a1a1a;
+  box-shadow: 0 0 6px rgba(30, 93, 246, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4ac5f9, #1E5DF6);
+  cursor: pointer;
+}
 
 
 html,
