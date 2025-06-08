@@ -5,6 +5,20 @@
   scroll-behavior: smooth;
 }
 
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  box-shadow: 0 0 0 1000px transparent inset;
+  -webkit-text-fill-color: white;
+  color: white;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
 /* Nur für Firefox */
 ::-webkit-scrollbar {
   width: 12px;
@@ -26,7 +40,6 @@
   background: linear-gradient(180deg, #4ac5f9, #1E5DF6);
   cursor: pointer;
 }
-
 
 html,
 body {

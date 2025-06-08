@@ -16,6 +16,15 @@ section {
   gap: 100px;
 }
 
+.my-pic {
+  position: absolute;
+  top: 6%;
+  left: 7%;
+  width: 86%;
+  height: 71%;
+  object-fit: cover;
+}
+
 .button-title {
   display: flex;
   flex-direction: column;
@@ -132,12 +141,17 @@ section {
 .pic-font-container {
   position: relative;
   width: 200px;
-  /* gleiche Breite wie das Bild */
   height: 250px;
-  /* gleiche Höhe wie das Bild */
   margin-left: -250px;
   transform: rotate(8deg) translateY(-22px);
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
 }
+
 
 .pic-frame {
   width: 100%;
@@ -157,8 +171,33 @@ section {
   font-weight: 700;
   line-height: 120%;
   letter-spacing: 0%;
+
   &::after {
     content: 'Edgar :)';
+    display: inline-block;
+  }
+}
+
+.pic-font-container:hover .pic-font::after {
+  content: 'Edgar :D';
+  animation: bump 0.5s ease;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.1);
+  }
+
+  60% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -189,17 +228,19 @@ a {
   gap: 8px;
   width: fit-content;
 
-  >img {
-    padding: 2px;
-    height: 40px;
-    width: 40px;
-    border: 1px solid white;
-    border-radius: 100px;
-    cursor: pointer;
+  a {
+    img {
+      padding: 2px;
+      height: 40px;
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 100px;
+      cursor: pointer;
 
-    &:hover {
-      background-color: #3355FF;
-      transition: ease-in-out 125ms;
+      &:hover {
+        background-color: #3355FF;
+        transition: ease-in-out 125ms;
+      }
     }
   }
 }
@@ -297,7 +338,7 @@ a {
     padding-top: 75px !important;
   }
 
-.pic-font-container {
+  .pic-font-container {
     margin-left: 0;
   }
 
@@ -352,6 +393,10 @@ a {
   .se-logo {
     height: 60px;
     width: 70px;
+  }
+
+  .my-pic {
+    filter: grayscale(0%);
   }
 }
 

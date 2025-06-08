@@ -16,29 +16,33 @@
 
   <div class="empty-place">
     <a href="/legal-notice" target="_blank" rel="noopener noreferrer">
-         {{ langService.translationsMap.footer.legalNotice }}
+      {{ langService.translationsMap.footer.legalNotice }}
     </a>
   </div>
 
 
   <div class="link-container" [ngClass]="{ 'hovered': hasHovered[0], 'reverse': isReversing[0] }">
     <img class="footer-icons" src="/assets/img/hero/icons/Github.png" alt="GitHub">
-    <a href="" (mouseenter)="onMouseEnter(0)" (mouseleave)="onMouseLeave(0)">
+    <a href="https://github.com/EdgarStroh" target="_blank" rel="noopener noreferrer" (mouseenter)="onMouseEnter(0)"
+      (mouseleave)="onMouseLeave(0)">
       GitHub
     </a>
   </div>
 
   <div class="link-container" [ngClass]="{ 'hovered': hasHovered[1], 'reverse': isReversing[1] }">
     <img class="footer-icons" src="/assets/img/hero/icons/linkedin.png" alt="LinkedIn">
-    <a href="" (mouseenter)="onMouseEnter(1)" (mouseleave)="onMouseLeave(1)">
+    <a href="https://www.linkedin.com/in/edgar-stroh-144a28337/" target="_blank" rel="noopener noreferrer"
+      (mouseenter)="onMouseEnter(1)" (mouseleave)="onMouseLeave(1)">
       LinkedIn
     </a>
   </div>
 
   <div class="link-container" [ngClass]="{ 'hovered': hasHovered[2], 'reverse': isReversing[2] }">
     <img class="footer-icons" src="/assets/img/hero/icons/mail.png" alt="Email">
-    <a href="" (mouseenter)="onMouseEnter(2)" (mouseleave)="onMouseLeave(2)">
+    <a href="https://mail.google.com/mail/?view=cm&to=edgarstroh@gmail.com" target="_blank" rel="noopener noreferrer"
+      (mouseenter)="onMouseEnter(2)" (mouseleave)="onMouseLeave(2)">
       Email
     </a>
   </div>
+
 </footer>

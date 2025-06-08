@@ -2,22 +2,22 @@
   <div class="grading-background "></div>
   <div class="header-content  ">
     <nav class="nav-container max-width-1440">
-    
+
       <div class="nav-left">
         <a href="#hero">
           <img class="se-logo" src="/assets/img/header/se-logo.png" alt="Logo">
         </a>
       </div>
 
-     
+
       <ul class="nav-mid">
-        <li><a href="#aboutme"  class="nav-link aboutme" >{{ langService.translationsMap.header.aboutMe }}</a></li>
+        <li><a href="#aboutme" class="nav-link aboutme">{{ langService.translationsMap.header.aboutMe }}</a></li>
         <li><a href="#skills" class="nav-link skills">{{ langService.translationsMap.header.skills }}</a></li>
         <li><a href="#projects" class="nav-link projects">{{ langService.translationsMap.header.projects }}</a></li>
         <li><a href="#contact" class="nav-link contact">{{ langService.translationsMap.header.contact }}</a></li>
       </ul>
 
-     
+
       <div class="nav-right">
         <div class="switch-container" (click)="toggleLanguage()">
           <span [class.active]="isEnglish" [class.inactive]="!isEnglish">EN</span>
@@ -32,7 +32,7 @@
     </nav>
   </div>
 
-  
+
   <div class="mobile-nav" [class.show]="isMenuOpen">
     <div class="mobile-header">
       <a href="#hero">
@@ -44,10 +44,14 @@
     </div>
 
     <ul class="mobile-links">
-      <li><a href="#aboutme" class="nav-link aboutme" (click)="toggleMenu()">{{ langService.translationsMap.header.aboutMe }}</a></li>
-      <li><a href="#skills" class="nav-link skills" (click)="toggleMenu()">{{ langService.translationsMap.header.skills }}</a></li>
-      <li><a href="#projects" class="nav-link projects" (click)="toggleMenu()">{{ langService.translationsMap.header.projects }}</a></li>
-      <li><a href="#contact" class="nav-link contact" (click)="toggleMenu()">{{ langService.translationsMap.header.contact }}</a></li>
+      <li><a href="#aboutme" class="nav-link aboutme" (click)="toggleMenu()">{{
+          langService.translationsMap.header.aboutMe }}</a></li>
+      <li><a href="#skills" class="nav-link skills" (click)="toggleMenu()">{{ langService.translationsMap.header.skills
+          }}</a></li>
+      <li><a href="#projects" class="nav-link projects" (click)="toggleMenu()">{{
+          langService.translationsMap.header.projects }}</a></li>
+      <li><a href="#contact" class="nav-link contact" (click)="toggleMenu()">{{
+          langService.translationsMap.header.contact }}</a></li>
     </ul>
 
     <div class="mobile-switch-container" (click)="toggleLanguage()">
@@ -57,9 +61,16 @@
     </div>
 
     <div class="contact-icons">
-      <img src="/assets/img/hero/icons/linkedin.png" alt="LinkedIn">
-      <img src="/assets/img/hero/icons/Github.png" alt="GitHub">
-      <img src="/assets/img/hero/icons/mail.png" alt="Email">
+      <a href="https://www.linkedin.com/in/edgar-stroh-144a28337/" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/img/hero/icons/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/EdgarStroh" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/img/hero/icons/Github.png" alt="GitHub">
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&to=edgarstroh@gmail.com" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/img/hero/icons/mail.png" alt="E-Mail">
+      </a>
     </div>
+
   </div>
 </header>

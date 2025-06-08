@@ -250,16 +250,18 @@ ul {
   cursor: pointer;
   margin-top: 80px;
 
-  >img {
-    padding: 2px;
-    height: 40px;
-    width: 40px;
-    border: 1px solid white;
-    border-radius: 100px;
+  a {
+    >img {
+      padding: 2px;
+      height: 40px;
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 100px;
 
-    &:hover {
-      background-color: #3355FF;
-      transition: ease-in-out 125ms;
+      &:hover {
+        background-color: #3355FF;
+        transition: ease-in-out 125ms;
+      }
     }
   }
 }

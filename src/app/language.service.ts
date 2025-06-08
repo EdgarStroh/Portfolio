@@ -17,7 +17,7 @@ export class LanguageService {
   get translationsMap() {
     return this.translations[this.currentLang];
   }
-  
+
   toggleLanguage(): void {
     this.isEnglish = !this.isEnglish;
     const newLang = this.isEnglish ? 'en' : 'de';
@@ -143,6 +143,8 @@ export class LanguageService {
         privacyError: "Please accept the privacy policy.",
 
         submitButton: "Submit",
+
+        messageSuccess: "Message sent successfully!"
       },
       imprint: {
         title: "Imprint",
@@ -228,7 +230,7 @@ export class LanguageService {
       hero: {
         defaultText: "Hallo Welt",
         hoverText: "Ich heiße Edgar Stroh",
-        buttonText: "Lass uns connecten",
+        buttonText: "In Kontakt kommen",
       },
       about: {
         location: 'Wohnhaft in Köln',
@@ -330,6 +332,8 @@ export class LanguageService {
         privacyError: "Bitte akzeptiere die Datenschutzerklärung.",
 
         submitButton: "Absenden",
+
+        messageSuccess: "Nachricht erfolgreich gesendet!"
       },
       imprint: {
         title: "Impressum",
