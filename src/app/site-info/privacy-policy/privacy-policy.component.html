@@ -1,4 +1,4 @@
- <div class="max-width-1440">
+<div class="max-width-1440 privacy-page">
     <app-header></app-header>
     <section>
         <h1>{{ langService.translationsMap.privacyPolicy.title }}</h1><br>
@@ -9,13 +9,15 @@
             {{ langService.translationsMap.privacyPolicy.point2Name }}<br>
             {{ langService.translationsMap.privacyPolicy.point2Street }}<br>
             {{ langService.translationsMap.privacyPolicy.point2City }}<br>
-            Email: <a href="mailto:{{ langService.translationsMap.privacyPolicy.point2Email }}">{{ langService.translationsMap.privacyPolicy.point2Email }}</a></p><br>
+            Email: <a href="mailto:{{ langService.translationsMap.privacyPolicy.point2Email }}">{{
+                langService.translationsMap.privacyPolicy.point2Email }}</a></p><br>
 
         <p><strong>{{ langService.translationsMap.privacyPolicy.point3Title }}</strong><br>
             {{ langService.translationsMap.privacyPolicy.point3HostingInfo }}<br>
             {{ langService.translationsMap.privacyPolicy.point3HostingProvider }}<br>
             {{ langService.translationsMap.privacyPolicy.point3LogfileInfo }}<br>
-            <a href="{{ langService.translationsMap.privacyPolicy.point3PrivacyPolicyLink }}" target="_blank">{{ langService.translationsMap.privacyPolicy.point3PrivacyPolicyLink }}</a>
+            <a href="{{ langService.translationsMap.privacyPolicy.point3PrivacyPolicyLink }}" target="_blank">{{
+                langService.translationsMap.privacyPolicy.point3PrivacyPolicyLink }}</a>
         </p><br>
 
         <p><strong>{{ langService.translationsMap.privacyPolicy.point4Title }}</strong><br>
@@ -27,7 +29,12 @@
         <p><strong>{{ langService.translationsMap.privacyPolicy.point6Title }}</strong><br>
             {{ langService.translationsMap.privacyPolicy.point6GoogleFontsUsage }}<br>
             {{ langService.translationsMap.privacyPolicy.point6Provider }}<br>
-            {{ langService.translationsMap.privacyPolicy.point6MoreInfo }} <a href="{{ langService.translationsMap.privacyPolicy.point6FAQLink }}" target="_blank">{{ langService.translationsMap.privacyPolicy.point6FAQLinkText }}</a> {{ langService.translationsMap.privacyPolicy.andText }} <a href="{{ langService.translationsMap.privacyPolicy.point6GooglePrivacyLink }}" target="_blank">{{ langService.translationsMap.privacyPolicy.point6GooglePrivacyLinkText }}</a></p>
+            {{ langService.translationsMap.privacyPolicy.point6MoreInfo }} <a
+                href="{{ langService.translationsMap.privacyPolicy.point6FAQLink }}" target="_blank">{{
+                langService.translationsMap.privacyPolicy.point6FAQLinkText }}</a> {{
+            langService.translationsMap.privacyPolicy.andText }} <a
+                href="{{ langService.translationsMap.privacyPolicy.point6GooglePrivacyLink }}" target="_blank">{{
+                langService.translationsMap.privacyPolicy.point6GooglePrivacyLinkText }}</a></p>
         <br>
 
         <p><strong>{{ langService.translationsMap.privacyPolicy.point7Title }}</strong><br>
@@ -37,4 +44,5 @@
         <p><strong>{{ langService.translationsMap.privacyPolicy.point8Title }}</strong><br>
             {{ langService.translationsMap.privacyPolicy.point8Text }}</p>
     </section>
+    <app-footer></app-footer>
 </div>

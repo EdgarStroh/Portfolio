@@ -92,6 +92,16 @@ footer a:nth-child(1):hover::after,
     opacity: 0;
 }
 
+:host-context(.privacy-page, .legal-notice ) {
+    a,
+    span,
+    p,
+    div {
+        color: black !important;
+    }
+}
+
+
 .link-container {
     display: flex;
     align-items: center;

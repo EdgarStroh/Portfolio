@@ -194,7 +194,7 @@ a {
 }
 
 .error {
-    color: #F87A55;
+    color: red;
     font-size: 14px;
 }
 
@@ -259,9 +259,10 @@ button {
     display: flex;
     align-items: center;
     height: fit-content;
-    padding-top: 20px;
+    padding-top: 60px;
 
 }
+
 
 @media (max-width: 1200px) {
     .yellow-arrow {

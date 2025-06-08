@@ -216,6 +216,14 @@ ul {
   }
 
 }
+:host-context(.privacy-page, .legal-notice) {
+  .nav-link,
+  .mobile-links a,
+  .switch-container span,
+  .mobile-switch-container span {
+    color: black !important;
+  }
+}
 
 .mobile-header {
   position: fixed;

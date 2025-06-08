@@ -15,61 +15,75 @@
     <div class="form-style">
       <label for="email" class="f-s24">{{ langService.translationsMap.contactformular.emailLabel }}</label>
       <input class="f-s18" #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email"
-        [placeholder]="
-          email.invalid && email.touched
-            ? langService.translationsMap.contactformular.emailPlaceholderError
-            : langService.translationsMap.contactformular.emailPlaceholder
-        " required (ngModelChange)="formValidFN()" />
+        placeholder="{{ langService.translationsMap.contactformular.emailPlaceholder }}" required
+        (ngModelChange)="formValidFN()" />
+
     </div>
+
 
     <div class="form-style">
       <label for="subject" class="f-s24">{{ langService.translationsMap.contactformular.subjectLabel }}</label>
       <textarea class="f-s18" rows="1" #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="subject"
         name="subject" [placeholder]="
-          message.invalid && message.touched
-            ? langService.translationsMap.contactformular.subjectPlaceholderError
-            : langService.translationsMap.contactformular.subjectPlaceholder
-        " required (ngModelChange)="formValidFN()"></textarea>
+      message.invalid && message.touched
+        ? langService.translationsMap.contactformular.subjectPlaceholderError
+        : langService.translationsMap.contactformular.subjectPlaceholder
+    " required (ngModelChange)="formValidFN()"></textarea>
     </div>
 
-    <div class="submit-container">
-      <div class="checkbox-error-container">
-        <div class="checkbox-text-container">
-          <div class="checkbox-container">
-            <input type="checkbox" class="checkbox" id="privacyCheckbox" name="privacy" [(ngModel)]="privacyAccepted"
-              #privacy="ngModel" required (change)="onPrivacyChange()" />
 
 
-          </div>
-          <span>
-            {{ langService.translationsMap.contactformular.privacyTextBefore }}
-            <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
-              {{ langService.translationsMap.contactformular.privacyPolicy }}
-            </a>
-            {{ langService.translationsMap.contactformular.privacyTextAfter }}
-          </span>
-        </div>
+<div class="submit-container">
+  <div class="checkbox-error-container">
+    <div class="checkbox-text-container">
+      <div class="checkbox-container">
+        <input type="checkbox" class="checkbox" id="privacyCheckbox" name="privacy" [(ngModel)]="privacyAccepted"
+          #privacy="ngModel" required (change)="onPrivacyChange()" />
 
-        <div class="error-container">
-          <div class="error" *ngIf="!privacyAccepted && formSubmitted">
-            {{ langService.translationsMap.contactformular.privacyError }}
-          </div>
-        </div>
+
+      </div>
+      <span>
+        {{ langService.translationsMap.contactformular.privacyTextBefore }}
+        <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
+          {{ langService.translationsMap.contactformular.privacyPolicy }}
+        </a>
+        {{ langService.translationsMap.contactformular.privacyTextAfter }}
+      </span>
+    </div>
+
+    <div class="error-container">
+      <div class="error" *ngIf="!privacyAccepted && formSubmitted">
+        {{ langService.translationsMap.contactformular.privacyError }}
       </div>
 
-      <div class="arrow-submit-btn">
-        <img class="yellow-arrow" src="/assets/img/contact/yellow-arrow.png" />
-        <button type="submit" [disabled]="isSubmitDisabled(contactForm)">
-          {{ langService.translationsMap.contactformular.submitButton }}
-        </button>
+      <div class="error"
+        *ngIf="contactData.email && !isEmailValid(contactData.email) && (formSubmitted || email.touched)">
+        {{ langService.translationsMap.contactformular.emailError }}
+      </div>
+
+      <div class="error"
+        *ngIf="contactData.message && (contactData.message.length < 4) && (formSubmitted || message.touched)">
+        {{ langService.translationsMap.contactformular.subjectError }}
       </div>
     </div>
-  </form>
+
+
+
+  </div>
+
+  <div class="arrow-submit-btn">
+    <img class="yellow-arrow" src="/assets/img/contact/yellow-arrow.png" />
+    <button type="submit" [disabled]="isSubmitDisabled(contactForm)">
+      {{ langService.translationsMap.contactformular.submitButton }}
+    </button>
+  </div>
+</div>
+</form>
 
 <div class="send-overlay" *ngIf="showSuccessMessage">
   <div class="send-message-box">
     <span class="send-icon">✓</span>
-    <span class="send-text">  {{ langService.translationsMap.contactformular.messageSuccess }}</span>
+    <span class="send-text"> {{ langService.translationsMap.contactformular.messageSuccess }}</span>
   </div>
 </div>
 

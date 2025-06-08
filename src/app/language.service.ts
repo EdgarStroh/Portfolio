@@ -142,6 +142,10 @@ export class LanguageService {
         privacyTextAfter: "and agree to the processing of my data as outlined.",
         privacyError: "Please accept the privacy policy.",
 
+        emailError: "Check your E-Mail again.",
+
+        subjectError: "Text is too short.",
+
         submitButton: "Submit",
 
         messageSuccess: "Message sent successfully!"
@@ -331,9 +335,15 @@ export class LanguageService {
         privacyTextAfter: "gelesen und stimme der Verarbeitung meiner Daten zu.",
         privacyError: "Bitte akzeptiere die Datenschutzerklärung.",
 
+
+        subjectError: "Der Text ist zu kurz.",
+
+        emailError: "Überprüfe nochmal deine E-Mail.",
+
         submitButton: "Absenden",
 
         messageSuccess: "Nachricht erfolgreich gesendet!"
+
       },
       imprint: {
         title: "Impressum",
