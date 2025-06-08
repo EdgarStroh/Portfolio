@@ -14,8 +14,8 @@ textarea:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px transparent inset;
   box-shadow: 0 0 0 1000px transparent inset;
   -webkit-text-fill-color: white;
-  color: white;
-  transition: background-color 5000s ease-in-out 0s;
+  color: white !important;
+  transition: background-color 5000s ease-in-out 0s!important;
 }
 
 
@@ -406,11 +406,11 @@ h3 {
 
 @media (max-width: 600px) {
   .hover-btn {
-    display: none !important;  
+    display: none !important;
   }
 
   .mobile-btn {
-    display: inline-block !important; 
+    display: inline-block !important;
   }
 
   h2 {

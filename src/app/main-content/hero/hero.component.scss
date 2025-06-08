@@ -180,7 +180,7 @@ section {
 
 .pic-font-container:hover .pic-font::after {
   content: 'Edgar :D';
-  animation: bump 0.5s ease;
+  animation: bump 0.5s ease-in-out;
 }
 
 @keyframes bump {
@@ -193,6 +193,10 @@ section {
   }
 
   60% {
+    transform: scale(0.90);
+  }
+
+  80% {
     transform: scale(0.95);
   }
 
