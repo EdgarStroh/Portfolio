@@ -110,6 +110,13 @@ span {
     margin-left: auto;
 }
 
+@media (min-width: 2600px) {
+    section {
+        padding-top: 250px;
+    }
+}
+
+
 @media (max-width: 1440px) {
     section {
         padding-top: 134px;

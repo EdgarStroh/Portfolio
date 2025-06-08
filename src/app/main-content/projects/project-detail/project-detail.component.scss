@@ -204,6 +204,12 @@ button {
     position: relative;
 }
 
+@media (min-width: 2450px) {
+    .project-detail-bg {
+        background-position: bottom;
+    }
+}
+
 @media (max-width: 1370px) {
     .project-detail-view {
         padding: 55px 64px;
