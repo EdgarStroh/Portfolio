@@ -47,7 +47,7 @@ export class LanguageService {
         remote: 'Open to work remote',
         aboutTitle: 'About me',
         aboutHeader: "WHO'S EDGAR",
-        aboutText: `Hey, I'm Edgar, a 30-year-old from Cologne currently training to become a frontend developer.  
+        aboutText: `Hey, I'm Edgar, a 31-year-old from Cologne currently training to become a frontend developer.  
         I made a conscious shift in my career and lifestyle after realizing I wasn't happy with where I was - now I'm focused on growth, both in tech and fitness.  
         I'm passionate about coding, strength training, health, and stock exchange market.  
         Always curious, always learning - and excited about what's next.`,
