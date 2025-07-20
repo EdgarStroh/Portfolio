@@ -1,39 +1,46 @@
 <app-header></app-header>
-<div class="project-detail-bg ">
-
-  <div class=" max-width-1440">
+<div class="project-detail-bg">
+  <div class="max-width-1440">
     <div class="project-detail-container">
       <div class="arrow-back-container" [routerLink]="['/']">
-        <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back.png">
+        <img
+          class="arrow-back"
+          src="/assets/img/projects/project-detail/icons/arrow-back.png"
+        />
         <span>{{ langService.translationsMap.singleproject.back }}</span>
       </div>
 
       <div class="project-detail-view">
-
         <div class="project-detail-view-ls">
           <div class="headline-container">
             <h2>{{ project.title }}</h2>
-            <img class="blue-line" src="/assets/img/about-me/blue-line.png">
+            <img class="blue-line" src="/assets/img/about-me/blue-line.png" />
           </div>
 
           <div class="proj-detail-text">
-            <span class="project-detail-headline">
+            <span class="project-detail-headline"> </span>
+            <span>{{ projectContent?.description }}</span>
 
-            </span>
-            <span>{{ langService.translationsMap.singleproject[projectKey!].description }}</span>
-
-            <span class="project-detail-headline">{{ langService.translationsMap.singleproject.details }}</span>
-            <span>{{ langService.translationsMap.singleproject[projectKey!].details }}</span>
+            <span class="project-detail-headline">{{
+              langService.translationsMap.singleproject.details
+            }}</span>
+            <span>{{ projectContent?.details }}</span>
 
             <div class="duration-container">
-              <span class="project-detail-duration">{{ langService.translationsMap.singleproject.duration }}</span>
-              {{ langService.translationsMap.singleproject[projectKey!].duration }}
+              <span class="project-detail-duration">{{
+                langService.translationsMap.singleproject.duration
+              }}</span>
+              {{ projectContent?.duration }}
             </div>
           </div>
 
           <div class="lang-container">
             <ng-container *ngFor="let lang of project.languages; let i = index">
-              <img class="lang-img" [src]="project.lang_img[i]" alt="{{ lang }}">
+              <img
+                class="lang-img"
+                [src]="project.lang_img[i]"
+                alt="{{ lang }}"
+              />
               <span>{{ lang }}</span>
             </ng-container>
           </div>
@@ -41,8 +48,8 @@
 
         <div class="project-detail-view-rs">
           <div class="project-image-wrapper">
-            <img class="project-img-image" src="{{project.image}}">
-            <img class="project-img-sticker" src="{{project.sticker}}">
+            <img class="project-img-image" src="{{ project.image }}" />
+            <img class="project-img-sticker" src="{{ project.sticker }}" />
           </div>
 
           <div class="button-container">
@@ -50,16 +57,25 @@
             <button (click)="openLink(project.live)">Live Test</button>
           </div>
 
-          <div class="arrow-back-yellow-container" (click)="goToNextProject()" [class.disabled]="!nextSlug">
-
+          <div
+            class="arrow-back-yellow-container"
+            (click)="goToNextProject()"
+            [class.disabled]="!nextSlug"
+          >
             <div class="arrow-back-container-mobile" [routerLink]="['/']">
-              <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back.png">
+              <img
+                class="arrow-back"
+                src="/assets/img/projects/project-detail/icons/arrow-back.png"
+              />
               <span>{{ langService.translationsMap.singleproject.back }}</span>
             </div>
 
             <div class="next-proj-container">
               <span>{{ langService.translationsMap.singleproject.next }}</span>
-              <img class="arrow-back" src="/assets/img/projects/project-detail/icons/arrow-back-yellow.png">
+              <img
+                class="arrow-back"
+                src="/assets/img/projects/project-detail/icons/arrow-back-yellow.png"
+              />
             </div>
           </div>
         </div>

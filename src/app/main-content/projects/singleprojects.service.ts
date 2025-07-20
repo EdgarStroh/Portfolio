@@ -15,8 +15,8 @@ export class SingledataService {
       logo: "assets/img/skills/featured-logo.png"
     },
     {
-      img: "assets/img/projects/pokedex.png",
-      name: "Pokedex",
+      img: "assets/img/projects/mft.jpg",
+      name: "Market Filter Tool",
     },
     {
       img: "assets/img/projects/elpolloloco.png",

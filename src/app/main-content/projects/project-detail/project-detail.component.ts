@@ -4,7 +4,7 @@ import { PROJECTS } from './project-data';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from "../../../shared/header/header.component";
 import { LanguageService } from '../../../language.service';
-type ProjectKey = 'join' | 'pokedex' | 'elpolloloco';
+type ProjectKey = 'join' | 'marketfiltertool' | 'elpolloloco';
 
 @Component({
   standalone: true,
@@ -26,7 +26,7 @@ export class ProjectDetailComponent {
       this.project = PROJECTS.find(p => p.slug === slug);
       this.projectFound = !!this.project;
 
-      if (slug === 'join' || slug === 'pokedex' || slug === 'elpolloloco') {
+      if (slug === 'join' || slug === 'marketfiltertool' || slug === 'elpolloloco') {
         this.projectKey = slug;
       } else {
         this.projectKey = 'join';
@@ -56,5 +56,8 @@ export class ProjectDetailComponent {
     window.open(url, '_blank', 'noopener');
 
   }
+get projectContent() {
+  return (this.projectKey && (this.langService.translationsMap.singleproject as any)[this.projectKey]) || null;
+}
 
 }

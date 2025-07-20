@@ -71,7 +71,7 @@ export class LanguageService {
                       I focus on writing clean, efficient code and designing responsive, user-friendly interfaces that feel good on any device.  
                       Whether it's a game, a productivity tool, or an interactive web app – each project taught me something new and pushed me further.`,
         joinDescription: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-        pokedexDescription: 'An interactive Pokédex web app to browse and view Pokémon stats, evolutions, and abilities using real-time data from a public API.',
+        mftDescription: 'Market Filter Tool is a stock analysis platform that helps you evaluate companies using proven strategies from legendary investors.',
         elpollolocoDescription: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       },
       singleproject: {
@@ -84,10 +84,10 @@ export class LanguageService {
           details: 'Developed with JavaScript, the app features a modular architecture, dynamic task management, and intuitive drag-and-drop interactions. Users can create, edit, and assign tasks to categories and team members, enhancing workflow efficiency.',
           duration: '6 weeks',
         },
-        pokedex: {
-          description: 'Pokedex is a web application that lets you explore and search for Pokémon, displaying detailed information like stats, evolutions, and abilities in a clean and interactive interface.',
-          details: 'Powered by a public Pokémon API, the app fetches and renders data in real-time using JavaScript, offering users an engaging and responsive browsing experience.',
-          duration: '2 weeks',
+        marketfiltertool: {
+          description: 'Market Filter Tool is a stock analysis platform that helps you evaluate companies using proven strategies from legendary investors. It offers search tools, interactive visualizations, and multiple ranking methods to support smart investment decisions.',
+           details: 'The project uses/used a paid financial API to retrieve raw data for numerous key metrics and calculate various valuation scores. Results, including company data and calculated scores, are stored in a backend database for persistent analysis and comparison.',
+          duration: '4 weeks',
         },
         elpolloloco: {
           description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
@@ -265,7 +265,7 @@ export class LanguageService {
                       Mein Fokus liegt auf sauberem, effizientem Code und responsivem Design – benutzerfreundlich auf jedem Gerät.  
                       Ob Spiel, Produktivitätstool oder interaktive Web-App – jedes Projekt hat mich weitergebracht und mir etwas Neues beigebracht.`,
         joinDescription: 'Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.',
-        pokedexDescription: 'Eine interaktive Pokédex-Web-App, um Pokémon-Statistiken, Entwicklungen und Fähigkeiten in Echtzeit über eine öffentliche API zu durchsuchen und anzusehen.',
+        mftDescription: 'Market Filter Tool ist eine Aktienanalyse-Plattform, mit der du Unternehmen anhand bewährter Strategien legendärer Investoren bewerten kannst.',
         elpollolocoDescription: 'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.',
       },
       singleproject: {
@@ -278,10 +278,10 @@ export class LanguageService {
           details: 'Entwickelt mit JavaScript, bietet die App eine modulare Architektur, dynamisches Aufgabenmanagement und eine intuitive Drag-and-Drop-Bedienung. Nutzer können Aufgaben erstellen, bearbeiten und Kategorien oder Teammitgliedern zuweisen – für eine effizientere Zusammenarbeit.',
           duration: '6 Wochen',
         },
-        pokedex: {
-          description: 'Eine Webanwendung zum Durchstöbern und Suchen von Pokémon – mit übersichtlicher Darstellung von Werten, Entwicklungen und Fähigkeiten.',
-          details: 'Basierend auf einer öffentlichen Pokémon-API lädt die App Daten in Echtzeit per JavaScript und stellt sie in einer responsiven, interaktiven Benutzeroberfläche dar. Das sorgt für ein spannendes und reaktionsschnelles Nutzungserlebnis.',
-          duration: '2 Wochen',
+        mft: {
+          description: 'Market Filter Tool ist eine Aktienanalyse-Plattform, mit der du Unternehmen anhand bewährter Strategien legendärer Investoren bewerten kannst. Sie bietet leistungsstarke Suchfunktionen, interaktive Visualisierungen und verschiedene Ranking-Methoden zur Unterstützung fundierter Anlageentscheidungen.',
+          details: 'Das Projekt verwendet/verwendete eine kostenpflichtige Finanz-API, um Rohdaten zu zahlreichen Kennzahlen abzurufen und verschiedene Bewertungs-Scores zu berechnen. Die Ergebnisse, einschließlich Unternehmensdaten und berechneter Scores, werden im Backend gespeichert, um eine dauerhafte Analyse und Vergleichbarkeit zu ermöglichen.',
+          duration: '4 Wochen',
         },
         elpolloloco: {
           description: 'Jump-&-Run-Spiel mit Wurfmechanik, basierend auf objektorientierter Programmierung. Hilf Pepe dabei, Münzen und Tabasco zu sammeln, um gegen das verrückte Huhn zu kämpfen.',

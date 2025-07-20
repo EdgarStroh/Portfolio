@@ -15,19 +15,20 @@ export const PROJECTS = [
   },
 
   {
-    title: 'Pokedex',
-    slug: 'pokedex',
-    languages: ['HTML', 'CSS', 'JavaScript', 'API'],
+    title: 'Market Filter Tool',
+    slug: 'marketfiltertool', 
+    languages: ['HTML', 'Tailwind CSS', 'TypeScript', 'React', 'API'],
     lang_img: [
       '/assets/img/skills/icons/html.png',
-      '/assets/img/skills/icons/css.png',
-      '/assets/img/skills/icons/js.png',
+      '/assets/img/skills/icons/tailwind-css.png',
+      '/assets/img/skills/icons/ts.png',
+      '/assets/img/skills/icons/react.png',
       '/assets/img/skills/icons/rest-api.png',
     ],
-    image: '/assets/img/projects/project-detail/pokedex.png',
+    image: '/assets/img/projects/project-detail/mft.png',
     sticker: '/assets/img/projects/project-detail/es-sticker.png',
-    github: 'https://github.com/EdgarStroh/pokedex',
-    live: 'https://edgar-stroh.de/pokemon/index.html'
+    github: 'https://github.com/EdgarStroh/Market-Filter-Tool',
+    live: 'https://edgar-stroh.de/mft/index.html'
   },
   {
     title: 'El Pollo Loco',
