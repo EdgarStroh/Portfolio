@@ -242,7 +242,7 @@ export class LanguageService {
         remote: 'Offen für Remote-Arbeit',
         aboutTitle: 'Über mich',
         aboutHeader: "Wer ist EDGAR",
-        aboutText: `Hey, ich bin Edgar, 30 aus Köln, und mache aktuell eine Weiterbildung zum Frontend-Entwickler.
+        aboutText: `Hey, ich bin Edgar, 31 aus Köln, und mache aktuell eine Weiterbildung zum Frontend-Entwickler.
         Nach einem bewussten Neustart liegt mein Fokus jetzt voll auf Tech, Fitness und persönlichem Wachstum.
         Ich liebe Code, Krafttraining, Gesundheit und die Börse.
         Ich bin Neugierig, motiviert und bereit für alles, was kommt.`,
@@ -278,7 +278,7 @@ export class LanguageService {
           details: 'Entwickelt mit JavaScript, bietet die App eine modulare Architektur, dynamisches Aufgabenmanagement und eine intuitive Drag-and-Drop-Bedienung. Nutzer können Aufgaben erstellen, bearbeiten und Kategorien oder Teammitgliedern zuweisen – für eine effizientere Zusammenarbeit.',
           duration: '6 Wochen',
         },
-        mft: {
+        marketfiltertool: {
           description: 'Market Filter Tool ist eine Aktienanalyse-Plattform, mit der du Unternehmen anhand bewährter Strategien legendärer Investoren bewerten kannst. Sie bietet leistungsstarke Suchfunktionen, interaktive Visualisierungen und verschiedene Ranking-Methoden zur Unterstützung fundierter Anlageentscheidungen.',
           details: 'Das Projekt verwendet/verwendete eine kostenpflichtige Finanz-API, um Rohdaten zu zahlreichen Kennzahlen abzurufen und verschiedene Bewertungs-Scores zu berechnen. Die Ergebnisse, einschließlich Unternehmensdaten und berechneter Scores, werden im Backend gespeichert, um eine dauerhafte Analyse und Vergleichbarkeit zu ermöglichen.',
           duration: '4 Wochen',
