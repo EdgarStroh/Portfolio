@@ -294,34 +294,21 @@ button {
   }
 }
 
-@media (max-width: 500px) {
-  .project-img-sticker {
-    height: 80px;
-    width: 80px;
-  }
-}
-
 @media (max-width: 770px) {
   .project-detail-bg {
     background-size: 120%;
   }
 }
-
-@media (max-width: 670px) {
+@media (max-width: 700px) {
   .project-detail-bg {
-    background-size: 140%;
+    background-size: 190%;
   }
 }
 
-@media (max-width: 510px) {
-  .project-detail-bg {
-    background-size: 170%;
-  }
-}
-
-@media (max-width: 440px) {
-  .project-detail-bg {
-    background-size: 240%;
+@media (max-width: 500px) {
+  .project-img-sticker {
+    height: 80px;
+    width: 80px;
   }
 }
 
@@ -331,3 +318,15 @@ button {
     flex-flow: wrap;
   }
 }
+@media (max-width: 430px) {
+  .project-detail-bg {
+    background-size: 330%;
+  }
+}
+@media (max-width: 400px) {
+  .lang-container {
+    width: 100%;
+  
+  }
+}
+
