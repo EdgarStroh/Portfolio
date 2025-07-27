@@ -67,6 +67,9 @@ app-singleprojects {
     .projects-title-text{
         margin-bottom: 50px;
     }
+       app-singleprojects {
+       gap: 30px;
+    }
 }
 @media (max-width: 500px) {
     section{
