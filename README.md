@@ -20,7 +20,7 @@ It presents selected projects, technical skills, and personal insights — built
 
 🚀 **How to Use**
 
-Open the index.html file in your browser.
+- Open the index.html file in your browser.
 
 🧩 Technology Stack
 
@@ -34,14 +34,14 @@ Open the index.html file in your browser.
 
 📱 Interface
 
-This website is fully responsive and adapts to desktop, tablet, and mobile screens with smooth transitions and mobile-optimized navigation.
+- This website is fully responsive and adapts to desktop, tablet, and mobile screens with smooth transitions and mobile-optimized navigation.
 
 👨‍💻 About
 
-This project was developed independently by me Edgar Stroh as part of a career shift into web development.
-The goal: to combine technical skills with personal storytelling, giving employers and collaborators a clear impression of both code quality and character.
+- This project was developed independently by me Edgar Stroh as part of a career shift into web development.
+- The goal: to combine technical skills with personal storytelling, giving employers and collaborators a clear impression of both code quality and character.
 
 📄 License
 
-This project is licensed under the MIT License.
-Feel free to explore and get inspired — but please do not copy it 1:1 😉
+-This project is licensed under the MIT License.
+- Feel free to explore and get inspired — but please do not copy it 1:1 😉
