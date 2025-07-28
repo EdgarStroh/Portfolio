@@ -24,15 +24,13 @@ Open the index.html file in your browser.
 
 🧩 Technology Stack
 
-Angular, TypeScript
+- Angular, TypeScript
 
-HTML, SCSS, JavaScript
+- HTML, SCSS, JavaScript
 
-Firebase (for hosting)
+- Figma (UI design)
 
-Figma (UI design)
-
-Git & GitHub (version control)
+- Git & GitHub (version control)
 
 📱 Interface
 
@@ -40,7 +38,7 @@ This website is fully responsive and adapts to desktop, tablet, and mobile scree
 
 👨‍💻 About
 
-This project was developed independently by Edgar Stroh as part of a career shift into web development.
+This project was developed independently by me Edgar Stroh as part of a career shift into web development.
 The goal: to combine technical skills with personal storytelling, giving employers and collaborators a clear impression of both code quality and character.
 
 📄 License
