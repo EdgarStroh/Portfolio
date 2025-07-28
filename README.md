@@ -43,5 +43,5 @@ It presents selected projects, technical skills, and personal insights — built
 
 📄 License
 
--This project is licensed under the MIT License.
+- This project is licensed under the MIT License.
 - Feel free to explore and get inspired — but please do not copy it 1:1 😉
