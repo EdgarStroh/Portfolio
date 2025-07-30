@@ -12,24 +12,6 @@ It showcases selected programming projects and serves as a digital business card
 - Showcases multiple projects with descriptions
 - Smooth navigation and animations
 
-## 🚀 How to Run Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/edgar-stroh.git
-   cd edgar-stroh
-
-2. Install dependencies:
-
-- npm install
-
-3. Run the development server:
-
-- ng serve
-
-Then open http://localhost:4200 in your browser.
-🛠 Requires Node.js and Angular CLI installed
-
 ## 📱 Interface
 - Fully responsive (works on desktop and mobile)
 
