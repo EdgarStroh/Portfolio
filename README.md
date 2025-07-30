@@ -1,6 +1,6 @@
 # edgar-stroh – Portfolio Website
 
-This is the personal portfolio website of **Edgar Stroh**, built with Angular.  
+This is the personal portfolio website of me **Edgar Stroh**, built with Angular.  
 It showcases selected programming projects and serves as a digital business card.
 
 🌐 [Visit the live site here](https://edgar-stroh.de/)
